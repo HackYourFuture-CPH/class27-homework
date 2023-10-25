@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url(Lantern.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  color: white;
+  background-color: black;
+  height: 110px;
+  width: 100%;
+  opacity: 0.8;
+  padding: 0 2rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  margin: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  background-color: orange;
+  border: none;
+  transition: 0.5s;
+  border-radius: 12px;
+  padding: 0.8rem 0.8rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-transform: uppercase;
+}
+
+main {
+  color: black;
+  padding: 2rem;
+  background-color: grey;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+body header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+.project {
+  height: 216px;
+  width: 384px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    height: 190px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 1rem 1rem;
+    gap: 1rem;
+  }
+  ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  body header .logo {
+    font-size: 1rem;
+  }
+  nav a {
+    font-size: 0.8rem;
+  }
+}
