@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Poppins:wght@300;400;500;600&display=swap');
+/* GENERAL --------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+html{
+    scroll-behavior: smooth;
+}
+p{
+    color: rgb(85, 85, 85);
+}
+/* TRANSITIONS--------------------------------------------------- */
+a , .btn{
+    transition: all 300ms ease;
+}
+.big-font{
+    font-size: 38px;
+}
+/* DESKTOP NAV---------------------------------------------------- */
+nav , .nav-links{
+    display: flex;
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(185, 185, 185); 
+}
+.logo{
+    font-size: 2rem;
+}
+.logo:hover{
+    cursor: default;
+}
+/* PROFILE -----------------------------------------------------*/
+#profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+}
+.profile-pic img{
+    width: 25rem;
+    height: 25rem;
+    border: 1px solid darkgray;
+    border-radius: 12rem;
+    margin: 5rem ;
+    transition: all 1s ease-in-out;
+}
+.profile-pic img:hover{
+    transform: scaleX(-1);
+}
+.profile-txt{
+    width: 30rem;
+    font-size: larger;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-btn button{
+    margin: 1.5rem 1rem;
+    width: 10rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.cv-btn{
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease-in;
+}
+.cv-btn:hover{
+    background-color: black;
+    color: white;
+    
+}
+.contact-btn{
+    background-color: black;
+    color: white;
+    transition: all 0.1s ease-in;
+}
+.contact-btn:hover{
+    background-color: white;
+    color: black;
+}
+.SoMe-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.SoMe-links a img{
+    margin: 0.5rem 1rem;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.3s ease-in;
+}
+.SoMe-links img:hover{
+    transform: scale(1.5);
+}
+
+/* ABOUT -----------------------------------------------------------*/
+#about{
+    min-height: 100vh;
+    margin: 5rem auto 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.about-title{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:3rem ;
+}
+.about-title p, h2{
+    text-align: center;
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-pic img{
+    width: 30rem;
+    height: 30rem;
+    margin: 2rem;
+    border: 1px solid darkgray;
+    border-radius: 1.5rem;
+}
+.experience-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.experience , .education{
+    width: 15rem;
+    height: 6rem;
+    border: 1px solid darkgray;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+
+}
+.about-me{
+    width: 40rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+/* SKILLS -------------------------------------------------------*/
+#skills{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.skills-title h2 , p{
+    text-align: center;
+}
+.skill-bar-container{
+    width: 80%;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+.skill-name{
+    
+    margin: 1rem;
+}
+.skill-bar{
+    width: 100%;
+    height: 1rem;
+    border: 1px solid darkgray;
+    border-radius: 2rem;
+    background-color: #c1c1c1;
+    display: flex;
+    
+    align-items: center;
+}
+.skill-level{
+    background-color: black;
+    border-radius: 2rem;
+    height: 100%;
+    animation: fill 2s ease-in-out;  
+}
+.html{
+    width: 90%;
+}
+.css{
+    width: 75%;
+}
+.bootstrap{
+    width: 70%;
+}
+.js{
+    width: 80%;
+}
+.react{
+    width: 50%;
+}
+@keyframes fill{
+    0%{
+        width: 0;
+    }
+}
+/* PROJECTS---------------------------------------------------------------- */
+#projects{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-container{
+    display: flex;
+    margin: 2rem;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 70vh;
+    border: 1px solid darkgray;
+    border-radius: 1rem;
+    margin: 2rem;
+    box-shadow: 6px 6px 35px -2px rgba(66, 68, 90, 1);
+}
+.project-pic{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project img{
+    width: 80%;
+    height: 70%;
+    border: 1px solid darkgray;
+    border-radius: 1rem;
+}
+.project-txt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project-txt h3{
+    font-size: 26px;
+}
+.project-link{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-link a{
+    padding: 0.5rem 2rem;
+    border: 1px solid darkgray;
+    border-radius: 2rem;
+    text-decoration: none;
+    
+}
+.project-link a:hover{
+    background-color: black;
+    color: white;
+}
+/* CONTACT--------------------------------------------------- */
+#contact{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact-me{
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+}
+.email , .linkdin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid darkgray;
+    border-radius: 3rem;
+    width: 20rem;
+    height: 5rem;
+    margin: 1rem;
+}
+.email img , .linkdin img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+.contact-me a{
+    text-decoration: none;
+}
+.bottom-nav{
+    margin-top: 5rem;
+}

@@ -1,0 +1,31 @@
+
+/* RESPONSIVE */
+@media screen and (max-width:700px) {
+    .logo{
+        display: none;
+    }
+    #profile{
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .about-container,.projects-container, .contact-me{
+        flex-direction: column;
+    }
+    .projects-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .project{
+        width: 70%;  
+    } 
+}
+@media screen and (min-width: 700px) and (max-width: 1200px){
+    .projects-container{
+        flex-wrap: wrap;
+    }
+    #profile, .about-container{
+        flex-direction: column;
+        min-height: 100vh;
+    }
+}

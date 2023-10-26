@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niloufar portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Niloufar Khaefi</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header id="profile">
+        <div class="profile-pic">
+            <img src="./assets/profile-niloufar.jpg" alt="">
+        </div>
+        <div class="profile-txt">
+            <p>Hello, I'm</p>
+            <h2>Niloufar Khaefi!</h2>
+            <h4>A Joniur Forntend Developer</h4>
+            <div class="profile-btn">
+                <button class="btn cv-btn" onclick="window.open('./assets/Niloufar-cv.pdf')">Download CV</button>
+                <button class="btn contact-btn" onclick="location.href = '#contact'">Contact Info</button>
+            </div>
+            <div class="SoMe-links">
+                <a href="https://github.com/Niloufar97"><img src="assets/square-github.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/niloufar-khaefi/"><img src="assets/linkedin.svg" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <section id="about" data-aos="fade-up" data-aos-duration="2000">
+        <div class="about-title">
+            <p>Get To Know More</p>
+            <h2 class="big-font">About Me</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-pic">
+                <img src="./assets/undraw_dev_focus_re_6iwt.svg" alt="">
+            </div>
+            <div class="about-txt">
+                <div class="experience-box">
+                    <div class="experience">
+                        <h5>Experience</h5>
+                        <p>1+ year</p>
+                        <p>Frontend Development</p>
+                    </div>
+                    <div class="education">
+                        <h5>Education</h5>
+                        <p>B.Sc. Bachlors Degree</p>
+                        <p>Isfahan University of Technology </p>
+                    </div>
+                </div>
+                <div class="about-me">
+                    <p>In early 2023, I embarked on a transformative journey into the world of frontend development,
+                        igniting a passion for crafting captivating web interfaces. My journey commenced with
+                        self-study, delving into the foundational realms of HTML and CSS. Eager to expand my knowledge
+                        and hone my skills, I enrolled in ReDi School's JavaScript course, delving deeper into the
+                        intricacies of interactive web design. This insatiable drive to learn and grow led me to
+                        continue with a React course, broadening my expertise in crafting dynamic and responsive user
+                        interfaces. As the leaves changed color in October 2023, I took a significant step forward by
+                        joining Hack Your Future, a pivotal juncture in my developmental odyssey, and a testament to my
+                        dedication to becoming a proficient frontend developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" data-aos="fade-up" data-aos-duration="2000" >
+        <div class="skills-title">
+            <p>Explore My</p>
+            <h2 class="big-font">Skills</h2>
+        </div>
+        <div class="skill-bar-container">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar">
+                    <div class="skill-level html"></div>
+                    <div>90%</div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-bar-container">
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-level css"></div>
+                    <div>75%</div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-bar-container">
+            <div class="skill">
+                <div class="skill-name">Bootstrap</div>
+                <div class="skill-bar">
+                    <div class="skill-level bootstrap"></div>
+                    <div>70%</div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-bar-container">
+            <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar">
+                    <div class="skill-level js"></div>
+                    <div>80%</div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-bar-container">
+            <div class="skill">
+                <div class="skill-name">React</div>
+                <div class="skill-bar">
+                    <div class="skill-level react"></div>
+                    <div>50%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" data-aos="fade-up" data-aos-duration="2000">
+        <div class="project-title">
+            <p>Browse My</p>
+            <h2 class="big-font">Projects</h2>
+        </div>
+        <div class="projects-container">
+            <div class="project">
+                <div class="project-pic">
+                    <img src="assets/coffee-menue.png" alt="">
+                </div>
+                <div class="project-txt">
+                    <h3>Coffee Menue</h3>
+                    <p>HTML and CSS</p>
+                </div>
+                <div class="project-link">
+                    <a href="">See Project</a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-pic">
+                    <img src="assets/survey-form.png" alt="">
+                </div>
+                <div class="project-txt">
+                    <h3>Survey Form</h3>
+                    <p>HTML and CSS</p>
+                </div>
+                <div class="project-link">
+                    <a
+                        href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form">See
+                        Project</a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-pic">
+                    <img src="assets/todo-list.png" alt="">
+                </div>
+                <div class="project-txt">
+                    <h3>Todo List</h3>
+                    <p>JavaScript</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/Niloufar97/to-do-list">See Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" data-aos="fade-up" data-aos-duration="2000">
+        <div class="contact-title">
+            <p>Get In Touch</p>
+            <h2 class="big-font">Contact Me</h2>
+        </div>
+        <div class="contact-me">
+            <div class="email">
+                <img src="assets/103176_mail_email_icon.svg" alt="">
+                <a href="mailto:nilooooofar97@gmail.com">nilooooofar97@gmail.com</a>
+            </div>
+            <div class="linkdin">
+                <img src="assets/linkedin.svg" alt="">
+                <a href="https://www.linkedin.com/in/niloufar-khaefi">Niloufar-Khaefi</a>
+            </div>
+        </div>
+        <div class="bottom-page">
+            <nav class="bottom-nav">
+                <div>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>copyright © 2023 Niloufar.All Rights Reserved</p>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    
+</body>
+
+</html>
