@@ -1,0 +1,451 @@
+/** {
+    box-sizing: border-box;
+}
+*/
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #001a32;
+   margin: 0;
+   font-size: 14px;
+   height: 100%;
+   padding: 0;
+   width: 100%;
+   /*background-image: url(./images/programming-background.jpg);
+    opacity: 10%;*/
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+/*HOME CODES - BASE CODES */
+
+.ho-line {
+    display: inline-flex;
+    background-color: #001a32;
+    flex-direction:row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*align-items: space-evenly;*/
+    align-items:normal;
+}
+
+.top {
+    display: flex;
+    background-color: darkorange;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    align-items: baseline;
+}
+
+.buttom {
+    display: flex;
+    background-color: darkorange;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 0;
+    padding: 0;
+    align-items: baseline;
+}
+
+#logo {
+    width: max(15px, 5vw);
+    aspect-ratio: 20 / 9;
+    /*padding: o.4rem;*/
+}
+
+.logoclass {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2px;
+    margin-right: 50%;
+    align-items: end;
+}
+
+/*.navigation {  
+    align-content: end;
+    display: flex;
+    align-items:flex-end;
+}*/
+
+.main {
+    width: 100%;
+    height:fit-content;
+    background-color: rgb(235, 235, 243);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 1200px;
+    padding: 20px 20px; 
+  }
+
+/*  nav > ul {                       
+    display: flex;
+    justify-content: space-evenly;
+}*/
+
+nav {
+    text-align:right;
+} 
+
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+/*.links*/
+ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: arial;
+    padding: 0 10px;
+    /*font-weight:bold;*/
+}
+
+
+
+a:link {
+  color: rgb(255, 255, 255);
+  }
+  a:visited {
+  color: rgb(255, 255, 255);
+  }
+  a:hover {
+  color: rgb(255, 72, 0);
+  }
+
+  
+
+.h2homeclass {
+    font-size: min(5vw, 1.2em);
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(14, 0, 41, 0.851);
+    margin-left: 30px;
+    animation-duration: 5s;
+    animation-name: welcome;
+    animation-iteration-count:initial;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+}
+
+/*img {
+    width: 250px;
+    height: 100px;
+    object-fit: cover;
+    /*opacity: 0.1;
+    /*border-color: rgb(81, 81, 78);
+    /*border-radius: 0 0 15px 0;
+    /*box-shadow: 3px 3px rgb(156, 143, 143);
+
+}*/
+
+/*.katy {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 45px 0;
+}*/
+
+.wd {
+    display: block;
+    width: 30%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.decandwd {
+    flex-direction: column;
+    align-items:baseline; 
+}
+
+.wdclass {
+    align-items: end;
+    animation-duration: 3s;
+    animation-name: wdclass;
+    animation-iteration-count:initial;
+    animation-direction:normal;
+}
+
+@keyframes wdclass {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-right: 100%;
+      width: 100%;
+    }
+  }
+
+
+.destext {
+    font-size: 1.2rem;
+    margin-left: 30px;
+    animation-duration: 5s;
+    animation-name: mytext;
+    animation-iteration-count:initial;
+    animation-direction:normal;
+    
+}
+
+@keyframes mytext {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-right: 100%;
+      width: 100%;
+    }
+  }
+
+.h1homeclass {
+    font-size: min(5vw, 1.2em);
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 30px;
+    text-shadow: rgb(128, 255, 0);
+
+    animation-duration: 5s;
+    animation-name: welcome;
+    animation-iteration-count:initial;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+    color: rgb(249, 0, 0);
+}
+
+@keyframes welcome {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-right: 100%;
+      width: 100%;
+    }
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .linkedinimage, .gmailimage, .instagramimage, .facebookimage, .githubimage {
+    display: block; 
+    width: 20px;
+    height:20px;
+    object-fit: cover; /* to prevent images distortion */
+    padding: 0 3px;
+  }
+
+  @media screen and (max-width: 600px) {
+    ul li a {
+        float:none;
+        display: block;
+        text-align: left;
+        margin: 0;
+        padding:10px;
+        width: 100%;
+    }
+}   
+
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+/* CONTACT PAGE CODES:*/
+
+.place1 {
+width: 15px;
+height: 15px;
+object-fit: cover; /* to prevent images distortion */
+}
+
+.place2 {
+  font-weight: normal;
+  color: darkblue;
+    }
+
+.contact-info {
+    display: flexbox;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}    
+
+.firstcontactpart {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    align-items: end;
+    margin-left: 75%;
+}
+
+.gmail {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.gmail:link {
+    color: darkblue;
+    }
+    .gmail:visited {
+    color: darkblue;
+    }
+    .gmail:hover {
+    color: rgb(255, 72, 0);
+    }
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 0.5rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fieldset {
+        border: 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+       }
+       
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300pxe;
+    width: 70vw;
+}
+
+input, textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    background-color: rgb(206, 205, 207);
+    border: 1px solid rgb(206, 205, 207);
+    color: rgb(50, 50, 50);
+}
+
+input[type="submit"] {
+    display: block;
+    width: 40%;
+    margin: 5px auto;
+    padding: 2px 5px;
+    font-weight: bold;
+    background-color: #3b3b4f;
+    color: aliceblue;
+    border-color: rgb(255, 145, 0);
+  }
+
+  .h2contactclass {
+    margin-top: 20px;
+     text-align: left;
+     margin-left: 50px;
+     color: rgb(0, 1, 73);
+  }
+  
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+/* ABOUT ME CODES:*/
+
+.myimage {
+    width: 270px;
+    height: 270px;
+    display: block;
+    object-fit: cover; /* to prevent images distortion */
+    border-radius: 100px;
+    border-color: darkorange;
+    border-width: 1opx;
+    margin: auto;
+    padding-right: 30px;
+}
+
+.h1aboutclass {
+    text-align: left;
+    color: rgb(249, 0, 0);
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
+
+.h2aboutclass {
+    text-align: left;
+    color: rgb(0, 1, 73);
+    margin-left: 30px;
+}
+
+.textandimage {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+    justify-content: center;
+    padding: 20px 20px;
+
+}
+
+.about-description {
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.marquee{
+    color: rgb(68, 0, 136);
+    font-size: large;
+}
+
+/*///////////////////////////////////////////////////////////////////*/
+/* PROJECT CODES: */
+.description2 {
+    text-align: center;
+}
+
+.skilimage {
+    display: block;
+    width: 750px;
+    height: auto;
+    border-radius: 0px;
+    border-color: darkblue;
+    box-shadow: aqua;
+    object-fit: cover; /* to prevent images distortion */
+    border: 3px;
+    margin: auto;
+    padding: 20px 20px;
+}
+
+.skilstitle1 {
+    font-size: large;
+    font-weight: bold;
+    padding-left: 20PX;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.skilstitle2 {
+    font-size: medium;
+    font-weight: bold;
+    padding-left: 50PX;
+    
+}
+
+.progbars {
+    display: flex;
+    align-items: baseline;
+}
+.progleft, .progright {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.progress {
+    width: 300px;
+    height: 20px;
+}
