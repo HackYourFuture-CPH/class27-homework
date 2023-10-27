@@ -1,3 +1,4 @@
+html-css/anastasiia
 :root {
   --light-yellow: #f5e8b9b2;
   --purpple: #b597f4;
@@ -68,8 +69,7 @@ welcome-section */
 }
 
 .text {
-  width: 50%;
-  text-align: center;
+  max-width: 600px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -79,12 +79,12 @@ welcome-section */
 h1 {
   color: var(--purpple);
   font-size: 60px;
-  font-weight: 400;
+  
 }
 #welcome-section p {
   color: var(--purpple);
   font-size: 30px;
-  font-weight: 100;
+ 
 }
 
 .photo {
@@ -123,7 +123,7 @@ about_me */
   align-items: center;
   height: 100vh;
   text-align: left;
-  margin-bottom: 50px;
+  margin: 0px 20px 50px 20px;
 }
 
 .about_me_header {
@@ -134,13 +134,14 @@ about_me */
 .article_text {
   color: var(--purpple);
   font-size: 27px;
-  line-height: 1.5;
-  margin: 10px 10px 20px 20px;
+  padding: 15px;
+  max-width: 500px;
 }
 
 .pictogramma {
-  width: 800px;
+  width: 600px;
   height: auto;
+  padding: 20px;
 }
 
 .text-pictogramma {
@@ -259,6 +260,7 @@ footer p {
 
 @media (max-width: 420px) {
   .navigation {
+    display: inline-block;
     padding: 10px 0px;
     height: 60px;
     font-size: 18px;
@@ -267,7 +269,7 @@ footer p {
   .nav-list {
     list-style: none;
     padding: 0px 10px;
-    display: flex;
+   
   }
 
   .nav-list a {
@@ -278,9 +280,11 @@ footer p {
 
   #welcome-section {
     display: flex;
-    height: 100vh;
+    height: 200vh;
+    width: 75vh;
     flex-direction: column-reverse;
   }
+  
   h1 {
     font-size: 18px;
   }
@@ -295,7 +299,8 @@ footer p {
     height: auto;
   }
   #about_me {
-    display: inline;
+    display: flex;
+    width: 80vh;
   }
 
   .about_me_header {
@@ -304,7 +309,7 @@ footer p {
 
   .article_text {
     font-size: 15px;
-    margin: 10px 10px 10px 20px;
+   
   }
   .pictogramma {
     display: none;
@@ -332,19 +337,28 @@ footer p {
     display: flex;
     background: var(--light-yellow);
     height: 100vh;
+    width: 100vh;
   }
 
   .projects-header {
     font-size: 40px;
     margin-top: 20px;
   }
+  
+  .projects-link {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-  .survey_form_img {
-    width: 300px;
-    height: auto;
+  .survey_form_img, .tribute_page_img {
+    width: 200px;
     border-radius: 40px;
   }
 
+   #contact {
+    width: 100vh;
+  }
+  
   .contact-header {
     font-size: 40px;
   }
@@ -357,11 +371,15 @@ footer p {
     width: 40px;
     height: 40px;
   }
+  
+  footer {
+    width: 100vh;
+  }
 }
 
-/*Adaptation 820px*/
+/*Adaptation 886px*/
 
-@media (max-width: 820px) {
+@media (max-width: 886px) {
   .navigation {
     margin-bottom: 5px;
     height: 80px;
@@ -378,6 +396,7 @@ footer p {
 
   #welcome-section p {
     font-size: 18px;
+    max-width: 450px;
   }
 
   .photo {
@@ -389,15 +408,16 @@ footer p {
     font-size: 20px;
   }
   .article_text {
-    font-size: 13px;
+    font-size: 14px;
+    max-width: 600px;
   }
 
   .pictogramma {
-    width: 400px;
+    width: 350px;
     height: auto;
   }
   #about_me {
-    display: block;
+    display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -414,10 +434,15 @@ footer p {
   .projects-header {
     font-size: 30px;
   }
+  
+   .projects-link {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .survey_form_img,
   .tribute_page_img {
-    width: 300px;
+    width: 250px;
     height: auto;
     border-radius: 40px;
     margin: 5px 10px;
@@ -435,15 +460,20 @@ footer p {
     width: 40px;
     height: 40px;
   }
+  
+  footer{
+  width: 100vh; 
+  }
 }
 
-/*Adaptation 1200px*/
+/*Adaptation 1280px*/
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .navigation {
     margin-bottom: 5px;
     height: 50px;
     font-size: 16px;
+    width: 100%;
   }
 
   h1 {
@@ -458,13 +488,13 @@ footer p {
     height: auto;
   }
   .about_me_header {
-    font-size: 35px;
+    font-size: 30px;
   }
   .article_text {
-    font-size: 25px;
+    font-size: 20px;
   }
   .pictogramma {
-    width: 40rem;
+    width: 480px;
     height: auto;
     margin: 60px 0px;
   }
@@ -472,7 +502,6 @@ footer p {
     display: none;
   }
   #about_me {
-    display: inline-block;
     text-align: center;
     height: 100vh;
   }
@@ -507,3 +536,4 @@ footer p {
     height: 60px;
   }
 }
+
