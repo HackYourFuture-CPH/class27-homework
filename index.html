@@ -2,176 +2,120 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Gizem Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500&family=Noto+Serif:ital,wght@0,700;1,400&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
-      href="https://fonts.google.com/specimen/Montserrat"
     />
   </head>
   <body>
     <header>
-      <nav class="navigation">
-        <ul class="nav-list">
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contacts</a></li>
-          <li><a href="#about_me">About me</a></li>
-          <li><a href="#welcome-section">Home</a></li>
+      <nav id="navbar">
+        <ul class="nav-links">
+          <li><a href="#welcome" class="nav-link">Welcome</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <section id="welcome-section" class="special-section">
-      <div class="text">
-        <h1>Hi, my name is Anastasiia</h1>
-        <p>
-          Welcome to my portfolio! I'm a passionate and driven<br />
-          junior front-end developer with a flair for creating captivating and
-          user-friendly web experiences.
-        </p>
-        <div class="botton">
-          <a
-            href="mailto:humenyuknastia.9616@gmail.com"
-            id="mail"
-            target="_blank"
-            >Mail me
-          </a>
-        </div>
-      </div>
-      <img
-        class="photo"
-        src="project.img/memoji-sticker.png"
-        alt="photo_Anastasiia"
-      />
-    </section>
 
-    <section id="about_me">
-      <div class="about-content">
-        <h2 class="about_me_header">About Me</h2>
-        <p class="article_text">
-          I'm a problem solver with a passion for design and a focus on creating
-          user-friendly websites. My journey in web development started with a
-          deep interest in the blend of technology and creativity, making it an
-          exciting adventure from the beginning.
-        </p>
-
-        <h2 class="about_me_header">Why Choose Me:</h2>
-        <p class="article_text">
-          When you work with me, you're getting a dedicated collaborator who is
-          passionate about your project's success. I intend to turn your vision
-          into a functional and visually appealing reality. I'm excited to take
-          on new challenges and deliver high-quality web solutions that exceed
-          your expectations. Let's team up to create an online presence that
-          stands out in today's digital world.
-        </p>
+    <section id="welcome-section">
+      <div class="welcome-me">
+        <h1>Hi, I'm Gizem!</h1>
+        <img
+          src="./images/GizemMe.png"
+          alt="A person photo"
+          class="personal-photo"
+        />
       </div>
-      <img
-        src="project.img/pictogramma-2.png"
-        alt="pictogramma"
-        class="pictogramma"
-      />
-
-      <div class="text-pictogramma">
-        <ul>
-          <strong>What i do:</strong>
-          <li>
-            <strong>Responsive Web Design:</strong> I specialize in building
-            websites that look great on any device. From desktop screens to
-            mobile phones, I ensure that your website adapts seamlessly.
-          </li>
-          <li>
-            <strong>Collaboration:</strong> I love working with
-            multidisciplinary teams to bring creative ideas to life. Effective
-            communication and teamwork are at the core of my work ethic.
-          </li>
-          <li>
-            <strong>HTML, CSS, JavaScript:</strong> These are my tools of
-            choice. I write clean, efficient code to make your website's
-            frontend shine.
-          </li>
-          <li>
-            <strong>Continuous Learning:</strong> The tech world is
-            ever-evolving, and I'm committed to staying updated with the latest
-            trends and best practices in web development.
-          </li>
-        </ul>
-      </div>
+      <p>
+        A full-stack developer. Currently, I spend my time with Python, SQL,
+        HTML&CSS&JS and React.
+      </p>
+      <h3>🐈❤️🐈‍⬛❤️👩‍💻❤️🧚‍♀️</h3>
     </section>
 
     <section id="projects">
-      <div class="projects-header">
-      <h2>My Projects</h2>
-      </div>
-      <div class="projects-link">
-      <div class="survey_form_project">
+      <h1>Some of my work</h1>
+      <div class="projects">
         <a
-          href="https://cdpn.io/humenyuk16/fullpage/BavYPWe?nocache=true&view="
-        >
-          <img
-            src="project.img/survey_form.png"
-            alt="survey_form"
-            class="survey_form_img"
-          />
+          href="https://github.com/GizemSavci/Denmark-Museum-Recommendation"
+          class="project-tile"
+          ><img src="./images/Work1.png" class="project-tile" alt="Work 1" />
+          <p>Denmark Museum Crawler</p>
         </a>
-      </div>
-      </div>
-      <div class="tribute-page">
-
-        <a href="https://cdpn.io/humenyuk16/fullpage/yLGvppK?nocache=true&view=">
-          <img src="project.img/Tribute_page.png"
-          alt="tribute-page"
-          class="tribute_page_img">
+        <a href="#" class="project-tile"
+          ><img src="./images/Work2.png" alt="Work 2" />
+          <p>Tic Tac Toe Python Terminal Game</p>
+        </a>
+        <a
+          href="https://editor.p5js.org/GizosGalactic/full/da9cpnWTe"
+          class="project-tile"
+          ><img src="./images/Work3.png" alt="Work 3" />
+          <p>Mondrian p5* Artwork</p>
+        </a>
+        <a
+          href="https://www.behance.net/gallery/160510989/glowy-Interiors-Furniture-Ecommerce-Web-Application"
+          class="project-tile"
+          ><img src="./images/Work4.png" alt="Work 4" />
+          <p>E-commerce UX/UI Design</p>
+        </a>
+        <a href="#" class="project-tile"
+          ><img src="./images/Work5.png" alt="Work 5" />
+          <p>Analytics Dashboard</p>
+        </a>
+        <a href="#" class="project-tile"
+          ><img src="./images/Work6.png" alt="Work 6" />
+          <p>Kaospilot Toolbox Design System</p>
         </a>
       </div>
     </section>
 
     <section id="contact">
-      <div class="contact-info">
-        <h2 class="contact-header">GET IN TOUCH</h2>
-        <p class="contact-desc">You can contact me via:</p>
-        <ul class="contact-list">
-          <li>
-            <a
-              href="https://www.facebook.com/super.goliakivska"
-              id="profile-link"
-              target="_blank"
-              ><img
-                src="project.img/facebook-2.png"
-                width="30px"
-                alt="Facebook"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/humenyuk16"
-              id="link-github"
-              target="_blank"
-              ><img src="project.img/github.png" width="30px" alt="GitHub" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="mailto:humenyuknastia.9616@gmail.com"
-              id="email"
-              target="_blank"
-              ><img src="project.img/mail.png" width="30px" alt="Email" />
-            </a>
-          </li>
-          <li>
-            <a href="tel:+45 936 063 28" id="number" target="_blank"
-              ><img
-                src="project.img/touch.png"
-                width="30px"
-                alt="Phone number"
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <h1>Let's work together</h1>
+      <a
+        href="https://www.linkedin.com/in/gizem-savci/"
+        target="_blank"
+        class="social-media"
+      >
+        <i class="ri-linkedin-box-fill ri-2x"></i>
+        <p>LinkedIn</p></a
+      >
+      <a
+        href="https://github.com/GizemSavci"
+        target="_blank"
+        class="social-media"
+        id="profile-link"
+      >
+        <i class="ri-github-fill ri-2x"></i>
+        <p>Github</p></a
+      >
+      <a
+        href="https://www.behance.net/gizemsavc1"
+        target="_blank"
+        class="social-media"
+      >
+        <i class="ri-behance-fill ri-2x"></i>
+        <p>Behance</p></a
+      >
+      <a
+        href="https://dribbble.com/GizemGalactic"
+        target="_blank"
+        class="social-media"
+      >
+        <i class="ri-dribbble-fill ri-2x"></i>
+        <p>Dribble</p></a
+      >
+      <footer>Created By Gizem Savci 2023</footer>
     </section>
-    <footer>
-      <p>&copy; 2023 Anastasiia Humeniuk</p>
-    </footer>
   </body>
 </html>
