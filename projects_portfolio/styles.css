@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "Sniglet";
-  src: url(Sniglet/Sniglet-Regular.ttf);
+  src: url(projects_portfolio/Sniglet/Sniglet-Regular.ttf);
 }
 
 body {
@@ -61,7 +61,7 @@ welcome-section */
 }
 
 .special-section {
-  background-image: url(project.img/pattern_circles-4_1_7_0-0_145_1__ffffff_ffec3d57.png);
+  background-image: url(projects_portfolio/project.img/pattern_circles-4_1_7_0-0_145_1__ffffff_ffec3d57.png);
   background-repeat: repeat;
   background-attachment: local;
   background-position: center center;
