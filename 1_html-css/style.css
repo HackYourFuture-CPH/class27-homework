@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: hwb(114 2% 73%);
+  font-family: Arial;
+}
+
+.navbar ul {
+  list-style: none;
+  background: #bd1e43;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.search-box {
+  float: left;
+  display: flex;
+  margin: 10px 25px;
+}
+
+.btn {
+  width: 60px;
+  background: yellowgreen;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  width: 80px;
+  display: block;
+  padding: 25px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Arial;
+  text-align: center;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  background: hsl(41, 57%, 49%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: none;
+  overflow: auto;
+}
+
+.Home {
+  margin: 5px;
+  float: left;
+  width: 390px;
+}
+
+.Home img {
+  width: 100%;
+  height: 20%;
+}
+
+.fa a:hover {
+  color: greenyellow;
+}
+
+.desc {
+  font-size: larger;
+  font-family: playfair display;
+}
+
+.desc-title {
+  font-family: playfair display;
+}
+
+@media only screen and (max-device-width: 1200px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .Home {
+    cursor: default;
+  }
+  .navbar {
+    background-color: rgb(40, 40, 128);
+  }
+}

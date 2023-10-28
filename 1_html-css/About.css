@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(162, 121, 19);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.p a {
+  text-align: center;
+}
+
+.img-photo {
+  width: 300px;
+  height: 300px;
+}
+.navbar ul {
+  list-style: none;
+  background: #086927;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  display: block;
+  background: #086927;
+  padding: 25px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background: rgb(101, 71, 19);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #483109;
+  height: auto;
+  width: 100vw;
+  font-family: "open sans";
+  padding-top: 40px;
+  color: #b3970e;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials a {
+  text-decoration: none;
+  color: #b3970e;
+}
+.socials a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+.socials a:hover i {
+  color: aqua;
+}
+
+.footer-bottom {
+  background: #fff;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.container {
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-device-width: 1200px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .Home {
+    cursor: default;
+  }
+}
