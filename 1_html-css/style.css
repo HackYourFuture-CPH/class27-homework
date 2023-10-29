@@ -27,6 +27,10 @@ a, .btn {
 
 /* Desktop nav */
 
+#desktop-nav {
+    position: sticky;
+}
+
 nav, .nav-links {
     display: flex;
 }
