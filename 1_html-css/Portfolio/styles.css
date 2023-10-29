@@ -136,6 +136,7 @@ img {
 .about p {
   color: #555;
   line-height: 30px;
+  margin: auto;
 }
 
 /* SKILLS */
