@@ -16,6 +16,7 @@ body {
   font-family: "Sniglet", sans-serif;
   line-height: 1.5;
   box-sizing: border-box;
+  margin: 0;
 }
 
 /*Navigation*/
@@ -91,7 +92,7 @@ h1 {
   border-radius: 40%;
   box-shadow: 2px 1px 80px 0px var(--light-yellow);
 }
-.botton {
+.container-botton {
   display: flex;
   justify-content: center;
   text-align: center;
