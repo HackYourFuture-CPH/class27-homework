@@ -51,13 +51,10 @@ a:hover{
     cursor: default;
 }
 /* PROFILE -----------------------------------------------------*/
-#profile{
+#hero{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 80vh;
-    margin: 0 auto;
 }
 .profile-pic img{
     width: 25rem;
@@ -152,12 +149,13 @@ a:hover{
     border: 1px solid darkgray;
     border-radius: 1.5rem;
 }
-.experience-box{
+.about-txt ul{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.experience , .education{
+.about-txt li{
+    list-style: none;
     width: 15rem;
     height: 6rem;
     border: 1px solid darkgray;
@@ -165,7 +163,6 @@ a:hover{
     text-align: center;
     padding: 1rem;
     margin: 1rem;
-
 }
 .about-me{
     width: 40rem;
@@ -184,16 +181,15 @@ a:hover{
 .skills-title h2 , p{
     text-align: center;
 }
-.skill-bar-container{
+#skills ul{
     width: 80%;
 }
-.skill{
+#skills li{
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
 }
-.skill-name{
-    
+.skill-name{   
     margin: 1rem;
 }
 .skill-bar{
@@ -202,8 +198,7 @@ a:hover{
     border: 1px solid darkgray;
     border-radius: 2rem;
     background-color: #c1c1c1;
-    display: flex;
-    
+    display: flex; 
     align-items: center;
 }
 .skill-level{

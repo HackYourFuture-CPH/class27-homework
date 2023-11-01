@@ -11,18 +11,21 @@
 </head>
 
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Niloufar Khaefi</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header id="profile">
+
+    <header>
+        <nav id="desktop-nav">
+            <div class="logo">Niloufar Khaefi</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="hero">
         <div class="profile-pic">
             <img src="./assets/profile-niloufar.jpg" alt="">
         </div>
@@ -39,7 +42,7 @@
                 <a href="https://www.linkedin.com/in/niloufar-khaefi/"><img src="assets/linkedin.svg" alt=""></a>
             </div>
         </div>
-    </header>
+    </section>
     <section id="about" data-aos="fade-up" data-aos-duration="2000">
         <div class="about-title">
             <p>Get To Know More</p>
@@ -50,82 +53,75 @@
                 <img src="./assets/undraw_dev_focus_re_6iwt.svg" alt="">
             </div>
             <div class="about-txt">
-                <div class="experience-box">
-                    <div class="experience">
+                <ul>
+                    <li>
                         <h5>Experience</h5>
                         <p>1+ year</p>
                         <p>Frontend Development</p>
-                    </div>
-                    <div class="education">
+                    </li>
+                    <li>
                         <h5>Education</h5>
                         <p>B.Sc. Bachlors Degree</p>
                         <p>Isfahan University of Technology </p>
-                    </div>
-                </div>
-                <div class="about-me">
-                    <p>In early 2023, I embarked on a transformative journey into the world of frontend development,
-                        igniting a passion for crafting captivating web interfaces. My journey commenced with
-                        self-study, delving into the foundational realms of HTML and CSS. Eager to expand my knowledge
-                        and hone my skills, I enrolled in ReDi School's JavaScript course, delving deeper into the
-                        intricacies of interactive web design. This insatiable drive to learn and grow led me to
-                        continue with a React course, broadening my expertise in crafting dynamic and responsive user
-                        interfaces. As the leaves changed color in October 2023, I took a significant step forward by
-                        joining Hack Your Future, a pivotal juncture in my developmental odyssey, and a testament to my
-                        dedication to becoming a proficient frontend developer</p>
-                </div>
+            </div>
+            </li>
+            </ul>
+            <div class="about-me">
+                <p>In early 2023, I embarked on a transformative journey into the world of frontend development,
+                    igniting a passion for crafting captivating web interfaces. My journey commenced with
+                    self-study, delving into the foundational realms of HTML and CSS. Eager to expand my knowledge
+                    and hone my skills, I enrolled in ReDi School's JavaScript course, delving deeper into the
+                    intricacies of interactive web design. This insatiable drive to learn and grow led me to
+                    continue with a React course, broadening my expertise in crafting dynamic and responsive user
+                    interfaces. As the leaves changed color in October 2023, I took a significant step forward by
+                    joining Hack Your Future, a pivotal juncture in my developmental odyssey, and a testament to my
+                    dedication to becoming a proficient frontend developer</p>
             </div>
         </div>
+        </div>
     </section>
-    <section id="skills" data-aos="fade-up" data-aos-duration="2000" >
+    <section id="skills" data-aos="fade-up" data-aos-duration="2000">
         <div class="skills-title">
             <p>Explore My</p>
             <h2 class="big-font">Skills</h2>
         </div>
-        <div class="skill-bar-container">
-            <div class="skill">
-                <div class="skill-name">HTML</div>
+        <ul>
+            <li>
+                <span class="skill-name">HTML</span>
                 <div class="skill-bar">
                     <div class="skill-level html"></div>
-                    <div>90%</div>
+                    <span>90%</span>
                 </div>
-            </div>
-        </div>
-        <div class="skill-bar-container">
-            <div class="skill">
+            </li>
+            <li>
                 <div class="skill-name">CSS</div>
                 <div class="skill-bar">
                     <div class="skill-level css"></div>
-                    <div>75%</div>
+                    <span>75%</span>
                 </div>
-            </div>
-        </div>
-        <div class="skill-bar-container">
-            <div class="skill">
+            </li>
+            <li>
                 <div class="skill-name">Bootstrap</div>
                 <div class="skill-bar">
                     <div class="skill-level bootstrap"></div>
-                    <div>70%</div>
+                    <span>70%</span>
                 </div>
-            </div>
-        </div>
-        <div class="skill-bar-container">
-            <div class="skill">
+            </li>
+            <li>
                 <div class="skill-name">JavaScript</div>
                 <div class="skill-bar">
                     <div class="skill-level js"></div>
-                    <div>80%</div>
+                    <span>80%</span>
                 </div>
-            </div>
-        </div>
-        <div class="skill-bar-container">
-            <div class="skill">
+            </li>
+            <li>
                 <div class="skill-name">React</div>
                 <div class="skill-bar">
                     <div class="skill-level react"></div>
                     <div>50%</div>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </section>
     <section id="projects" data-aos="fade-up" data-aos-duration="2000">
         <div class="project-title">
@@ -208,7 +204,7 @@
     <script>
         AOS.init();
     </script>
-    
+
 </body>
 
 </html>
