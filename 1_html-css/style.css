@@ -10,7 +10,7 @@ body{
 html{
     scroll-behavior: smooth;
 }
-p{
+.span-title{
     color: rgb(85, 85, 85);
 }
 /* TRANSITIONS--------------------------------------------------- */
@@ -134,7 +134,7 @@ a:hover{
     flex-direction: column;
     margin-bottom:3rem ;
 }
-.about-title p, h2{
+.about-title span, h2{
     text-align: center;
 }
 .about-container{
@@ -178,7 +178,7 @@ a:hover{
     align-items: center;
     
 }
-.skills-title h2 , p{
+.skills-title h2 , span{
     text-align: center;
 }
 #skills ul{
@@ -233,7 +233,9 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
-
+.project-title h2{
+    text-align: center;
+}
 .projects-container{
     display: flex;
     margin: 2rem;
@@ -301,6 +303,9 @@ a:hover{
     display: flex;
     flex-direction: column;
     
+}
+.contact-title h2,span{
+    text-align: center;
 }
 .contact-me{
     margin: 2rem;
