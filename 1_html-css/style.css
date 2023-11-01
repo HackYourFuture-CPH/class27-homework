@@ -64,7 +64,7 @@ a:hover{
     margin: 5rem ;
     transition: all 1s ease-in-out;
 }
-.profile-pic img:hover{
+.hero-pic img:hover{
     transform: scaleX(-1);
 }
 .hero-txt{
