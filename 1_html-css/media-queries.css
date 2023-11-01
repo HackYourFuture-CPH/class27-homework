@@ -4,23 +4,52 @@
     .logo{
         display: none;
     }
-    #profile{
+    .nav-links{
+        font-size: 1rem;
+        gap: 1rem;
+    }
+    /* hero */
+    #hero{
         flex-direction: column;
         min-height: 100vh;
     }
-    .about-container,.projects-container, .contact-me{
+    .hero-pic img{
+        width: 20rem;
+        height: 20rem;
+    }
+    .hero-txt{
+        width: 25rem;
+        font-size: small;
+    }
+    /* about */
+    .about-pic img{
+        width: 20rem;
+        height: 20rem;
+    }
+    .about-txt ul{
         flex-direction: column;
     }
-    .projects-container{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .about-me{
+        width: 20rem;
+        font-size: smaller;
     }
-    .project{
-        width: 70%;  
-    } 
+    /* flex-direction */
+   
+    .about-container, .contact-me, .projects-container{
+        flex-direction: column;
+    }
+    #projects ul li{
+        width: 70%;
+    }
+    
 }
 @media screen and (min-width: 700px) and (max-width: 1200px){
+    
+    .hero-txt{
+        width: 25rem;
+        font-size: small;
+    }
+
     .projects-container{
         flex-wrap: wrap;
     }
