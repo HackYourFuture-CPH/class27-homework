@@ -236,11 +236,11 @@ a:hover{
 .project-title h2{
     text-align: center;
 }
-.projects-container{
+#projects ul{
     display: flex;
     margin: 2rem;
 }
-.project{
+#projects li{
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -257,7 +257,7 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-.project img{
+#projects li img{
     width: 80%;
     height: 70%;
     border: 1px solid darkgray;
@@ -307,14 +307,14 @@ a:hover{
 .contact-title h2,span{
     text-align: center;
 }
-.contact-me{
+#contact ul{
     margin: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0.5rem;
 }
-.email , .linkdin{
+.contact-me li{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -324,14 +324,24 @@ a:hover{
     height: 5rem;
     margin: 1rem;
 }
-.email img , .linkdin img{
+#contact li img{
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
 }
-.contact-me a{
+#contact li a{
     text-decoration: none;
 }
-.bottom-nav{
-    margin-top: 5rem;
+.bottom-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-nav ul{
+    margin-top: 7rem;
+}
+.bottom-nav p{
+    text-align: center;
+    color: rgb(85, 85, 85);
 }
