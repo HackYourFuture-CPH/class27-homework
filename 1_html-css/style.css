@@ -56,7 +56,7 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-.profile-pic img{
+.hero-pic img{
     width: 25rem;
     height: 25rem;
     border: 1px solid darkgray;
@@ -67,7 +67,7 @@ a:hover{
 .profile-pic img:hover{
     transform: scaleX(-1);
 }
-.profile-txt{
+.hero-txt{
     width: 30rem;
     font-size: larger;
     line-height: 3rem;
@@ -76,7 +76,7 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-.profile-btn button{
+.hero-btn button{
     margin: 1.5rem 1rem;
     width: 10rem;
     height: 2.5rem;
