@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header-first{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 20px;
+}
+
+
+body{
+    background-color: white;
+}
+a{
+    cursor: pointer;
+}
+.menu{
+    
+    height: 100px;
+    background-color: red;
+    padding: 0 64px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkedin-logo{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    background-image: url(../img/linkedin-icon-.png);
+    
+    }
+
+ul {
+   
+    align-items: end;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    line-height: 100px;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkblue;
+    padding: 0 20px;
+    justify-content: space-between;
+    
+}
+ul li a:hover{
+    color: black;
+}
+h1, h2, h3{
+    /* text-align: center; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-size: 15px; */
+    color: rgb(1, 1, 27);
+    padding: 0 64px;
+    margin-top: 48px;
+   
+}
+.logo{
+    margin: 64px;
+    width: 456px;
+    height: 456px;
+}
+.linkedin-icon{
+    width: 50px;
+    height: 25px;
+}
+.linkedin{
+    width: 70px;
+    height: 45px;
+}
+img{
+    width: 50px;
+    height: 45px;
+
+}
