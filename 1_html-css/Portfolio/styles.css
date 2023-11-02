@@ -137,6 +137,10 @@ img {
   color: #555;
   line-height: 30px;
   margin: auto;
+  width: 50%;
+  border: 3px solid rgb(243, 134, 9);
+  padding: 10px;
+  border-radius: 1rem;
 }
 
 /* SKILLS */
