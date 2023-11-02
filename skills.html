@@ -1,39 +1,81 @@
-<html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width" />
-      <link rel="stylesheet" href="style.css" />
-      <title>Best website ever</title>
-    </head>
-    <body>
-      <div class="menu flex">
-        <div>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-          </ul>
-        </div>
-        <div>
-          <img src="./linkedin-icon.png" />
-        </div>
-      </div>
-      <div class="name"></div>
+<!DOCTYPE html>
+<html lang="en">
 
-      <div class="begginer">
-        <h1>HTML begginer</h1>
-        <h1>CSS begginer</h1>
-        <h1>JavaScript begginer</h1>
-      </div>
-      <div class="lerning">
-        <h2>everything I need - learning</h2>
-        <h2>React - heard about</h2>
-        <h2>Very important language - I will definetly learn</h2>
-        <h2>Phyton - someday</h2>
-      </div>
-    </body>
-  </html>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+    <nav class="navbar">
+        <a href="Portfolio.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact info</a>
+    </nav>
+    </div>
+        <header>
+            <h1>My Dual Skills Pathway</h1>
+            <p31>Bridging Cultures with Languages & Building Digital Experiences with Code.</p31>
+        </header>
+        <section id="linguistic-pathway">
+            <h2>Linguistic Journey</h2>
+
+            
+            <ul31 class="styled-list">
+                <li>Persian: Native</li>
+                <li>English: Near-native (IELTS-8.5)</li>
+                <li>French: Intermediate</li>
+                <li>Danish: Intermediate (Module 4)</li>
+            </ul31>
+
+        </section>
+        <section id="webdev-pathway">
+        <h3>Technical Proficiency</h3>
+        
+    <div class="skills-category">
+        <h4>Front-end</h4>
+        <div class="skill">
+            <label for="html">HTML:</label>
+            <progress id="html" max="100" value="75">75%</progress>
+        </div>
+        <div class="skill">
+            <label for="css">CSS:</label>
+            <progress id="css" max="100" value="75">75%</progress>
+        </div>
+        <div class="skill">
+            <label for="javascript">JavaScript:</label>
+            <progress id="javascript" max="100" value="45">45%</progress>
+        </div>
+    </div>
+    <div class="skills-category">
+        <h4>Tools & Environments</h4>
+        <div class="skill">
+            <label for="visual-studio-code">Visual Studio Code:</label>
+            <progress id="visual-studio-code" max="100" value="80">80%</progress>
+        </div>
+        <div class="skill">
+            <label for="git">Git:</label>
+            <progress id="git" max="100" value="30">30%</progress>
+        </div>
+    </div>
+    <div class="skills-category">
+        <h4>Other</h4>
+        <div class="skill">
+            <label for="matlab">MATLAB:</label>
+            <progress id="matlab" max="100" value="80">80%</progress>
+        </div>
+        <div class="skill">
+            <label for="python">Python:</label>
+            <progress id="python" max="100" value="60">60%</progress>
+        </div>
+    </div>
+
+        </section>
+        <footer>
+            <a href="#projects-page-link">See my work in action!</a>
+        </footer>
