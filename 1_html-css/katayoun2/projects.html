@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="description"
+      content="Katayoun-Yousefzadeh - Frontend Web Development - Web design"
+    />
+    <title>-- Web Development Portfolio --</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="ho-line">
+        <div class="logoclass">
+          <!--<button class="javabutton" onclick="showalert()">
+            <img src="images/Fimann-logo-a.png" id="logo" alt="Fimannco.com" />
+          </button>-->
+        </div>
+        <div class="navigation">
+          <nav>
+            <ul>
+              <li><a href="index.html" class="links">| Home</a></li>
+              <li><a href="about.html" class="links">| About me</a></li>
+              <li><a href="projects.html" class="links">| Projects</a></li>
+              <li><a href="skils.html" class="links">| Skils</a></li>
+              <li><a href="contact.html" class="links">| Contact me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <h2 class="title">Survey Form</h2>
+      <p class="description2">
+        Thank you for taking the time to fill the form
+      </p>
+
+      <form class="surveyform" 
+        id="survey-form"
+        method="post"
+        action="#">
+        <fieldset>
+          <label id="name-label" for="name"
+            >Name
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+          /></label>
+          <label id="email-label" for="email"
+            >Email
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your Email"
+              required
+          /></label>
+          <label id="number-label" for="number"
+            >Age (optional)
+            <input
+              id="number"
+              name="number"
+              type="number"
+              min="13"
+              max="120"
+              pattern="[0-9]"
+              placeholder="Age"
+          /></label>
+        </fieldset>
+
+        <fieldset>
+          <label for="role"
+            >Which option best describes your current role?
+            <select id="role" name="role" required multiple>
+              <option value="">Select current role</option>
+              <option value="Student">Student</option>
+              <option value="Full tile job">Full tile job</option>
+              <option value="Full time learner">Full time learner</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label
+            >Would you recommend our services to a friend?
+            <label for="definitely"
+              ><input
+                id="definitely"
+                type="radio"
+                name="recommendationtype"
+                value="1"
+                class="inline"
+              />
+              Definitely</label
+            >
+            <label for="maybe"
+              ><input
+                id="maybe"
+                type="radio"
+                name="recommendationtype"
+                value="2"
+                class="inline"
+              />
+              Maybe</label
+            >
+            <label for="not sure"
+              ><input
+                id="not sure"
+                type="radio"
+                name="recommendationtype"
+                value="3"
+                class="inline"
+              />
+              Not sure</label
+            >
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="dropdown"
+            >What is your favorite sport?
+            <br>
+            <select id="dropdown" name="dropdown" required multiple>
+              <option value="">Select an option</option>
+              <option value="Tennis">Tennis</option>
+              <option value="Basketball">Basketball</option>
+              <option value="Swimming">Swimming</option>
+              <option value="Football">Football</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label
+            >What would you like to see improved? (Check all that apply)
+            <label for="Films">
+              <input
+                value="1"
+                id="Films"
+                type="checkbox"
+                name="Films"
+                class="inline"
+              />
+              Films</label
+            >
+            <label for="Events">
+              <input
+                value="2"
+                id="Events"
+                type="checkbox"
+                name="Events"
+                class="inline"
+              />
+              Events</label
+            >
+            <label for="Camps">
+              <input
+                value="3"
+                id="Camps"
+                type="checkbox"
+                name="Camps"
+                class="inline"
+              />
+              Camps</label
+            >
+            <label for="News">
+              <input
+                value="4"
+                id="News"
+                type="checkbox"
+                name="News"
+                class="inline"
+              />
+              News</label
+            >
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="comments"
+            >Any comments or suggestions?
+            <textarea
+              id="comments"
+              name="comments"
+              rows="3"
+              cols="30"
+              placeholder="Enter your comment here"
+            ></textarea>
+          </label>
+        </fieldset>
+
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+
+      <div class="icons">
+        <div class="linkedin">
+          <a
+            href="https://www.linkedin.com/in/katayoun-yousefzadeh/"
+            target="_blank"
+            ><img
+              src="images/linkedin.png"
+              basetarget="_new"
+              alt="My LinkedIn"
+              class="linkedinimage"
+          /></a>
+        </div>
+        <div class="gmail">
+          <a href="mailto:k.yousefzadeh@gmail.com" target="_blank"
+            ><img
+              src="images/logo-suite-google-email.png"
+              alt="Gmail me"
+              class="gmailimage"
+          /></a>
+        </div>
+        <div class="github">
+          <a href="https://github.com/katayouny" target="_blank"
+            ><img src="images/github.png" alt="My Github" class="githubimage"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
