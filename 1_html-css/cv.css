@@ -1,0 +1,284 @@
+
+
+body{
+    background: #eee9e9;
+    margin: 0;
+    font-family: Arial, sans-serif, Helvetica; 
+    background-image: url("./images/cv\ bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: 400px 600px;
+    background-position-x: 30%;
+    background-attachment: local; 
+}
+
+#nav-item{
+    list-style-type: none;
+    background-color: lightgray;
+    margin: 0%;
+    padding: 0%;
+    width: 90%;
+
+}
+
+.common-atribute{
+  padding: 4rem;
+}
+
+
+/*mobile format*/
+@media screen and (max-width:600px) {
+
+  .nav-item li a{
+    float: right;
+    display: block;
+    text-decoration: none;
+    color: rgb(113, 66, 66);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 10px;
+    
+}
+.main-frame{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-size: x-small;
+}
+.Expriences-class{
+  display: block;
+  align-items: center;
+  width: 100%;
+}
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav-item li a{
+    float: right;
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    
+}
+
+li a:hover{
+    background-color: rgb(153, 132, 132);
+    color: white;
+}
+
+.logo h6 a{
+    float: left;
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+}
+
+.logo h6 a:hover{
+    color: white;
+    background-color: rgb(54, 80, 54);
+}
+
+#profile .txt-container{
+    padding-top: 15%;
+    padding-left: 63%;
+}
+
+#profile .socialmedia{
+    list-style-type: none;
+    padding-left: 63%;
+    
+}
+
+#profile h1{
+    font-weight: 900;
+    font-size: calc(1.375rem + 1.5vw)
+    
+}
+
+#profile h1 a{
+    text-decoration: none;
+}
+
+.socialmedia .icon{
+    width: 32px;
+    height: 32px;
+    float: right;
+    display: block;
+    float: left;
+}
+
+.project-img{
+    width:250px;
+    height: 250px;
+}
+
+.project-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15%;
+    padding-left: 63%;
+}
+
+.project-container a{
+  text-decoration: none;
+  color: black;  f
+}
+
+
+#profile button{
+    display: flex;
+    background-color: black;
+    border: 2px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 2px;
+    float: right;
+    padding: 15px 32px;
+}
+
+#profile button:hover{
+    color: orange;
+}
+/* project */
+.head-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    font-size: 2rem;
+  }
+  .card-project {
+    display: flex;
+    justify-content: center;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.979);
+   
+  }
+  
+  .img-project {
+    width: 400px;
+    height: 300px;
+    
+  }
+
+
+  .title-project {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 15px;
+  }
+
+
+  .btn-project {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 15px 32px;
+    margin-bottom: 1rem;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 2px;
+    float: center; 
+  }
+
+
+  .btn-project:hover, .btn-cv:hover {
+    color: orange;
+    cursor: pointer;
+  }
+
+
+  .div-cv {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  .btn-cv {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+
+
+  #about {
+    display: block;
+    justify-content: center;
+    height: 30%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-block-start: 1rem;
+    align-items: center;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 10px;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .about-img {
+    height: 500px;
+    width: 300px;
+    border-radius: 1rem;
+  }
+
+  .contact {
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-me img, .call-me img{
+    width: 68px;
+    height: 68px;
+  }
+  
