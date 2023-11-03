@@ -2,3 +2,4 @@ I am doing Class exercises >>>> excercise 2.
 I am very happy by doing that. 
 No matter if I make mistakes, I will learn from them.
 *****************************************************'
+No it is time to add more text in the file for third time to see the results in GitHub.
