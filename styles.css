@@ -66,9 +66,8 @@ section{
 }
 .welcome-me{
     padding-top: 20vh;
-    display:flex;
-    flex-direction:row-row;
-    align-items:center;
+    display:block;
+
 }
 
 #welcome-section .welcome-me {
@@ -76,9 +75,10 @@ section{
 }
 
 .personal-photo{
-    height: 70px;
+    height: 120px;
     width: auto;
     margin-right: 10px;
+    border-radius: 50%;
 }
 
 #welcome-section p{
@@ -170,6 +170,10 @@ section{
 #contact{
     background-color:var(--neutral);
     color:var(--base-100)
+}
+.some-icons{
+    display: flex;
+    justify-content: space-between;
 }
 
 #contact h1{
