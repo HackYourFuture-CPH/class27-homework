@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1eaea;
+  color: #2b1d1d;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: #f9dede;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header {
+  background-image: url("https://www.nouri.co/images/Historical_Photo/nasir-al-mulk-mosque.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+#profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+#welcome-text {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  color: #1ea745;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  padding: 2rem;
+  background-color: #fff;
+  margin: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+  font-size: 1.5rem;
+}
+
+section p {
+  font-size: 1rem;
+}
+
+ul#skills {
+  list-style: none;
+}
+
+ul#skills li {
+  margin: 0.5rem 0;
+}
+
+.project {
+  margin-top: 2rem;
+}
+
+.project h4 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.project p {
+  font-size: 1rem;
+}
+
+.project a {
+  text-decoration: none;
+  color: #0077b5;
+}
+
+.contact-info,
+.social-media {
+  margin: 2rem 0;
+}
+
+.social-media ul {
+  list-style: none;
+}
+
+.social-media li {
+  margin: 0.5rem 0;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #0077b5;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 1rem;
+  }
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+  transition: color 0.3 ease-in-out;
+}
+header h1 {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+project a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.contact-info input[type="text"],
+.contact-info input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.contact-info input[type="text"]:focus,
+.contact-info input[type="email"]:focus {
+  border-color: #ff6600;
+}
+
+.social-media li a {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-media li a:hover {
+  transform: scale(1.2);
+}
