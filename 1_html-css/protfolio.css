@@ -139,7 +139,6 @@ h2{
     color: rgb(173, 173, 227);               
     text-decoration: none;     
     font-weight: bold; 
-          
 }
 
 .project-details a:hover {
@@ -219,6 +218,7 @@ footer.bottom-bar {
     color: white;
     text-align: center;
     padding: 10px 0;
+    width: 100%;
 }
 footer.bottom-bar nav a {
     color: white;
