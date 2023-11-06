@@ -1,0 +1,75 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(52, 46, 46);
+  background-image: url(images/holiday.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.outside-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
+}
+header {
+  height: 118px;
+  text-align: center;
+}
+.logo-m {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+}
+nav {
+  background-color: rgba(211, 211, 211, 0.369);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+main {
+  height: 400px;
+  text-align: left;
+  padding-top: 80px;
+  padding-left: 240px;
+  padding-right: 240px;
+}
+footer {
+  background-color: rgba(211, 211, 211, 0.369);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+p {
+  font-size: 24px;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+a {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+nav a {
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.copyright {
+  font-size: 13px;
+  text-align: center;
+}
+.map {
+  padding-bottom: 0px;
+}
