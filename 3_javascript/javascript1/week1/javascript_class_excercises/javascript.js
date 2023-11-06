@@ -1,1 +1,1 @@
-console.log('Hello from javascript page')
+console.log("Hello from javascript page2);
