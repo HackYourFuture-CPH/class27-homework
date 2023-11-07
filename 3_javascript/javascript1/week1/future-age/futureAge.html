@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Future Age</title>
+    <style>
+        form{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        fieldset{
+            margin: 30px;
+            padding: 30px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input , button {
+            margin: 10px;
+            width: 200px
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Future Age Calculator</legend>
+            <label for="yearOfBirth">Enter the year of your Birth: </label>
+            <input type="number" id="yearOfBirth">
+            <label for="yearFuture">Enter the future year:</label>
+            <input type="number" id="yearFuture">
+            <button onclick="calculateAge()">Your Future Age</button>
+            <p id="yourAge"></p>
+        </fieldset>
+    </form>
+    <script src="futureAge.js"></script>
+</body>
+</html>
