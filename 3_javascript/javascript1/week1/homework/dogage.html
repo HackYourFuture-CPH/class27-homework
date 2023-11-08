@@ -7,18 +7,18 @@
   </head>
   <body>
     <script>
-      var dogYearOfBirth = 2000;
-      var dogYearFuture = 2027;
-      var dogYear = 50;
-      var shouldShowResultInDogYears = true;
+      const shouldShowResultInDogYears = true;
+      const dogYearOfBirth = 2017;
+      const dogYearFuture = 2027;
+      const dogYear = dogYearFuture - dogYearOfBirth;
 
-      if ((shouldShowResultInDogYears = true)) {
-        ("Your dog will be 10 human years old in 2027");
+      if (shouldShowResultInDogYears) {
+        console.log(
+          "Your dog will be" + dogYear * 15 + "human years old in 2027"
+        );
       } else {
-        ("Your dog will be 70 dog years old in 2027");
+        console.log("Your dog will be 70 dog years old in 2027");
       }
-
-      // "Your dog will be 10 human years old in 2027" or "Your dog will be 70 dog years old in 2027"
     </script>
   </body>
 </html>
