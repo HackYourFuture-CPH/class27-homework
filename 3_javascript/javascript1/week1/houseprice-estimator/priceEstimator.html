@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House price Estimator</title>
+    <style>
+      form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      fieldset {
+        margin: 30px;
+        padding: 30px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input,
+      button {
+        margin: 10px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(113, 52, 84)">
+    <form action="#">
+      <fieldset>
+        <h2>House Price Estimator</h2>
+        <label for="wide">Enter width of the house </label>
+        <input type="number" id="wide" />
+        <label for="deep">Enter depth of the house</label>
+        <input type="number" id="deep" />
+        <label for="high">Enter height of the house</label>
+        <input type="number" id="high" />
+        <label for="gardenSize">Enter garden size of the house</label>
+        <input type="number" id="gardenSize" />
+        <label for="askedPrice">Enter price of the house </label>
+        <input type="number" id="askedPrice" />
+        <button onclick="estimatedPrice()">Estimate & Compare</button>
+        <p id="price"></p>
+      </fieldset>
+    </form>
+    <script src="priceEstimator.js"></script>
+  </body>
+</html>
