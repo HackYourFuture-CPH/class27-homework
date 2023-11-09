@@ -39,3 +39,14 @@ calculator(8, 10, 10, 100, 2500000)
 
 //function for Julia. Julia pays less than market value. ^.^
 calculator(5, 11, 8, 70, 1000000)
+
+
+//Ez Namey
+const firstWords = ["Cutie", "Tabby", "Chonky", "Grumpy", "Liquid", "Fluffy", "Squishable", "One-Brain-Cell", "Hangry", "Sleepy"]
+const secondWords = ["Cat", "Goat", "Giraffe", "Lion", "Tiger", "Cow", "Horse", "Duck", "Whale", "Leopard"]
+const randomNumber = Math.floor(Math.random() * 10);
+
+const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber]
+console.log(startupName)
+
+console.log("The startup: " + startupName + " contains " + startupName.length + " characters.")
