@@ -4,7 +4,7 @@ let yearOfBirth = 1976;
 let yearFuture = 2076;
 let age = yearFuture - yearOfBirth;
 
-console.log('You will be ' + age + ' years old in ' + yearFuture);
+console.log(`You will be ${age} years old in ${yearFuture}`);
 console.log('\n');
 
 
