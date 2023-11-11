@@ -33,10 +33,9 @@ if (choice === "dog") {
     console.log(`Your dog will be ${dogYear} human years old in ${dogYearFuture}`);
 
 } else {
-    alert("You have not entered dog neither human. \n
-     Please run the page again and enter one of them to perform the calculations");
+    alert("You have not entered dog neither human. \n Please run the page again and enter one of them to perform the calculations");
 
-  return;
+    return;
 }
 console.log('\n');
 
