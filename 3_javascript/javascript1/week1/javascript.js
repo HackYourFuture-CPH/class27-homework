@@ -8,7 +8,7 @@ let age = yearFuture - yearOfBirth;
 console.log(`You will be ${age} years old in ${yearFuture}`);
 console.log('\n');
 
-// eXC. 2 -----------------------------------------------------------------------------------
+// exc. 2 -----------------------------------------------------------------------------------
 
 console.log('----------- Goodboy-Oldboy (A dog age calculator) -----------');
 let dogYearOfBirth = 2018;
