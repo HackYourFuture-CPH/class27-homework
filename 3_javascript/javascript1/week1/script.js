@@ -45,3 +45,11 @@ if (JuliaActualPrice < JuliaHousePrice){
     console.log(JuliaHousePrice + " too little");
 
 }
+//Ez Namey(Startup name generator) 
+const firstWords = ["Mission","Vission","Spotlight","Live A life","Grandma","Shubh magal","Goldeger","Too Much","Rachin","Startup"];
+const secondWords = ["Chef","Hot Chilly","Samarth","GPL","YO Chef","Water Tank","Terminal","Good Luck","First Bank","Logout"];
+const randomNumber = Math.floor(Math.random() * 10);
+
+var startupName = `${firstWords[randomNumber]} ${secondWords[randomNumber]}`;
+
+console.log("My Startup Company Name is " + startupName + ".");
