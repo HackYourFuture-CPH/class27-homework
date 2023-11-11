@@ -114,7 +114,7 @@ let secondWords = [
 const randomNumber = Math.floor(Math.random() * 10);
 
 let startupName = firstWords[randomNumber] + ' ' + secondWords[randomNumber];
-console.log("The startup: " + startupName + " contains " + startupName.length + " characters");
+console.log(`The startup: ${startupName} contains ${startupName.length} characters`);
 
 
 
