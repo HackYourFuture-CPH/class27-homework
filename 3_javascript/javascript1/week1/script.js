@@ -6,7 +6,7 @@ console.log(typeof yearFuture);
 const curentYear = 2023;
 const age = curentYear - yearOfBirth;
 console.log(age);
-const futureAge = yearFuture - curentYear + age;
+const futureAge = yearFuture - yearOfBirth;
 console.log(futureAge);
 console.log(`You will be ${futureAge} years old in ${yearFuture}`);
 
