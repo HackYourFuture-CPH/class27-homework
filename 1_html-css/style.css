@@ -96,6 +96,10 @@ h1 {
     fill: #dff3fc;
     transition: fill  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.link-icon:hover, .link-icon:focus {
+    background-color: #149ddd;
+}
 nav-menu {
   padding: 10px 10px 0 0;
 }
@@ -487,20 +491,20 @@ h4 {
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+/* .contact .php-email-form button[type=submit] {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
   border-radius: 4px;
-}
+} */
 
 /* .contact .php-email-form button[type=submit]:hover {
   background: #37b3ed;
 } */
 
-@keyframes animate-loading {
+/* @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
   }
@@ -508,4 +512,4 @@ h4 {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
