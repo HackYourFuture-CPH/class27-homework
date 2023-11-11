@@ -44,7 +44,7 @@ console.log('\n');
 
 console.log('----------- Housey pricey (A house price estimator) -----------');
 
-let JuliaHouse = {
+let juliaHouse = {
     wide: 5, //m
     high: 11, //m
     deep: 8, //m
@@ -52,18 +52,18 @@ let JuliaHouse = {
     housePricePaidByJulia: 1000000
 };
 
-let JuliaHousePrice;
+let juliaHousePrice;
 
 // housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300; 
-JuliaHousePrice = (JuliaHouse.wide * JuliaHouse.high * JuliaHouse.deep) * 2.5 * 1000 + (JuliaHouse.gardenSizeInM2 * 300);
+juliaHousePrice = (juliaHouse.wide * juliaHouse.high * juliaHouse.deep) * 2.5 * 1000 + (juliaHouse.gardenSizeInM2 * 300);
 
-if (JuliaHouse.housePricePaidByJulia > JuliaHousePrice) {
-    console.log('Julia has paid more: ' + ' She has paid: ' + JuliaHouse.housePricePaidByJulia + 'and the real price is: ' + JuliaHousePrice);
+if (juliaHouse.housePricePaidByJulia > juliaHousePrice) {
+    console.log(`Julia has paid more: She has paid: ${juliaHouse.housePricePaidByJulia} and the real price is: ${juliaHousePrice}`);
 } else {
     console.log('Julia has paid less than Peter');
 }
 
-let PeterHouse = {
+let peterHouse = {
     wide: 8, //m
     high: 10, //m
     deep: 10, //m
@@ -71,26 +71,18 @@ let PeterHouse = {
     housePricePaidByPeter: 2500000
 };
 
-let PeterHousePrice;
-PeterHousePrice = (PeterHouse.wide * PeterHouse.high * PeterHouse.deep) * 2.5 * 1000 + (PeterHouse.gardenSizeInM2 * 300);
+let peterHousePrice;
+peterHousePrice = (peterHouse.wide * peterHouse.high * peterHouse.deep) * 2.5 * 1000 + (peterHouse.gardenSizeInM2 * 300);
 
-if (PeterHouse.housePricePaidByPeter > PeterHousePrice) {
-    console.log('Peter has paid more than Julia. ' + ' He has paid ' + PeterHouse.housePricePaidByPeter + ' and the real price is ' + PeterHousePrice);
+if (peterHouse.housePricePaidByPeter > peterHousePrice) {
+    console.log(`Peter has paid more than Julia. He has paid ${peterHouse.housePricePaidByPeter} and the real price is ${peterHousePrice}`);
 } else {
     console.log('Peter has paid less');
 }
 
 console.log('\n');
 
-/* if (JuliaHouse.housePricePaidByJulia > PeterHousePrice.housePricePaidByPeter) {
-    console.log('Julia has paid more than Peter');
-}
-else if (JuliaHouse.housePricePaidByJulia == PeterHousePrice.housePricePaidByPeter) {
-    console.log('Julia anad Peter has paid the same amount of ' + JuliaHouse.housePricePaidByJulia);
-} else {
-    console.log('Peter has paid more than Julia');
-}*/
-
+// eXC. 4 -----------------------------------------------------------------------------------
 
 console.log('----------- Ez Namey (Startup name generator) Optional -----------');
 
