@@ -67,3 +67,4 @@ if (juliaActualPrice > juliaExpectedPrice) {
 } else {
   console.log("Julia is getting a good deal for the house.");
 }
+// comment
