@@ -1,9 +1,9 @@
  //hello... Hello... This is my first experience in Javascript :)
 
 console.log("******    Age-ify (A future age calculator)    ******");
-let myYearOfBirth = 1991;
-let yearFuture = 2027;
-let age = yearFuture - myYearOfBirth;
+const myYearOfBirth = 1991;
+const yearFuture = 2027;
+const age = yearFuture - myYearOfBirth;
 
 console.log("I\'ll be " + age + " years old in " + yearFuture + ".");
 console.log("\n");
@@ -11,14 +11,14 @@ console.log("\n");
 
 
 console.log("******    Goodboy-Oldboy (A dog age calculator)    ******");
-let dogYearOfBirth = 2017;
-let dogYearFuture = 2045;
+const dogYearOfBirth = 2017;
+const dogYearFuture = 2045;
 // We have a conditional statement, so a "BOOLEAN variable" can represent (shouldShowResultInDogYears).
 let shouldShowResultInDogYears = true;
 
  // According to the information in the txt:(1 human year = 7 dog year)
-let dogAge = (dogYearFuture - dogYearOfBirth)*7;
-let humanAge = dogYearFuture - dogYearOfBirth;
+const dogAge = (dogYearFuture - dogYearOfBirth)*7;
+const humanAge = dogYearFuture - dogYearOfBirth;
 
 if (shouldShowResultInDogYears) {
     console.log("His dog will be " + dogAge + " dog years old in " + dogYearFuture + ".");
@@ -27,7 +27,6 @@ if (shouldShowResultInDogYears) {
 else {
  console.log("His dog will be " + humanAge + " human years old in " + dogYearFuture + ".");
 }
-console.log("/* His dog will be 28 human years old in 2045. */");
 console.log("\n");
 
 
