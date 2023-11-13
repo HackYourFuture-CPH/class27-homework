@@ -91,3 +91,44 @@ addStudentToClass("Hassan");
 addStudentToClass("Queen");
 console.log(class07Students);
 getNumberOfStudents();
+
+// candy helper
+let boughtCandyPrices = [];
+const addCandy = (candyType , weight) => {
+    let pricePerGram;
+    switch (candyType){
+        case "Sweet":
+            pricePerGram = 0.5;
+            break;
+        case "Chocolate":
+            pricePerGram = 0.7;
+            break;
+        case "Toffee":
+            pricePerGram = 1.1;
+            break;
+        case "Chewing-gum":
+            pricePerGram = 0.03;
+            break;    
+    }
+    let totalPrice = pricePerGram * weight
+    boughtCandyPrices.push(totalPrice)
+}
+const canBuyMoreCandy = () => {
+    let amountToSpend = Math.random() * 100;
+    let sum = 0
+    boughtCandyPrices.forEach((candyPrice) => {
+        sum += candyPrice
+    })
+    if(sum < amountToSpend){
+        console.log("You can buy more, so please do!");
+    }else{
+        console.log("Enough candy for you!")
+    }
+}
+addCandy("Toffee", 20);
+addCandy("Chocolate", 40);
+addCandy("Chewing-gum", 100);
+addCandy("Toffee",10);
+addCandy("Sweet", 40);
+console.log(boughtCandyPrices);
+canBuyMoreCandy()
