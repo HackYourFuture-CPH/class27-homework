@@ -27,3 +27,20 @@ const getEventDay = (daysUntilEvent) =>{
 }
 getEventDay(9); 
 getEventDay(5); 
+
+// weather wear
+const clothesToWear = (temperature) => {
+    if(temperature >= 20){
+        console.log("It is very hot. shorts and T-shirt is a good choise");
+    }else if(temperature >= 10){
+        console.log("It is warm. jeans and shirt is good");
+    }else if(temperature>=5){
+        console.log("It is cool .wear jeans and long sleeve");
+    }
+    else{
+        console.log("It is cold. Make sure to have jacket with you");
+    }
+}
+clothesToWear(15);
+clothesToWear(2);
+clothesToWear(25);
