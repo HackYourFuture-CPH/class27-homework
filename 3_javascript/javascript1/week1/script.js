@@ -6,7 +6,7 @@ console.log(typeof yearFuture);
 const curentYear = 2023;
 const age = curentYear - yearOfBirth;
 console.log(age);
-const futureAge = yearFuture - curentYear + age;
+const futureAge = yearFuture - yearOfBirth;
 console.log(futureAge);
 console.log(`You will be ${futureAge} years old in ${yearFuture}`);
 
@@ -16,7 +16,6 @@ const dogYearOfBirth = 2018;
 const dogYearFuture = 2045;
 const dogYear = 2023;
 const result = dogYear - dogYearOfBirth;
-console.log(result);
 const dogFutureAge = dogYearFuture - dogYear + result;
 console.log(dogFutureAge);
 const shouldShowResultInDogYears = true;
@@ -28,25 +27,25 @@ if (shouldShowResultInDogYears === true) {
 
 //Housey pricey (A house price estimator)
 
-const volumeInMeters1 = 8 * 10 * 10;
-const housePrice1 = 2500000;
+const volumeInMetersPeter = 8 * 10 * 10;
+const thePricOfTheHousePeterWants = 2500000;
 const gardenSizeInM2Peter = 100;
-const calculatedHousePrice = volumeInMeters1 * 2.5 * 1000 + gardenSizeInM2Peter * 300;
-if (housePrice1 > calculatedHousePrice) {
+const calculatedHousePricePeter = volumeInMetersPeter * 2.5 * 1000 + gardenSizeInM2Peter * 300;
+if (thePricOfTheHousePeterWants > calculatedHousePricePeter) {
   console.log("too expensive");
-} else if (housePrice1 === calculatedHousePrice) {
+} else if (thePricOfTheHousePeterWants === calculatedHousePricePeter) {
   console.log("price is good");
 } else {
   console.log("cheap");
 }
 
-const volumeInMeters2 = 5 * 11 * 8;
-const housePrice2 = 1000000;
+const volumeInMetersJulia = 5 * 11 * 8;
+const thePriceOfTheHouseJuliaWants = 1000000;
 const gardenSizeInM2Julia = 70;
-const calculatedHousePrice2 = volumeInMeters2 * 2.5 * 1000 + gardenSizeInM2Julia * 300;
-if (housePrice2 > calculatedHousePrice2) {
+const calculatedHousePriceJulia = volumeInMetersJulia * 2.5 * 1000 + gardenSizeInM2Julia * 300;
+if (thePriceOfTheHouseJuliaWants > calculatedHousePriceJulia) {
   console.log("too expensive");
-} else if (housePrice2 === calculatedHousePrice2) {
+} else if (thePriceOfTheHouseJuliaWants === calculatedHousePriceJulia) {
   console.log("price is good");
 } else {
   console.log("cheap");
@@ -82,5 +81,4 @@ const secondWords = [
 const randomNumber = Math.floor(Math.random() * 10);
 console.log(randomNumber);
 const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
-console.log(startupName);
-console.log(startupName.length);
+console.log(`The startup: ${startupName} contains ${startupName.length} characters`);
