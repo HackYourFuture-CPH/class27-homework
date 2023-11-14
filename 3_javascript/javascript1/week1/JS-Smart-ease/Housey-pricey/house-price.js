@@ -5,8 +5,8 @@ let heightInM2= 10;
 let gardenSizeInM2 = 100;
 const house1= 2500000;
 
-volumeInMeters = widthInM2 * depthInM2 * heightInM2; 
-housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+const volumeInMeters = widthInM2 * depthInM2 * heightInM2; 
+const housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 console.log(housePrice);
 
 if ((house1-housePrice)>0){
