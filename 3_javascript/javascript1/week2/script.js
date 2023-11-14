@@ -106,6 +106,9 @@ const addCandy = (candyType, weight) => {
     case "Chewing-gum":
       pricePerGram = 0.03;
       break;
+      default:
+        console.log("Unknown candy type");
+        break;
   }
   let totalPrice = pricePerGram * weight;
   boughtCandyPrices.push(totalPrice);
