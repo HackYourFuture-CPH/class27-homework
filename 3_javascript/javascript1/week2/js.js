@@ -85,7 +85,7 @@ const getEventDay = (daysUntilEvent) => {
     const today = new Date();
     const futureDate = today.getDay();
     const weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-    const futureEvent = (futureDate + daysUntilEvent) % 7;
+    const futureEvent = (futureDate + daysUntilEvent -1) % 7;
     return weekdays[futureEvent];
   };
-  console.log(`The event will be held on a ${getEventDay(9)}`);
+  console.log(`The event will be held on a ${getEventDay(10)}`);
