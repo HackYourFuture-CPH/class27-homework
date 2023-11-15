@@ -16,3 +16,22 @@ const fullname2= getFullname("Benjamin","Hughes", false, false);
 
 console.log(fullname1);
 console.log(fullname2);
+
+
+
+// Weather Wear 
+
+function temperatureOut(temperature){
+    if (temperature > 40){
+        return "Do not go outside if you don't want to be grilled"
+    }
+    else if (temperature > 20){
+        return "You should wear t-shirt and remember to apply sunscreen";
+    } else if (temperature < 20 && temperature > 15){
+        return "You should wear a sweater";
+    }else {
+        return "You should wear a Jacket"
+    }
+}
+const clothesToWear = temperatureOut(45);
+console.log(clothesToWear); // Logs out: "shorts and a t-shirt"
