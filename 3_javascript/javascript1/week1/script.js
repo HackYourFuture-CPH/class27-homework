@@ -1,7 +1,7 @@
  //calcutation of future age.
-let yearOfBirth = 1996;
-let yearFuture = 2023;
-let age = yearFuture - yearOfBirth;
+const yearOfBirth = 1996;
+const yearFuture = 2023;
+const age = yearFuture - yearOfBirth;
 console.log("You will be " +age+ "years old in "+ yearFuture );
 
 // a dog age is calculation.
