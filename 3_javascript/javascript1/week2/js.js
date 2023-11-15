@@ -34,4 +34,43 @@ function temperatureOut(temperature){
     }
 }
 const clothesToWear = temperatureOut(45);
-console.log(clothesToWear); // Logs out: "shorts and a t-shirt"
+console.log(clothesToWear);
+
+
+
+// Student manager & get number of
+
+const class07Students = [];
+function addStudentToClass(studentName) {
+    for (let i = 0; i < class07Students.length; i++) {
+        if (class07Students[i] === studentName) {
+          console.log("Student "+ studentName +" is already in the class");
+          return;
+        }
+    }
+   
+    if (class07Students.length < 6 || studentName === "Queen") {
+        class07Students.push(studentName);
+      } else if (studentName === "") {
+        confirm.log("Please add a name")
+      } else {
+        console.log("no more students to be added");
+      } 
+}
+   
+
+
+addStudentToClass ("Youssef");
+addStudentToClass ("Rene");
+addStudentToClass("Younes");
+addStudentToClass("Ahmad");
+addStudentToClass("Margret");
+addStudentToClass("Saeed");
+addStudentToClass("Queen");
+console.log(class07Students)
+
+
+function getNumberOfStudents() {
+  console.log(class07Students.length);
+}
+getNumberOfStudents();
