@@ -49,23 +49,27 @@ function addStudentToClass(studentName) {
         }
     }
    
-    if (class07Students.length < 6 || studentName === "Queen") {
-        class07Students.push(studentName);
-      } else if (studentName === "") {
-        confirm.log("Please add a name")
-      } else {
-        console.log("no more students to be added");
-      } 
+    if (studentName !== ""){
+        if (class07Students.length < 6 || studentName === "Queen") {
+            class07Students.push(studentName);
+        } else {
+            console.log("no more students to be added");
+        } 
+    } else {
+        console.log("please add a name.")
+    }
 }
    
 
 
 addStudentToClass ("Youssef");
 addStudentToClass ("Rene");
-addStudentToClass("Younes");
+addStudentToClass("");
 addStudentToClass("Ahmad");
 addStudentToClass("Margret");
 addStudentToClass("Saeed");
+addStudentToClass("Saeed");
+addStudentToClass("Wael");
 addStudentToClass("Queen");
 console.log(class07Students)
 
@@ -74,3 +78,14 @@ function getNumberOfStudents() {
   console.log(class07Students.length);
 }
 getNumberOfStudents();
+
+
+// Event Application
+const getEventDay = (daysUntilEvent) => {
+    const today = new Date();
+    const futureDate = today.getDay();
+    const weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    const futureEvent = (futureDate + daysUntilEvent) % 7;
+    return weekdays[futureEvent];
+  };
+  console.log(`The event will be held on a ${getEventDay(9)}`);
