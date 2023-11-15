@@ -13,7 +13,8 @@ function getFullname(firstname, surname, gender, useFormalName = false) {
 }
 
 const fullname1 = getFullname("Benjamin", "Hughes", "man", true);
-const fullname2 = getFullname("Angel", "A", "man", false);
+const fullname2 = getFullname("Angel", "Aboah", "man", false);
 
-console.log(getFullname("Benjamin", "Hughes", "man", true));
-console.log(getFullname("Angel", "A", "man", false));
+console.log(getFullname("Benjamin", "Hughes"));
+console.log(getFullname("Angel", "Aboah", "man", false));
+console.log(getFullname("Lord Benjamin", "Hughes", "man", "true"));
