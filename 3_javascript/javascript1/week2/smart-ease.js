@@ -41,3 +41,18 @@ function getEventDay(daysUntilEvent) {
     return eventWeekday;
 }
 console.log(getEventDay(8));
+
+//Weather wear
+const clothesToWear = [" jeans", " t-shirt", " and sneakers."];
+function whatDoIHaveToWear(temperature) {
+    if (temperature >= 15) {
+      return "I should have my sunglasses" + clothesToWear;
+    } else {
+      return "Just stay home and hygge.";
+    }
+  }
+const myOutfitForToday = (whatDoIHaveToWear(23));
+console.log(myOutfitForToday);
+const myOutfitForTodayTwo = (whatDoIHaveToWear(10));
+console.log(myOutfitForTodayTwo);
+
