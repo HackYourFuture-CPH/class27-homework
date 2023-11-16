@@ -1,4 +1,5 @@
    //Flight booking fullname function
+
 const firstName = "Benjamin";
 const surname = "Hughes";
 getFullnameVercion1 = firstName+" "+surname;
@@ -20,3 +21,23 @@ function getFullname(firstname, surname, sex, useFormalName = true){
 console.log(fullname1);
 console.log(fullname2); 
 console.log(fullname3);
+
+
+//Event application
+
+const weekdays = [
+    "Sunday", 
+    "Monday", 
+    "Tuesday", 
+    "Wednesday", 
+    "Thursday", 
+    "Friday", 
+    "Saturdat"];
+const today = new Date();
+const futureDay = new Date(today); 
+function getEventDay(daysUntilEvent) {
+    futureDay.setDate(today.getDate() + daysUntilEvent);
+    const eventWeekday = weekdays[futureDay.getDay()];
+    return eventWeekday;
+}
+console.log(getEventDay(8));
