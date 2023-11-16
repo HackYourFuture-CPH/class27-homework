@@ -6,7 +6,7 @@ const yearFuture = 2027;
 const age = yearFuture - myYearOfBirth;
 
 console.log("I\'ll be " + age + " years old in " + yearFuture + ".");
-console.log("\n");
+
 
 
 
@@ -27,46 +27,45 @@ if (shouldShowResultInDogYears) {
 else {
  console.log("His dog will be " + humanAge + " human years old in " + dogYearFuture + ".");
 }
-console.log("\n");
 
 
 console.log("******    Housey pricey (A house price estimator)    ******");
 //Peter:
-var petersPreferredHouseWide = a;
-var petersPreferredHouseDeep = b;
-var petersPreferredHouseHigh = c;
+const petersPreferredHouseWide = 8; //m
+const petersPreferredHouseDeep = 10; //m
+const petersPreferredHouseHigh = 10; //m
 
-let petersGardenSizeInM2 = 100; //m2
-let petersPreferredHouseCosts = 2500000; //$
+const petersGardenSizeInM2 = 100; //m2
+const petersPreferredHouseCosts = 2500000; //$
 
-var a = 8; //m
-var b = 10; //m
-var c = 10; //m
+const volumeInMetersP = petersPreferredHouseWide * petersPreferredHouseDeep * petersPreferredHouseHigh;
+const petersHousePrice = volumeInMetersP * 2.5 * 1000 + petersGardenSizeInM2 * 300;
 
-var volumeInMeters = a * b * c;
-const petersHousePrice = volumeInMeters * 2.5 * 1000 + petersGardenSizeInM2 * 300;
-const petersPriceDifference = petersPreferredHouseCosts - petersHousePrice;
-//We can consider the currency unit as the US Doller.
-console.log("Peter is paying " + petersPriceDifference + " more than real price.");
+if(petersHousePrice < petersPreferredHouseCosts) {
+    console.log("Such a good deal for Peter.");
+}
+else{
+    console.log("Too expensive deal for Peter."); 
+}
+
 
 //Julia:
-var juliasPreferredHouseWide = x;
-var juliasPreferredHouseDeep = y;
-var juliasPreferredHouseHigh = z;
+const juliasPreferredHouseWide = 5; //m
+const juliasPreferredHouseDeep = 11; //m
+const juliasPreferredHouseHigh = 8; //m
 
-let juliasGardenSizeInM2 = 70; //m2
-let juliasPreferredHouseCosts = 1000000; //$
+const juliasGardenSizeInM2 = 70; //m2
+const juliasPreferredHouseCosts = 1000000; //$
 
-var x = 5; //m
-var y = 11; //m
-var z = 8; //m
+const volumeInMetersJ = juliasPreferredHouseWide * juliasPreferredHouseDeep * juliasPreferredHouseHigh;
+const juliasHousePrice = volumeInMetersJ * 2.5 * 1000 + juliasGardenSizeInM2 * 300;
 
-var volumeInMeters = x * y * z;
-const juliasHousePrice = volumeInMeters * 2.5 * 1000 + juliasGardenSizeInM2 * 300;
-const juliasPriceDifference = juliasPreferredHouseCosts - juliasHousePrice;
-//We can consider the currency unit as the US Doller.
-console.log("Julia is paying " + juliasPriceDifference + " less than real price.");
-console.log("\n");
+if(juliasHousePrice < juliasPreferredHouseCosts) {
+    console.log("Such a good deal for Julia.");
+}
+else{
+    console.log("Too expensive deal for Julia."); 
+}
 
 
 console.log("******    Ez Namey (Startup name generator) Optional    ******");
@@ -74,11 +73,11 @@ const firstWords =  [
     "Golden",
     "Amazing",
     "Brilliant",
-    "Cute",
+    "Huge",
     "Inteligent",
     "Smart",
     "Silver",
-    "Shine",
+    "Shiny",
     "Alpha",
     "Fast"
 ];
@@ -97,7 +96,9 @@ const secondWords = [
 ];
 
 const randomNumber = Math.floor(Math.random() * 10);
-console.log(randomNumber);
-const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
-console.log(startupName);
-console.log(startupName.length);
+const firstWord = firstWords[randomNumber];
+const secondWord = secondWords[randomNumber];
+const startupName = firstWord + secondWord;
+const count  = startupName.length - 1;
+
+console.log("The Startup: " + startupName + " contains " + count + "characters.");
