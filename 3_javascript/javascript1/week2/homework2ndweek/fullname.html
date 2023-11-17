@@ -6,13 +6,19 @@
   </head>
   <body>
     <script>
-      const firstName = "Monika";
-      const surName = "Marciniak";
+      const firstname1 = getFullName("Monika", "Marciniak");
+      const firstname2 = getFullName("John", "Smith", false);
 
-      function getFullName(firstName, surName) {
-        return firstName + " " + surName;
+      function getFullName(firstName, surName, isWoman = true) {
+        if (isWoman) {
+          return "Lady " + firstName + " " + surName;
+        } else {
+          return "Lord " + firstName + " " + surName;
+        }
       }
-      console.log(getFullName(firstName, surName));
+
+      console.log(firstname1);
+      console.log(firstname2);
     </script>
   </body>
 </html>
