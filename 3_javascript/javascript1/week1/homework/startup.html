@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startup</title>
+  </head>
+  <body>
+    <script>
+      const firstWords = [
+        "nice",
+        "easy",
+        "great",
+        "big",
+        "cool",
+        "pink",
+        "worrior",
+        "classy",
+        "funny",
+        "smth",
+      ];
+      const secondWords = [
+        "smart",
+        "wonderful",
+        "cozy",
+        "shoe",
+        "car",
+        "cleaning",
+        "pencil",
+        "eight",
+        "elephant",
+        "groomer",
+      ];
+      const randomNumber = Math.floor(Math.random() * 10);
+
+      const startupName =
+        firstWords[randomNumber] + " " + secondWords[randomNumber];
+      const length = startupName.length;
+      console.log(
+        "The startup: " +
+          '"' +
+          startupName +
+          '"' +
+          " contains " +
+          length +
+          " characters"
+      );
+    </script>
+  </body>
+</html>
