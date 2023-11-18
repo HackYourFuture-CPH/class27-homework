@@ -15,34 +15,30 @@ function getFullname(firstname, surname, useFormalName) {
 
 var fullname1 = getFullname("Benjamin", "Hughes", true);
 var fullname2 = getFullname("Alice", "Smith", false);
- 
 
-//What do we do if useFormalName is not given as an argument? 
-//answer :WE GIVE DEFULT 
+//What do we do if useFormalName is not given as an argument?
+//answer :WE GIVE DEFULT
 //   FUNCTION (FIRSTNAME,SURNAME,USEFORMALNAME=FALSE,ISFEMALE=FALSE)
 
-Function getFullname(firstname, surname, useFormalName, isFemale) {
-    
-    if (!firstname || !surname) {
-      return " provide both firstname and surname";
-    }
-  
-    
-    var title = isFemale ? "Lady" : "Lord";
-  
-  
-    if (useFormalName) {
-      return `${title} ${firstname} ${surname}`;
-    } else {
-      return `${firstname} ${surname}`;
-    }
+function getFullname(firstname, surname, useFormalName, isFemale) {
+  if (!firstname || !surname) {
+    return " provide both firstname and surname";
   }
-      //example:
- 
- var femaleFullname =getFullname('sanaz','rezaei',true,true);
-  ///vent application
 
-// Another customer has contacted us. He works for a secret company that rimes with foogle. 
+  var title = isFemale ? "Lady" : "Lord";
+
+  if (useFormalName) {
+    return `${title} ${firstname} ${surname}`;
+  } else {
+    return `${firstname} ${surname}`;
+  }
+}
+//example:
+
+var femaleFullname = getFullname("sanaz", "rezaei", true, true);
+///vent application
+
+// Another customer has contacted us. He works for a secret company that rimes with foogle.
 //
 //The customer works on their calendar application. They need some functionality to help with writing what weekday an event is held.
 
@@ -60,26 +56,31 @@ Function getFullname(firstname, surname, useFormalName, isFemale) {
 
 // Hint: use remainder operator, array indexes and investigate new Date in js.
 
+function getEventWeekday(daysFromToday) {
+  const weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
+  // Get the current day index
+  const todayIndex = new Date().getDay();
 
-  function getEventWeekday(daysFromToday) {
-  
-    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  
-    // Get the current day index
-    const todayIndex = new Date().getDay();
-  
-    // Calculate the index of the event day
-    const eventDayIndex = (todayIndex + daysFromToday) % 7;
-  
-    // Return the corresponding weekday
-    return weekdays[eventDayIndex];
-  }
-  
-  // Test cases
-  console.log(getEventWeekday(9)); // Logs out "Thursday"
-  console.log(getEventWeekday(2)); // Logs out "Sunday"
- 
+  // Calculate the index of the event day
+  const eventDayIndex = (todayIndex + daysFromToday) % 7;
+
+  // Return the corresponding weekday
+  return weekdays[eventDayIndex];
+}
+
+// Test cases
+console.log(getEventWeekday(9)); // Logs out "Thursday"
+console.log(getEventWeekday(2)); // Logs out "Sunday"
+
 //3
 // Weather wear
 
@@ -92,40 +93,40 @@ Function getFullname(firstname, surname, useFormalName, isFemale) {
 // console.log(clothesToWear); // Logs out: "shorts and a t-shirt"
 
 function suggestClothing(temperature) {
-    if (temperature >= 25) {
-      return "shorts and a t-shirt";
-    } else if (temperature >= 18) {
-      return "light jacket and jeans";
-    } else if (temperature >= 10) {
-      return "sweater and pants";
-    } else {
-      return "coat and warm clothes";
-    }
+  if (temperature >= 25) {
+    return "shorts and a t-shirt";
+  } else if (temperature >= 18) {
+    return "light jacket and jeans";
+  } else if (temperature >= 10) {
+    return "sweater and pants";
+  } else {
+    return "coat and warm clothes";
   }
-  
-  // Example :
-  const clothesToWear = suggestClothing(18);
-  console.log(clothesToWear); // Logs out: "light jacket and jeans"
-  //4:
+}
+
+// Example :
+const clothesToWear = suggestClothing(18);
+console.log(clothesToWear); // Logs out: "light jacket and jeans"
+//4:
 
 //   Student manager
 
 //   A coding school have contacted us to make some functionality for managing their classes. We will create functionality for adding students to a class.
-  
+
 //   For this exercise you need to figure out how Array.push works. Learn about the concept by researching about it.
-  
+
 //   Copy the following code into your homework js file
-  
+
 //   const class07Students = [];
 //   function addStudentToClass(studentName) {
 //     // You write code here
 //   }
-  
+
 //   function getNumberOfStudents() {
 //     // You write code here
 //   }
 
- const class07Students = [];
+const class07Students = [];
 
 function addStudentToClass(studentName) {
   // Check empty string and is not already in the class
@@ -141,7 +142,6 @@ function addStudentToClass(studentName) {
 function getNumberOfStudents() {
   return class07Students.length;
 }
-
 
 addStudentToClass("sanaz");
 addStudentToClass("maryam");
@@ -163,45 +163,33 @@ console.log(`Number of students in the class: ${getNumberOfStudents()}`);
 const class07Students = [];
 
 function addStudentToClass(studentName) {
-  
   if (class07Students.length >= 6) {
     console.log("Cannot add more students to class 07");
     return;
   }
 
-  
   if (!studentName) {
     console.log("Student name cannot be empty");
     return;
   }
 
-  
   if (class07Students.includes(studentName)) {
     console.log(`Student ${studentName} is already in the class`);
     return;
   }
 
- 
   if (studentName.toLowerCase() === "queen") {
     class07Students.push(studentName);
     console.log("Long live the Queen! Queen added to the class.");
   } else {
-
     class07Students.push(studentName);
     console.log(`Student ${studentName} added to the class.`);
   }
 }
 
-
- addStudentToClass("sanaz");
- addStudentToClass("Nilo");
- addStudentToClass("sanaz"); // This should print an error message
+addStudentToClass("sanaz");
+addStudentToClass("Nilo");
+addStudentToClass("sanaz"); // This should print an error message
 addStudentToClass(""); // This should print an error message
 addStudentToClass("Queen"); // This should add the Queen to the class
- addStudentToClass("Dena"); // This should print an error message (class full)
-
- getNumberOfStudents function
-
-//getNumberOfStudents should simply return the number of students in the class.
-
-
+addStudentToClass("Dena"); // This should print an error message (class full)
