@@ -32,3 +32,23 @@ function todayWeatherTemp(temp) {
   }
 }
 console.log(todayWeatherTemp(37));
+
+//Event Application
+
+const todayDay = new Date();
+const todayWeek = todayDay.getDay();
+const targetWeek = (todayWeek + 9) % 7;
+
+function getEventWeekday(weekOfTheEvent) {
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return daysOfWeek[targetWeek];
+}
+console.log("9 weeks from today will be a " + getEventWeekday(9));
