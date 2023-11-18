@@ -52,3 +52,29 @@ function getEventWeekday(weekOfTheEvent) {
   return daysOfWeek[targetWeek];
 }
 console.log("9 weeks from today will be a " + getEventWeekday(9));
+
+//student Manager-addStudentToClass
+const class07Students = [];
+function addStudentToClass(studentName) {
+  switch (true) {
+    case class07Students.includes(studentName):
+      console.log("Student ${studentName} is already in the class.");
+      break;
+    case class07Students.length >= 6 && studentName.toLowerCase() !== "queen":
+      console.log("Cannot add more students to class 07.");
+      break;
+    default:
+      class07Students.push(studentName);
+      console.log("Student ${studentName} has been added to class 07.");
+      break;
+  }
+}
+
+addStudentToClass("Rishab");
+addStudentToClass("Jyansh");
+addStudentToClass("Mohit");
+addStudentToClass("Rooney");
+addStudentToClass("Babul");
+addStudentToClass("Anshu");
+addStudentToClass("boo");
+addStudentToClass("queen");
