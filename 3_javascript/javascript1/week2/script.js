@@ -78,3 +78,11 @@ addStudentToClass("Babul");
 addStudentToClass("Anshu");
 addStudentToClass("boo");
 addStudentToClass("queen");
+
+//student Manager-getNumberOfStudents
+
+function getNumberOfStudents() {
+  return class07Students.length;
+}
+
+//Candy helper optinal
