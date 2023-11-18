@@ -19,3 +19,16 @@ function getFullname(firstName, surName, useFormalName, isWoman) {
 }
 const formalName = getFullname("Anjali", "Kumari", false, true);
 console.log(formalName);
+//note: other way to solve the promblem is = isWoman ? 'Lady' : 'Lord';
+
+//Weather Wear
+function todayWeatherTemp(temp) {
+  if (temp <= 10) {
+    return "Long Winter Jacket";
+  } else if (temp <= 20) {
+    return "causual shirt and jeans";
+  } else {
+    return "shorts and tshirt";
+  }
+}
+console.log(todayWeatherTemp(37));
