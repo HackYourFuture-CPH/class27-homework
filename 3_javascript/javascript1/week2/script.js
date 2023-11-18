@@ -65,7 +65,7 @@ function addStudentToClass(studentName) {
       break;
     default:
       class07Students.push(studentName);
-      console.log("Student ${studentName} has been added to class 07.");
+      console.log(`Student ${studentName} has been added to class 07.`);
       break;
   }
 }
@@ -79,10 +79,7 @@ addStudentToClass("Anshu");
 addStudentToClass("boo");
 addStudentToClass("queen");
 
-//student Manager-getNumberOfStudents
-
 function getNumberOfStudents() {
   return class07Students.length;
 }
-
-//Candy helper optinal
+console.log(class07Students);
