@@ -131,3 +131,4 @@ addCandy("sweet", 20);
 addCandy("chocolate", 15);
 console.log(canBuyMoreCandy());
 addCandy("toffee", 5);
+console.log(canBuyMoreCandy());
