@@ -67,19 +67,16 @@ function getEventWeekday(daysFromToday) {
     "Saturday",
   ];
 
-  // Get the current day index
   const todayIndex = new Date().getDay();
 
-  // Calculate the index of the event day
   const eventDayIndex = (todayIndex + daysFromToday) % 7;
 
-  // Return the corresponding weekday
   return weekdays[eventDayIndex];
 }
 
 // Test cases
-console.log(getEventWeekday(9)); // Logs out "Thursday"
-console.log(getEventWeekday(2)); // Logs out "Sunday"
+console.log(getEventWeekday(9)); //Thursday"
+console.log(getEventWeekday(2)); // Log out "Sunday"
 
 //3
 // Weather wear
