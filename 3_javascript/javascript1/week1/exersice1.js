@@ -80,7 +80,7 @@ if (housePriceJulia > juliaHouseParameters.price) {
 // was easier! You need to be creative, funny and interesting, its 
 // nearly impossible!" Another problem to solve, awesome!
 
-const firstWords = ['Cool', 'Great', 'Maxi', 'Big', 'Digital', 'Awesom', 'Smart','Super'];
+const firstWords = ['Cool', 'Great', 'Maxi', 'Big', 'Digital', 'Awesome', 'Smart','Super'];
 const secondWords = [
   "Corporate",
   "Businness",
