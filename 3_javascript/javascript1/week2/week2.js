@@ -26,7 +26,7 @@ function getEventWeekday(eventy) {
     const nextDate = (numberDayNow + eventy) % 7;
     console.log('event on', weekday[nextDate]);
 
-}
+} 
 
 getEventWeekday(9);
 
