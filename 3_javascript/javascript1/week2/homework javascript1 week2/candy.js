@@ -31,7 +31,7 @@ function addCandy(candyType, weight) {
   }
 }
 function canBuyMoreCandy() {
-  let sum = 60;
+  let sum = 0;
   for (let i = 0; i < boughtCandyPrices.length; i++) {
     sum += boughtCandyPrices;
   }
