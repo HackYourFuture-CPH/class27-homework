@@ -22,21 +22,21 @@ console.log(fullname1);
 console.log(fullname2); 
 console.log(fullname3);
 
-//Event application
-
-const weekdays = [
-    "Sunday", 
-    "Monday", 
-    "Tuesday", 
-    "Wednesday", 
-    "Thursday", 
-    "Friday", 
-    "Saturdat"];
-const today = new Date();
-const futureDay = new Date(today); 
+//Event application (made with explanation at the class)
 function getEventDay(daysUntilEvent) {
-    futureDay.setDate(today.getDate() + daysUntilEvent);
-    const eventWeekday = weekdays[futureDay.getDay()];
+    const date = new Date();
+    const weekdays = [
+        "Sunday", 
+        "Monday", 
+        "Tuesday", 
+        "Wednesday", 
+        "Thursday", 
+        "Friday", 
+        "Saturday"];
+    const todaysDaysOfTheWeek = date.getDay();
+    const dayOfTheWeekNumber = (todaysDaysOfTheWeek + daysUntilEvent) % 7;
+    console.log(dayOfTheWeekNumber);
+    const eventWeekday = weekdays[dayOfTheWeekNumber];
     return eventWeekday;
 }
 console.log(getEventDay(8));
@@ -98,3 +98,58 @@ getNumberOfStudents();
 //I also don't understand why I can't make "Queen" a special object in function, 
 //and that requirement is applying to all other names..
 //I need some advice so can improve it.  
+
+//Candy helper (optional (exercise is not finished))
+
+const boughtCandyPrices = [];
+const candyTablePrices = [
+    
+    {candyType: "Sweet",
+    pricePerGram: 0.5,
+    },
+    {candyType: "Chocolate",
+    pricePerGram: 0.7,
+    },
+    {candyType: "Toffee",
+    pricePerGram: 1.1,
+    },
+    {candyType: "Chewing-gum",
+    pricePerGram: 0.03,
+    },
+]
+function addCandy(candyType, weight) {
+      boughtCandyPrices.push(candyTablePrices.price * 20);  
+      }
+console.log(boughtCandyPrices);
+
+addCandy("Sweet", 20);
+addCandy("Chocolate", 20);
+addCandy("Toffe", 20);
+addCandy("Chewing-gum", 20);
+
+
+
+//Class exercise three - New Year counter
+
+for (let counter = 10; counter >= 0; counter--) {
+    console.log(counter);
+    if (counter === 10) {console.log("OMG it started");}
+    if (counter === 0) {console.log("Happy New Year!");}
+}
+
+//Class exercise three - B (Names)
+const names = [
+    "Chris", 
+    "Anne", 
+    "Colin", 
+    "Terri", 
+    "Phil", 
+    "Lola", 
+    "Sam", 
+    "Kay", 
+    "Bruce"];
+for (const name of names) {
+    if (name.includes('a')) {
+        console.log(name);
+    }
+}
