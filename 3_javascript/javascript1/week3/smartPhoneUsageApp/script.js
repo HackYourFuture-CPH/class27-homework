@@ -1,16 +1,18 @@
 let activities = [];
 // Adding an activity
-const addActivity = (date , activity , duration) =>{
+const addActivity = ( activity , duration) =>{
+    let today = new Date()
+    date = today.toLocaleDateString()
     activities.push({
         date: date,
         activity : activity,
         duration : duration
     })
 }
-addActivity("23/7-18", "Youtube", 30);
-addActivity("23/7-19", "Instagram", 40);
-addActivity("23/7-20", "Telegram", 50);
-
+addActivity("Youtube", 30);
+addActivity("Instagram", 40);
+addActivity("Telegram", 50);
+console.log(activities)
 // Show my status
 const showStatus = () =>{
     let actinitiesDuration = 0;
