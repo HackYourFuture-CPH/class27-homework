@@ -15,12 +15,23 @@ const fullname2 = getFullname("hadis", "R", "man", false);
 const fullname3 = getFullname("hadis", "R");
 
 //Event application
-const today = 3;
-function getEventWeekday(days) {
-  return (days % 7) + 3;
+// const today = 3;
+// function getEventWeekday(days) {
+//   return (days % 7) + 3;
+// }
+// const eventAplication = getEventWeekday(3);
+// console.log(eventAplication);
+function getEventWeekday(daysToAdd) {
+  const today = new Date();
+  const futureDate = new Date(today);
+  futureDate.setDate(today.getDate() + daysToAdd);
+
+  const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const eventDayOfWeek = daysOfWeek[futureDate.getDay()];
+  return eventDayOfWeek;
 }
-const eventAplication = getEventWeekday(3);
-console.log(eventAplication);
+const eventApplication = getEventWeekday(3);
+console.log(eventApplication);
 
 //Weather wear
 function weatherWear(temperature) {
@@ -53,10 +64,10 @@ function addStudentToClass(studentName) {
     console.log("can not add more student");
   }
 }
-class07Students("reza");
-class07Students("hadis");
-class07Students("daisy");
-class07Students("atefe");
+addStudentToClass("reza");
+addStudentToClass("hadis");
+addStudentToClass("daisy");
+addStudentToClass("atefe");
 
 function getNumberOfStudents() {
   return class07Students.length;
@@ -96,7 +107,7 @@ function addCandy(candyType, weight) {
 function canBuyMoreCandy() {
   let sum = 0;
   for (let i = 0; i < boughtCandyPrices.length; i++) {
-    sum += boughtCandyPrices;
+    sum += boughtCandyPrices[i];
   }
   if (amountToSpend > sum) {
     console.log("You can buy more, so please do!");
