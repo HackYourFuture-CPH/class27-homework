@@ -1,10 +1,5 @@
    //Flight booking fullname function
 
-const firstName = "Benjamin";
-const surname = "Hughes";
-getFullnameVercion1 = firstName+" "+surname;
-console.log(getFullnameVercion1);
-
 const fullname1 = getFullname("Benjamin", "Hughes", "male", true);
 const fullname2 = getFullname("Viktoriia","Dembitska", "female", true);
 const fullname3 = getFullname("Star","Pink", "other", true);
@@ -59,18 +54,18 @@ console.log(myOutfitForTodayTwo);
 
 const class07Students = [];
 function addStudentToClass(studentName) {
-    for (let i = 0; i < class07Students.length; i++) {
-        if (class07Students[i] === studentName) {
-          console.log("Student " + studentName + " is already in the class");
-          return;}
-    }
-    if (class07Students.length <= 6 || studentName === "Queen") {
+    //for (let i = 0; i < class07Students.length; i++) 
+    if (class07Students.includes(studentName)) {
+      console.log("Student " + studentName + " is already in the class");
+    } else if (studentName == "Queen") {
+      class07Students.push(studentName);
+      console.log("Dear " + studentName + ", there is always place for you in the class");
+    } else if (studentName == "") {
+      console.log("Please, enter your name");
+    } else if (class07Students.length >= 6) {
+      console.log("There can not be more students in the class07");
+    } else {
         class07Students.push(studentName);
-        console.log("Dear " + studentName + ", there is always place for you in the class")
-      } else if (studentName === "") {
-        console.log("Please, enter your name")
-      } else {
-        console.log("Cannot add more students to class 07");
       } 
 }
 addStudentToClass("Emil");
@@ -81,24 +76,13 @@ addStudentToClass("Sonya");
 addStudentToClass("Peter");
 addStudentToClass("Queen");
 addStudentToClass("Lisa");
-
 console.log(class07Students);
-
 
 function getNumberOfStudents() {
   console.log(class07Students.length);
 }
 getNumberOfStudents(); 
-
-// I tried to add value of class07Students.length max, 
-//but it didn't work, and I can't figure out where to add it so it works, 
-//and I'm not sure that it is useful also there - 
-//class07Students.length = Math.max(7) 
-
-//I also don't understand why I can't make "Queen" a special object in function, 
-//and that requirement is applying to all other names..
-//I need some advice so can improve it.  
-
+  
 //Candy helper (optional (exercise is not finished))
 
 const boughtCandyPrices = [];
@@ -126,8 +110,6 @@ addCandy("Sweet", 20);
 addCandy("Chocolate", 20);
 addCandy("Toffe", 20);
 addCandy("Chewing-gum", 20);
-
-
 
 //Class exercise three - New Year counter
 
