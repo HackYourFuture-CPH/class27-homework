@@ -1,39 +1,29 @@
-//Welcome to my second experience in JAVASCRIPT :)
-
-/* console.log("*******     Flight booking fullname function    *******");
- function getFullname(firstname, surname) {
-     return `${firstname} ${surname}`;
-}
-
- const fullname1 = getFullname("Helena", "Hashemi");
- const fullname2 = getFullname("Shahram", "Shokri");
-
- console.log(fullname1);
- console.log(fullname2); */
-
 console.log("*******     Flight booking fullname function / ('Formal fullnam')     *******");
-function getFullname(firstname, surname, gender, userFormalName) {
+function getFullname(firstname, surname, userFormalName , genderIsFemale) {
 
-    if(gender === "male") {
+    if( firstname !== "" && surname !== "" && userFormalName === false) {
     return `Lord ${firstname} ${surname}`;
-}
-if(gender === "female"){
+} else if( firstname !== "" && surname !== "" && genderIsFemale === true){
     return `Lady ${firstname} ${surname}`;
-}
-if (gender === ""){
+} else {
     return `${firstname} ${surname}`;
 }
 }
 
-const userFormalName = getFullname("Soeren", "Sepehr", "");
-const userFormalName1 = getFullname("Helena", "HME", "female");
-const userFormalName2 = getFullname("Shahram", "S.K.Loo", "male");
-const userFormalName3 = getFullname("Carl-Emil", "R.H.Hansen", "male" );
+const userFormalName = getFullname("Soeren", "", true);
+const userFormalName1 = getFullname("", "", false);
+const userFormalName2 = getFullname("Helena", "HME", true, true);
+const userFormalName3 = getFullname("Shahram", "S.K.Loo", false );
+const userFormalName4 = getFullname("Carl-Emil", "R.H.Hansen" );
+
 
 console.log(userFormalName);
 console.log(userFormalName1);
 console.log(userFormalName2);
 console.log(userFormalName3);
+console.log(userFormalName4);
+
+
 
 
 console.log("*******     Event application     *******");
@@ -49,66 +39,41 @@ function getEventWeekDay(howManyDaysUntilEvent) {
 console.log(getEventWeekDay(5));
 console.log(getEventWeekDay(11));
 
-//A comment for dear mentor:
-/* The question was very complex.
-Despite my extensive efforts to understand it
-(searching on Google, checking educational websites, watching videos on YouTube,
-looking at others' answers, and seeking help from ChatGPT)
-I still found it challenging to grasp the issue.
-I tried my best to comprehend it but wasn't very successful.
-Please explain the solution to this problem in a simple manner. */
+
 
 console.log("*******     Weather wear     *******");
-// function outsideTempreture(tempreture) {
-//     const wearInFrazing = "jacket and gloves";
-//     const wearInCold = "sweater";
-//     const wearInWarm = "top and shorts";
+function outsideTempreture(tempreture) {
+    const wearInFrazing = "jacket and gloves";
+    const wearInCold = "sweater";
+    const wearInWarm = "top and shorts";
 
-//     if(tempreture <= 10) {
-//         return `Frazing...! Wear ${wearInFrazing}.`
-//     }
-//     if(tempreture > 10 && tempreture < 19) {
-//         return `Almost cold...! Wear ${wearInCold}.`
-//     } else {
-//         return `Sun shine...! Wear ${wearInWarm} and remember suncream and sunglasses.`
-//     }
-// }
-// const wearInWarm = outsideTempreture(27);
-// console.log(wearInWarm);
-
-const tempreture = 20;
-switch(tempreture) {
-
-    case(tempreture < 10 || tempreture === 10):
-    console.log("Freezing...! Wear jacket and gloves.");
-    break;
-
-    case(tempreture > 10 && tempreture < 19 || tempreture === 19):
-    console.log("Almost cold...! Wear sweater.");
-    break;
-
-    case(tempreture > 19 && tempreture < 39 || tempreture === 39):
-    console.log("Sun shine...! Wear top, shorts and remember suncream and sunglasses.");
-    break;
-
-    default:
-    console.log("Warning!... Risk of heatstroke");   
+    if(tempreture <= 10) {
+        return `Frazing... Wear ${wearInFrazing}.`
+    } else if(tempreture > 10 && tempreture < 19) {
+        return `Almost cold... Wear ${wearInCold}.`
+    } else if (tempreture >=19 && tempreture < 39 ){
+        return `Sun shine... Wear ${wearInWarm} and remember suncream and sunglasses.`
+    } else {
+        return "Warning!!!  Risk of heatstroke"
+    }
 }
+const wearInWarm = outsideTempreture(27);
+const wearInWarm1 = outsideTempreture(42);
+const wearInWarm2 = outsideTempreture(10);
+const wearInWarm3 = outsideTempreture(13);
 
-//In this case there is some problem. As you can see I have set the temprature on 20:
-//here (const tempreture = 20;). So we should face with this sentence:
-//(Sun shine...! Wear top, shorts and remember suncream and sunglasses.)
-//but we have (Warning!... Risk of heatstroke) in the browser and I cant undrestand what is wrong with that :(
-//please give me a clue!
+console.log(wearInWarm);
+console.log(wearInWarm1);
+console.log(wearInWarm2);
+console.log(wearInWarm3);
+
 
 console.log("*******     Weather wear     *******");
 const class07Students = [];
 function addStudentToClass(studentName) {
     if(studentName === "") {
         console.log("Add your name.");
-    } else /*if(studentName = Number){ 
-        console.log("Invalid request");
-    } else*/ if(class07Students.includes(studentName)) {
+    } else if(class07Students.includes(studentName)) {
         console.log(`${studentName} has already applied`);
     } else if(class07Students.length >= 6 &&  studentName === "Queen" || studentName === "queen") {
         class07Students.push(studentName);
@@ -123,15 +88,10 @@ function addStudentToClass(studentName) {
     }
 }
 
-function getNumberOfStudents(numberOfStudent){
-return class07Students;
-}
-
 addStudentToClass("");
 addStudentToClass("Helena");
 addStudentToClass("Helena");
 addStudentToClass("Carl-Emil");
-//addStudentToClass(25);
 addStudentToClass("Adel");
 addStudentToClass("William");
 addStudentToClass("Casper");
@@ -139,8 +99,77 @@ addStudentToClass("Niels");
 addStudentToClass("Soren");
 addStudentToClass("Queen");
 
-//Dear mentor:
-//this comment is my question
-//please help me to figure it out
+function getNumberOfStudents(numberOfStudent){
+    const class07Students = ['Helena', 'Carl-Emil', 'Adel', 'William', 'Casper', 'Niels', 'Queen'];
+return getNumberOfStudents = class07Students.length;
+}
 
-//The answer to the fifth question will be implemented along with the reforms.
+console.log(getNumberOfStudents());
+
+
+
+
+
+
+
+console.log("*******     Candy helper     *******");
+
+const candyType  = ['sweet', 'chocolate', 'toffee', 'chewing-gum'];
+const pricePerGram = [0.5 , 0.7 , 1.1 , 0.03];
+
+function addCandy(candyType , weight) {
+const boughtCandyPrices = [];
+
+switch(candyType){
+
+    case 'sweet':
+    pricePerGramOfCandy = 0.5;
+    break;
+
+    case 'chocolate':
+    pricePerGramOfCandy = 0.7;
+    break;
+
+    case 'toffee':
+    pricePerGramOfCandy = 1.1;
+    break;
+    
+    case 'chewing-gum':
+    pricePerGramOfCandy = 0.03;
+    break;
+    
+    default:
+    console.log("Invalid candy tipe");
+    return;
+
+}
+
+const priceOfTheCandy = weight * pricePerGram;
+boughtCandyPrices.push(priceOfTheCandy);
+}
+
+//------------------------Can i buy more------------------------
+
+const amountToSpend = Math.random() * 100 ;
+function canBuyMoreCandy(boughtCandy) {
+    const totalPrice = 0;
+    for(i = 0; i < totalPrice.length; i++) {
+        totalPrice = boughtCandy[i];
+    }
+    if(totalPrice < amountToSpend){
+        return true;
+    } else {
+        return false
+    }
+}
+
+const boughtCandyPrices = [];
+addCandy('sweet', 15);
+addCandy('chocolate', 25);
+addCandy('toffee', 32);
+
+if(canBuyMoreCandy(boughtCandyPrices)) {
+    console.log("possible for you to have more candy :) ") ;
+} else {
+    console.log("you are not allow to have more candy :(") ;
+}
