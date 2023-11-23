@@ -22,7 +22,7 @@ const names = [
 
 
 
-  
+
 //   When will we be there??
 
 
@@ -66,16 +66,19 @@ const seriesDurations = [
 function yourAge(age) {
     
 let result="";
-let wastedLifePercentage="";
+let resultInTotal=0;
     for (const seriesDuration of seriesDurations){
         let ageInMinutes = age*365*24*60;
         let seriesDurationsInMinutes = (seriesDuration.days*24*60) + (seriesDuration.hours*60) + seriesDuration.minutes;
         let wastedLifePercentage = (seriesDurationsInMinutes/ageInMinutes)*100;
 
         result = `${seriesDuration.title} has wasted ${wastedLifePercentage.toFixed(3)} % of your life`;
-        console.log (result)
+        console.log (result);
+        resultInTotal+=wastedLifePercentage;
     }
+    console.log(`in total that is ${resultInTotal.toFixed(3)} of your life!`);
+
 }
 
-yourAge (80);
+yourAge (70);
 
