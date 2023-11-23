@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Time Calculator</title>
+    <style>
+        body {
+            background-color: #c1d9ce;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #394240;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #394240;
+        }
+
+        input {
+            width: 300px; 
+            padding: 10px; 
+            margin-bottom: 15px; 
+        }
+
+        button {
+            padding: 15px 30px; 
+            background-color: #394240;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #56797f;
+        }
+
+        #result {
+            margin-top: 20px;
+            color: #394240;
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel Time Calculator</h1>
+
+    <form id="travelForm">
+        <label for="speedInput">Speed (km/h):</label>
+        <input type="number" id="speedInput" required>
+        <br>
+
+        <label for="distanceInput">Distance (km):</label>
+        <input type="number" id="distanceInput" required>
+        <br>
+    
+        <button type="button" onclick="calculateAndDisplay()">Calculate Travel Time</button>
+    </form>
+
+    <p id="result"></p>
+
+<script src="script1.js"></script>
+
+</body>
+</html>
