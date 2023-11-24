@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(0,0, 33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 1px;
+}
+/*header*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(13, 13, 82);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+    font-size: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    color: rgb(153,153,226);
+    font-size: 1.9rem;
+}
+h1{
+   text-align: center;
+   color: white;
+   background-color: #8d21e6;
+}
+.left{
+    font-size: 2rem;
+    padding: 0cap5px;
+}
+/*about section*/
+
+.firstsection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 130px 10px;
+}
+.firstsection>div{
+    width:30%;
+}
+.leftSection{
+    font-size: 3rem;
+}
+.rightsection img{
+    width: 80%;
+
+}
+
+.purple{
+    color: blueviolet;
+}
+.text-gray{
+    color: gray;
+}
+#element {
+    color: blueviolet;
+}
+main hr{
+    border: 0;
+    background-color:#9c97f1;
+    height: 1.2px;
+    margin: 60px 84px;
+}
+/*project section*/
+.secondsection{
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+    font-size: 15px;
+    justify-content: space-around;
+}
+.secondsection h2{
+    font-size: 1.9rem;
+}
+.project-item {
+    background-color:rgb(0,0, 33);  
+    text-align: right;       
+    padding: 20px;
+    display: flex;
+    font-size: 1.5rem;  
+    justify-content: space-around; 
+}
+#center-button a {
+    color: rgb(153,153,226);               
+    text-decoration: none;     
+    font-weight: bold; 
+          
+}
+
+#center-button a:hover {
+    text-decoration: none;  
+}
+.project-item img {
+    max-width: 60%;    
+    height: 20rem;       
+    margin: 40px;   
+}
+
+.project-item button{
+    text-align: center;
+    font-size: 2rem; 
+    padding: 10px 20px; 
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.paragraph-margin{
+    margin: 100px 0 100px 0;
+
+}
+/*skill section*/
+.skills-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+}
+  
+.skills-section h2 {
+    font-size: 24px;
+    color: #333;
+}
+  
+.skills-section ul {
+    list-style: none;
+    padding: 5px;
+}
+  
+.skills-section li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom:10px;
+}
+/*contact section*/
+.contact-section {
+    text-align: center;
+    padding: 50px;
+}
+  
+.contact-section h2 {
+    font-size: 24px;
+    color: white;
+}
+  
+.social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #66b3dc; 
+    text-decoration: none;
+    padding: 20px;
+}
+  
+.social-icons a:hover {
+    color:  rgb(153,153,226);
+}
+/*footer*/
+footer.bottom-bar {
+    background-color: rgb(13, 13, 82);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+footer.bottom-bar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; 
+}
+@media screen and (max-width: 768px) {
+    nav ul li {
+        font-size: 1rem; 
+    }
+    .left{
+        font-size: 12px;
+        padding-left: 75px;
+    }
+    .firstsection > div {
+        width: 80%; 
+    }
+
+    .rightsection img {
+        width: 100%; 
+   
+    }
+    .project-item, .secondsection {
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+    .project-item img {
+        width: 100%; 
+    }
+
+    .project-item button {
+        font-size: 0.5rem; 
+    }
+
+    .paragraph-margin {
+        margin: 20px 0; 
+    }
+    .header{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(0,0, 33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*header*/
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(13, 13, 82);
+    position: fixed;
+    top:15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none; 
+}
+nav li{
+    list-style: none;
+    margin: 0 15px;
+    font-size: 2rem;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+nav a:hover{
+    color: rgb(153,153,226);
+    font-size: 1.9rem;
+}
+h1{
+   text-align: center;
+   color: white;
+   background-color: #8d21e6;
+   font-size: 0.5rem;
+   position: fixed;
+   width: 100%;
+
+}
+.left{
+    font-size: 2rem;
+    padding: 0;
+}
+/*about section*/
+
+#about {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.leftSection{
+    font-size: 3rem;
+    width: 80%;
+    margin: 175px;
+}
+.rightsection img{
+    width: 41%;
+    padding: 10px 10px;
+    border-right: 350px;
+
+}
+
+.purple{
+    color: blueviolet;
+}
+.text-gray{
+    color: gray;
+}
+#element {
+    color: blueviolet;
+}
+main hr{
+    border: 0;
+    background-color:#9c97f1;
+    height: 1.2px;
+    margin: 60px 84px;
+}
+/*project section*/
+#projects {
+    width: fit-content;
+    margin: 10px;
+    height: 80vh;
+    font-size: 15px;
+    display: flex;
+    padding: 10px;
+    text-wrap: center;
+    display: flexbox;
+    
+}
+.container{
+    display: flex;
+    padding: 5px;
+}
+.text-gray{
+    padding: 10px 40px;
+}
+h2{
+    font-size: 1.9rem;
+    font-size: 24px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+.project-item {
+    background-color:rgb(0,0, 33);  
+    text-align: right;       
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;  
+    justify-content: space-around; 
+}
+.project-details{
+    display: flex;
+    justify-content: space-around;
+}
+.project-details a {
+    color: rgb(173, 173, 227);               
+    text-decoration: none;     
+    font-weight: bold; 
+}
+
+.project-details a:hover {
+    text-decoration: none;  
+}
+.project-item img {
+    max-width: 34%;    
+    height: 14rem;       
+    margin: 11px;   
+}
+
+.project-details button{
+    text-align: center; 
+    padding: 10px 20px; 
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.paragraph-margin{
+    margin: 40px 13px;
+
+}
+/*skill section*/
+#skills{
+    background-color: rgb(173, 173, 227);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+}
+  
+  
+.skills-section ul {
+    list-style: none;
+    padding: 5px;
+}
+  
+.skills-section li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom:10px;
+}
+/*contact section*/
+.contact-section {
+    text-align: center;
+    padding: 50px;
+}
+  
+.contact-section h2 {
+    font-size: 24px;
+    color: white;
+}
+.social-icons{
+    padding: 10px;
+    margin: 5px;
+}
+.social-icons a {
+    font-size: 24px;
+    margin: 10px 10px;
+    color: #66b3dc; 
+    text-decoration: none;
+    padding: 20px;
+}
+  
+.social-icons a:hover {
+    color:  rgb(153,153,226);
+}
+.lastimg img{
+    width: 50%;
+    padding: 10px;
+    margin: 15px;
+}
+/*footer*/
+footer.bottom-bar {
+    background-color: rgb(13, 13, 82);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+footer.bottom-bar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; 
+}
+@media screen and (max-width: 768px) {
+    nav li{
+        font-size: 0.6rem;
+    }
+    nav {
+        height: 25px;
+    }
+    .left{
+        font-style: none;
+    }
+    .leftSection {
+        font-size: 22px;
+        margin: auto;
+    }
+
+    div {
+        width: 60%;
+    }
+
+    .rightsection img {
+        width: 40%;
+    }
+
+    .container .p{
+        
+        flex-direction: column;
+    }
+    .p {
+       
+        color: aqua;
+    }
+    .project-details {
+        margin-left: 0;
+    }
+
+    .project-item button {
+        font-size: 0.5rem;
+    }
+
+    .paragraph-margin {
+        margin: 20px 0;
+    }
+
+    .header {
+        width: 100%;
+    }
+}
