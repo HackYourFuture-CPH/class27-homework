@@ -151,7 +151,6 @@ console.log(activities);
 
 function showStatus(activities) {
 
-    console.log(`You have added ${activities.length} activities`);
     if (activities.length === 0) {
         let NoactivitiesAdded = console.log(`You have not added any activities. 
         Add some activities before to request seeing the status of activities`);
@@ -161,7 +160,7 @@ function showStatus(activities) {
     } else {
         console.log(`You have added ${activities.length} activities`);
         for (let i = 0; i < activities.length; i++) {
-            console.log(`Activities ${i + 1}: ${activities[i].activities}`);
+            console.log(`Activities ${i + 1}: ${activities[i].activity}`);
         }
 
         let totalSmartphoneUsagedurationInMinuits = 0;
@@ -178,7 +177,7 @@ function showStatus(activities) {
             console.log('You have reached your limit, no more smartphoning for you!');
         } else {
             console.log(`You still have not reach your limit. You can use your smartphoning for
-            ${180 - totalSmartphoneUsagedurationInMinuits} more min.`);
+${180 - totalSmartphoneUsagedurationInMinuits} more min.`);
         }
     };
 
@@ -212,5 +211,5 @@ showStatus(activities);
 const birds = ["Parrot", "Falcon", "Owl"];
 
 for (const bird of birds) {
-    console.log(bird);
+console.log(bird);
 };*/
