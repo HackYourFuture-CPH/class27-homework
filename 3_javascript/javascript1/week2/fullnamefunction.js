@@ -36,7 +36,7 @@ function getFullname(firstname, surname, useFormalName, isFemale) {
 //example:
 
 var femaleFullname = getFullname("sanaz", "rezaei", true, true);
-///vent application
+///event application
 
 // Another customer has contacted us. He works for a secret company that rimes with foogle.
 //
@@ -57,6 +57,8 @@ var femaleFullname = getFullname("sanaz", "rezaei", true, true);
 // Hint: use remainder operator, array indexes and investigate new Date in js.
 
 function getEventWeekday(daysFromToday) {
+  //// Sunday - Saturday : 0 - 6
+
   const weekdays = [
     "Sunday",
     "Monday",
@@ -66,7 +68,15 @@ function getEventWeekday(daysFromToday) {
     "Friday",
     "Saturday",
   ];
+  // const date =new date(); give us todays date
+  //`new Date().getDay()` در جاوااسکریپت، ترکیبی از ساختن یک شیء تاریخ جدید و فراخوانی متد `getDay()` بر روی آن است. این تکه کد مقداری عددی (از 0 تا 6) را باز می‌گرداند که به روز هفته فعلی اشاره دارد.
 
+  // برای مثال، اگر این تکه کد را در یک محیط جاوااسکریپت اجرا کنید:
+
+  // const currentDay = new Date().getDay();
+  // console.log(currentDay);
+
+  // مقدار `currentDay` عددی بین 0 تا 6 خواهد بود که هر عدد به روز هفته اشاره دارد، مطابق توضیحاتی که پیشتر ذکر شده‌اند.
   const todayIndex = new Date().getDay();
 
   const eventDayIndex = (todayIndex + daysFromToday) % 7;
