@@ -105,6 +105,94 @@ logOutNotesFormatted(); // should log out the text below
 
 //--------- Unique feature --------------------------------
 
+//What can it be fx.? :)
+
+
+
+
+
+
+
+// -----------CactusIO-interactive (Smart phone usage app) optional -------------------
+
+//PART1: Adding an activity ______________________________________
+
+const activities = [];  // [{}]  or [{}] would also work?
+
+function addActivity(date, activity, duration) {  //date: string, activity: string; duration: minutes
+
+    let activitiesDataDuration = { activity: activity, date: date, duration: duration };
+    activities.push(activitiesDataDuration);
+    return activities;
+}
+
+let gottenActivity;
+let gottenDate;
+let gottenDuration;
+
+gottenDate = prompt('add a date fx. 23/7-2023', '23/7-2023');
+gottenActivity = prompt('add an activity fx. Youtube', 'Youtube');
+gottenDuration = prompt('Enter a number as activity duration hours fx.', 30);
+addActivity(gottenDate, gottenActivity, gottenDuration);
+
+gottenDate = prompt('add a date fx. 23/7-2023', '23/7-2023');
+gottenActivity = prompt('add an activity fx. Instagram', 'Instagram');
+gottenDuration = prompt('Enter a number as activity duration hours fx.', 40);
+addActivity(gottenDate, gottenActivity, gottenDuration);
+
+gottenDate = prompt('add a date fx. 23/7-2023', '23/7-2023');
+gottenActivity = prompt('add an activity fx. Facebook', 'Facebook');
+gottenDuration = prompt('Enter a number as activity duration hours fx.', 25);
+addActivity(gottenDate, gottenActivity, gottenDuration);
+
+console.log(activities);
+
+// PART2: Adding an activity ____________________________________
+
+function showStatus(activities) {
+
+    console.log(`You have added ${activities.length} activities`);
+    if (activities.length === 0) {
+        let NoactivitiesAdded = console.log(`You have not added any activities. 
+        Add some activities before to request seeing the status of activities`);
+        //Should I call the function again???
+        return NoactivitiesAdded;
+
+    } else {
+        console.log(`You have added ${activities.length} activities`);
+        for (let i = 0; i < activities.length; i++) {
+            console.log(`Activities ${i + 1}: ${activities[i].activities}`);
+        }
+
+        let totalSmartphoneUsagedurationInMinuits = 0;
+        for (let j = 0; j < activities.length; j++) {
+            totalSmartphoneUsagedurationInMinuits = totalSmartphoneUsagedurationInMinuits + activities[j].duration;
+            //Unfortunately, I cannot understand what the problem is with this code !!!
+        }
+        console.log(`Activities amount to ${totalSmartphoneUsagedurationInMinuits} min. of usage on ${activities[0].date}`);
+
+        // PART 3: Usage limit ____________________________________
+
+        console.log(`The usage limitation per day is 180 min.`)
+        if (totalSmartphoneUsagedurationInMinuits > 180) {
+            console.log('You have reached your limit, no more smartphoning for you!');
+        } else {
+            console.log(`You still have not reach your limit. You can use your smartphoning for
+            ${180 - totalSmartphoneUsagedurationInMinuits} more min.`);
+        }
+    };
+
+}
+
+showStatus(activities);
+
+
+
+
+
+
+
+
 
 
 
