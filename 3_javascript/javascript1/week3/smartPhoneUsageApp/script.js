@@ -1,7 +1,7 @@
 let activities = [];
 // Adding an activity
 const addActivity = ( activity , duration) =>{
-    let today = new Date()
+    const today = new Date()
     date = today.toLocaleDateString('en-GB')
     activities.push({
         date: date,
