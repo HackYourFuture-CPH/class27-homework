@@ -75,18 +75,18 @@ console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do lau
 
 function getNote(id) {
 
-    if (id <= notes.length && id) {
+    if (id <= notes.length && typeof id !== 'string') {
         let noteT = notes.find(item => item.id == id);
-        return (noteT.content); //f.x  id=1 >>> "Pick up groceries"
+        return (noteT.content); //f.x  id=1 => "Pick up groceries"
     } else {
 
-        return (alert(`Are you kidding me? :O 
+        return (alert(`Are you kidding me? :O A number !!
         Run the program again and enter a number between 1 and ${notes.length}`));
         //Why I get 'Undefind' after this alert message? :/
     }
 };
 
-const getId = prompt(`Enter a number between 1 and ${notes.length}`, 1);
+const getId = prompt(`Enter a number between 1 and ${notes.length} `, 1);
 const theRelevantNoteToTheGivenId = getNote(getId);
 alert(theRelevantNoteToTheGivenId);
 
@@ -95,7 +95,7 @@ alert(theRelevantNoteToTheGivenId);
 
 function logOutNotesFormatted() {
     for (let i = 0; i < notes.length; i++) {
-        console.log(`The note with id: ${notes[i].id}, has the following note text: ${notes[i].content}`);
+        console.log(`The note with id: ${notes[i].id}, has the following note text: ${notes[i].content} `);
     }
 };
 
