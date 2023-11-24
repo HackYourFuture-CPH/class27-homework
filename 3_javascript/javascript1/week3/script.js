@@ -75,7 +75,7 @@ console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do lau
 
 function getNote(id) {
 
-    if (id <= notes.length && typeof id !== 'string') {
+    if (id <= notes.length || typeof id !== 'string') {
         let noteT = notes.find(item => item.id == id);
         return (noteT.content); //f.x  id=1 => "Pick up groceries"
     } else {
