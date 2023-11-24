@@ -170,6 +170,7 @@ function showStatus(activities) {
             //Why it gives a different digit whenever I run the codes???
         }
         console.log(`Activities amount to ${totalSmartphoneUsagedurationInMinuits} min. of usage on ${activities[0].date}`);
+        // it it also correct???    ${activities["date"]}
 
         // PART 3: Usage limit ____________________________________
 
