@@ -1,8 +1,8 @@
 let activities = [];
+const today = new Date()
+date = today.toLocaleDateString('en-GB')
 // Adding an activity
 const addActivity = ( activity , duration) =>{
-    const today = new Date()
-    date = today.toLocaleDateString('en-GB')
     activities.push({
         date: date,
         activity : activity,
@@ -10,39 +10,22 @@ const addActivity = ( activity , duration) =>{
     })
 }
 addActivity("Youtube", 30);
-addActivity("Instagram", 40);
-addActivity("Telegram", 50);
+addActivity("Instagram", 10);
+addActivity("Telegram", 20);
 console.log(activities)
+
 // Show my status
 const showStatus = () =>{
-    let actinitiesDuration = 0;
+    let activitiesDuration = 0;
+    const limmitedDuration = 90;
     for(const activity of activities){
-        actinitiesDuration += activity.duration;
+        activitiesDuration += activity.duration;
     }
-    return activities.length === 0
-    ? "Add some activities before calling showStatus"
-    : `You have added ${activities.length} activities. They amount to ${actinitiesDuration} min. of usage`
+    if(activities.length === 0)
+        return "Add some activities before calling showStatus"
+    else if(activitiesDuration > limmitedDuration)
+        return "You have reached your limit, no more smartphoning for you!"
+    else return `You have added ${activities.length} activities in ${date}. They amount to ${activitiesDuration} min. of usage`
+    
 }
 console.log(showStatus())
-
-// Usage limit
-const limittedActivities = [
-    {
-        title: "Youtube",
-        time: 30
-    },
-    {
-        title: "Instagram",
-        time: 30
-    },
-    {
-        title: "Telegram",
-        time: 30
-    },
-  
-]  
-if(activities.activity === limittedActivities.title && activities.duration < limittedActivities.time){
-    console.log(showStatus());
-}else{
-    console.log("You have reached your limit, no more smartphoning for you!")
-}
