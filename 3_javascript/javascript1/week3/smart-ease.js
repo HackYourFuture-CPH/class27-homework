@@ -55,11 +55,52 @@ function timeToDrive(travelInformation) {
       minutes: 21,
     },
   ];
-  const averageLifespan = 80;
-  const averageLifespanInMinutes = averageLifespan * 365 * 24 * 60;
-  const timeForEachTypeOfSeriesInMinutes = seriesDurations.days * 24 + seriesDurations.hours * 60 + seriesDurations.minutes; 
-  function logOutSeriesText() {
-    
+    function logOutSeriesText() {
+    const averageLifespan = 80;
+    const averageLifespanInMinutes = averageLifespan * 365 * 24 * 60;
+    }
+
+
+  //NOnoN0nOYes (Note taking app)
+
+  //Save a note
+  const notes = [];
+  function saveNote(content, id) {
+    const noteToDo = {content: content, id: id};
+    notes.push(noteToDo);
+
   }
-  
-  logOutSeriesText());// logs out the text found above
+  saveNote("Pick up groceries", 1);
+  saveNote("Do laundry", 2);
+  saveNote("Feed fish", 3);
+  saveNote("Walk with dog",4);
+  saveNote("Rest a little",5);
+
+console.log(notes);
+
+//Get a note
+function getNote(id) {
+   for (const note of notes) {
+    if (note.id === id) {
+    return note;
+  } else {
+    return Error;
+  }
+}
+}
+const firstNote = getNote(1);
+console.log(firstNote);
+/* When I run that function, so I can console.log the result 
+which shows in homework example like note with id(1), but 
+when I want to find another note by id so I can not get it. 
+I think, that I need to run function throught all notes.lenght,
+and probably give more options, and I tried it but it didn't work..
+*/ 
+
+//Log out notes
+function logOutNotesFormatted() {
+    for (let i = 0; i < notes.length; i++) {
+        console.log(`The note with id: ${notes[i].id}, has the following note text: ${notes[i].content}`);
+    }
+};
+logOutNotesFormatted();
