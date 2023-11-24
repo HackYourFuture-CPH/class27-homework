@@ -55,7 +55,8 @@ for (let i = 0; i < seriesDurations.length; i++) {
 
 // _________Homework : Smart-ease / NOnoN0nOYes (Note taking app) / create a simple and easy notepad__________
 
-// --------------------------------Save a note:
+// ---------Save a note  ---------------------------------
+
 const notes = [];
 
 function saveNote(content, id) { // content parameter is a string and id is a number
@@ -142,7 +143,7 @@ addActivity(gottenDate, gottenActivity, gottenDuration);
 
 gottenDate = prompt('add a date fx. 23/7-2023', '23/7-2023');
 gottenActivity = prompt('add an activity fx. Facebook', 'Facebook');
-gottenDuration = prompt('Enter a number as activity duration hours fx.', 25);
+gottenDuration = prompt('Enter a number as activity duration hours fx.', 15);
 addActivity(gottenDate, gottenActivity, gottenDuration);
 
 console.log(activities);
@@ -166,7 +167,7 @@ function showStatus(activities) {
         let totalSmartphoneUsagedurationInMinuits = 0;
         for (let j = 0; j < activities.length; j++) {
             totalSmartphoneUsagedurationInMinuits = totalSmartphoneUsagedurationInMinuits + activities[j].duration;
-            //Unfortunately, I cannot understand what the problem is with this code !!!
+            //Why it gives a different digit whenever I run the codes???
         }
         console.log(`Activities amount to ${totalSmartphoneUsagedurationInMinuits} min. of usage on ${activities[0].date}`);
 
