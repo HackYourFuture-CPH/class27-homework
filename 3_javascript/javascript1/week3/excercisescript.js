@@ -42,7 +42,7 @@ let peopleArrayOfObjects = [
     },
 
     {
-        name: "Robert",
+        name: "Robert",   // alert(peopleArrayOfObjects[2].name)  ===> Robert
         age: 35,
     },
 
@@ -117,7 +117,7 @@ console.log(result);
 let user = {
     name: "John",
     age: 30,
-    isAdmin: true
+    isAdmin: true,
 };
 
 for (let key in user) {
