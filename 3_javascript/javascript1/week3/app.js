@@ -1,3 +1,5 @@
+//Remove the item in names that is equal to nameToRemove
+
 const names = [
   "Peter",
   "Ahmad",
@@ -14,7 +16,7 @@ const filteredNames = names.filter((name) => name !== nameToRemove);
 
 console.log(filteredNames);
 
-//-----------------------------
+//2 -----------------------------
 // Write a function where you speficy your speed in km/h and how far you have to go in km.
 //The function has to return the time it will take to arrive at your destination.
 //The time should be formatted like this: 3 hours and 34 minutes.
@@ -95,10 +97,10 @@ console.log(travelTime); // : 8 hours and 38 minutes
 // Try an interactive version 💻 of your code here. Remember to insert your code in the top of the codepen :)
 
 //part1
-// //bar zakhireh dar note
+// //bara zakhireh dar note
 const notes = [];
 
-// to save a note
+// f.to save a note
 function saveNote(content, id) {
   // idi adadeh ya nah
   if (typeof id !== "number") {
