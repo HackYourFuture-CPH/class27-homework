@@ -82,3 +82,57 @@ let resultInTotal=0;
 
 yourAge (70);
 
+// Note taking app
+
+
+
+const notes = [];
+
+function saveNote(content, id) {
+  notes.push({
+    content: content,
+    id: id
+  })
+}
+
+saveNote("Pick up groceries", 1);
+saveNote("Do laundry", 2);
+
+console.log(notes);
+
+
+// GetNote
+
+
+function getNote(id){
+    for (const note of notes){
+        if (note.id===id){
+            console.log(note.content);
+    }
+}
+}
+getNote(1);
+
+
+
+function logOutNotesFormatted() {
+    for (const note of notes){
+        console.log(`The note with id: ${note.id}, has the following note text: ${note.content} \n`)
+    }
+}
+  
+  logOutNotesFormatted(); // should log out the text below
+  
+  // The note with id: 1, has the following note text: Pick up groceries
+  // The note with id: 2, has the following note text: Do laundry
+
+function uniqueFeature(content){
+    for (const note of notes){
+        if (note.content === content)
+        console.log(note.id)
+    }   
+}
+const partOfContent= "Pick up groceries"
+uniqueFeature(partOfContent);
+// this feature is to know the id of an object by writing the array
+// I was trying to find a way to search for the content by writing part of it, but unfortunately I didn't manage. But hopefully soon!
