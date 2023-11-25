@@ -6,8 +6,8 @@ function travelInformation(speedInkmperh, destinationDistanceInkm) {
     const hours = Math.trunc(timeToRichToTheDestination); //same result with const hours (~~timeToRichToTheDestination) to cuts all fractional digits
     let minutes = (timeToRichToTheDestination - hours) * 60;
     const rminutes = Math.ceil(minutes); // To round up the minutes
-    return ('Your travel takes ${hours} hours & ${rminutes} minutes'); // It doesn't give a result for ${hours} & ${rminutes} !!!!!
-};
+    return (`Your travel takes ${hours} hours & ${rminutes} minutes`); // It doesn't give a result for ${hours} & ${rminutes} !!!!!
+}
 
 const travelTime = travelInformation(50, 432);
 console.log(travelTime);
@@ -17,11 +17,15 @@ console.log(travelTime);
 
 function logOutSeriesText(TVSeriestiltle, daysToWatch) {
 
-    const tookDaysOfLife = (80 * 365) / daysToWatch;
-    let percentFromlife = (daysToWatch * 100) / tookDaysOfLife;
+    const tookDaysOfLife = (80 * 365);
+    let percentFromlife = (daysToWatch * 100) / tookDaysOfLife; //claculating percentage
     let rPercentOfLife = percentFromlife.toPrecision(4); // To have just 4 digits and only 3 digits after decimal point
-    return (`${TVSeriestiltle} took ${rPercentOfLife} % of my life`);
+    //.toFixed(3) method rounds the number to 3 decimal places
+    totalPercentOfLife = totalPercentOfLife + rPercentOfLife;
+    return (`${TVSeriestiltle} took ${rPercentOfLife} % of my life. And alle of them took `);
+
 };
+let totalPercentOfLife = 0;
 
 const seriesDurations = [
     {
@@ -62,7 +66,6 @@ const notes = [];
 function saveNote(content, id) { // content parameter is a string and id is a number
     let note = { content: content, id: id };
     notes.push(note);
-    return notes;
 };
 
 saveNote("Pick up groceries", 1);
@@ -76,14 +79,14 @@ console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do lau
 
 function getNote(id) {
 
-    if (id <= notes.length || typeof id !== 'string') {
-        let noteT = notes.find(item => item.id == id);
-        return (noteT.content); //f.x  id=1 => "Pick up groceries"
+    if (typeof id === number) {  //typeof id !== 'string'
+        let theTask = notes.find(item => item.id == id);
+        return (theTask); //f.x  id=1 => "Pick up groceries"
     } else {
 
-        return (alert(`Are you kidding me? :O A number !!
+        return (alert(`You should enter only a number!
         Run the program again and enter a number between 1 and ${notes.length}`));
-        //Why I get 'Undefind' after this alert message? :/
+        //Why do I get 'Undefined' message? :/
     }
 };
 
@@ -109,26 +112,24 @@ logOutNotesFormatted(); // should log out the text below
 //What can it be fx.? :)
 
 
-
-
-
-
-
 // -----------CactusIO-interactive (Smart phone usage app) optional -------------------
 
 //PART1: Adding an activity ______________________________________
 
-const activities = [];  // [{}]  or [{}] would also work?
+const activities = []; // [{}]
 
 function addActivity(date, activity, duration) {  //date: string, activity: string; duration: minutes
 
-    let activitiesDataDuration = { activity: activity, date: date, duration: duration };
-    activities.push(activitiesDataDuration);
-    return activities;
+    let activitiesDataDuration = { date: date, activity: activity, duration: duration };
+    //a little trick to save some time and lines,
+    //if the variable and the object key are the same you can write it just once and not twice. like this:
+    //let activitiesDataDuration = { activity, date, duration };
+
+    activities.push(activitiesDataDuration); // no need to write:   return activities;
 }
 
-let gottenActivity;
 let gottenDate;
+let gottenActivity;
 let gottenDuration;
 
 gottenDate = prompt('add a date fx. 23/7-2023', '23/7-2023');
@@ -153,10 +154,9 @@ console.log(activities);
 function showStatus(activities) {
 
     if (activities.length === 0) {
-        let NoactivitiesAdded = console.log(`You have not added any activities. 
+        console.log(`You have not added any activities. 
         Add some activities before to request seeing the status of activities`);
         //Should I call the function again???
-        return NoactivitiesAdded;
 
     } else {
         console.log(`You have added ${activities.length} activities`);
@@ -166,11 +166,17 @@ function showStatus(activities) {
 
         let totalSmartphoneUsagedurationInMinuits = 0;
         for (let j = 0; j < activities.length; j++) {
-            totalSmartphoneUsagedurationInMinuits = totalSmartphoneUsagedurationInMinuits + activities[j].duration;
+            totalSmartphoneUsagedurationInMinuits = totalSmartphoneUsagedurationInMinuits + (+activities[j].duration);
             //Why it gives a different digit whenever I run the codes???
+
+            //Since the value from the prompt is always a string, 
+            //adding the value will result in a different output than you might expect. :) 
+            //Instead of the default 85, the value will be 0304015. 
+            //To fix this, you need to cast the 'duration' value to a Number type. 
+            //You can achieve this by either using Number(activities[j].duration) or simply adding a + sign as in +activities[j].duration.
         }
-        console.log(`Activities amount to ${totalSmartphoneUsagedurationInMinuits} min. of usage on ${activities[0].date}`);
-        // it it also correct???    ${activities["date"]}
+        console.log(`Activities amount to ${totalSmartphoneUsagedurationInMinuits} min. of usage on ${activities.date}`);
+        // ${activities.date} can also be used like ${activities["date"]}
 
         // PART 3: Usage limit ____________________________________
 
@@ -178,40 +184,9 @@ function showStatus(activities) {
         if (totalSmartphoneUsagedurationInMinuits > 180) {
             console.log('You have reached your limit, no more smartphoning for you!');
         } else {
-            console.log(`You still have not reach your limit. You can use your smartphoning for
-${180 - totalSmartphoneUsagedurationInMinuits} more min.`);
+            console.log(`You still have not reached your limit. You can use your smartphoning for
+            ${180 - totalSmartphoneUsagedurationInMinuits} more min.`);
         }
     };
-
 }
-
 showStatus(activities);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//___just a little class excercise ________________________________________________________
-
-/*
-const birds = ["Parrot", "Falcon", "Owl"];
-
-for (const bird of birds) {
-console.log(bird);
-};*/
