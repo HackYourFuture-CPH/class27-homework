@@ -1,15 +1,22 @@
 // Flight booking fullname function
 
-function getFullname(firstname, surname, useFormalName) {
-    if (useFormalName) {
-        return ('Lord ' + firstname + " " + surname);
-
+function getFullname(firstname, surname, useFormalName, isLady) {
+    if (firstname && surname) {
+        if (useFormalName) {
+            if (isLady) {
+                return "Lady " + firstname + " " + surname;
+            } else {
+                return "Lord " + firstname + " " + surname;
+            }
+        } else {
+          return firstname + " " + surname;
+        }
     } else {
-        return (firstname + " " + surname);
-    } 
+        return ('Please enter your full name')
+    }
 }  
 
-const fullname1 = getFullname("Benjamin", "Hughes", true);
+const fullname1 = getFullname("Benjamin", 'MM', true, true);
 const fullname2= getFullname("Benjamin", "Hughes", false);
 
 console.log(fullname1, fullname2);
@@ -17,13 +24,13 @@ console.log(fullname1, fullname2);
 
 // Event application
 
-function getEventWeekday(eventy) {
+function getEventWeekday(event) {
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const dateNow = new Date();
     
     const numberDayNow = dateNow.getDay();
  
-    const nextDate = (numberDayNow + eventy) % 7;
+    const nextDate = (numberDayNow + event) % 7;
     console.log('event on', weekday[nextDate]);
 
 } 
@@ -90,8 +97,8 @@ function addStudentToClass(studentName) {
 
 function getNumberOfStudents() {
     return class07Students.length;
-  // You write code here
 }
+
 
 
 addStudentToClass("N1");
@@ -104,27 +111,27 @@ addStudentToClass("");
 addStudentToClass("N6");
 addStudentToClass("N7");
 console.log(class07Students);
-console.log(`The number of students is ${class07Students.length}`);
+console.log(`The number of students is ${getNumberOfStudents()}`);
 
 
 
 //  Candy helper optional
 let boughtCandyPrices = [];
-const typeCandy = ["sweet", "chocolate", "toffee", "chewing-gum"];
-const priceCandy = [0.5, 0.7, 1.1, 0.03];
+const candys = {
+  sweet: 0.5,
+  chocolate: 0.7,
+  toffee: 1.1,
+  "chewing-gum": 0.03,
+};
+// const typeCandy = ["sweet", "chocolate", "toffee", "chewing-gum"];
+// const priceCandy = [0.5, 0.7, 1.1, 0.03];
 const amountToSpend = Math.random() * 100;
 
 console.log("amountToSpend", amountToSpend);
 
 function addCandy(candyType, weight) {
-    let price = 0;
-    for (i = 0; i < typeCandy.length; i++) {
-        if (typeCandy[i] === candyType) {
-            price = priceCandy[i] * weight;
-        }
-    }
+    const price = candys[candyType] * weight;
     boughtCandyPrices.push(price);
-
 }
 
 addCandy("sweet", 20);
