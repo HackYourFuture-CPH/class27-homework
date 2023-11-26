@@ -11,6 +11,7 @@ const names = [
   ];
   const nameToRemove = "Ahmad";
   
+  
   // Write some code here
   names.splice(1,1);
   // Code done
