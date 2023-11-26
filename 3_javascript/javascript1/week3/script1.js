@@ -114,3 +114,43 @@ logOutNotesFormatted(); // should log out the text below
 console.log(logOutNotesFormatted());
 // The note with id: 1, has the following note text: Pick up groceries
 // The note with id: 2, has the following note text: Do laundry
+
+
+// CactusIO-interactive (Smart phone usage app) optional
+
+let activities =[];
+
+function addActivity(date, activity, duration) {
+    if (date !== '' && activity !== '' && duration != 0) {
+        activities.push({ 'date': date, 'activity': activity, 'duration':duration });
+    } else {
+        alert("Fill all fields");
+    }
+}
+
+addActivity("23/7-18", "Youtube", 30);
+addActivity("23/7-18", "Facebook", 60);
+addActivity("23/7-18", "Instagram", 40);
+console.log(activities);
+
+function showStatus(activities) {
+    const totalDuration = 0;
+    const number = 0;
+    if (activities === '') {
+        console.log("Add some activities before calling showStatus");
+    } else {
+        activities.forEach(act => {
+        //   totalDuration = totalDuration + act.duration;
+            number += 1;
+            console.log(number);
+        });
+        // for (act of activities) {
+        //     totalDuration = totalDuration + act.duration;
+        //     number += 1;
+        // }
+        console.log(`You have added ${number} activities. They amount to ${totalDuration} min. of usage"`
+        )
+    } 
+}
+
+// showStatus(activities);
