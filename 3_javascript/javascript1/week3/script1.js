@@ -79,7 +79,6 @@ function saveNote(content, id) {
     } else {
         alert('Fill the content');
     }
-    
 }
 
 saveNote("Pick up groceries", 1);
@@ -118,7 +117,8 @@ console.log(logOutNotesFormatted());
 
 // CactusIO-interactive (Smart phone usage app) optional
 
-let activities =[];
+let activities = [];
+const usageLimit = 120;
 
 function addActivity(date, activity, duration) {
     if (date !== '' && activity !== '' && duration != 0) {
@@ -128,29 +128,41 @@ function addActivity(date, activity, duration) {
     }
 }
 
-addActivity("23/7-18", "Youtube", 30);
+addActivity((new Date()).toLocaleDateString("en-us"), "Youtube", 20);
 addActivity("23/7-18", "Facebook", 60);
 addActivity("23/7-18", "Instagram", 40);
 console.log(activities);
 
 function showStatus(activities) {
-    const totalDuration = 0;
-    const number = 0;
+    let totalDuration = 0;
+    let number = 0;
     if (activities === '') {
         console.log("Add some activities before calling showStatus");
     } else {
         activities.forEach(act => {
-        //   totalDuration = totalDuration + act.duration;
+          totalDuration = totalDuration + act.duration;
             number += 1;
-            console.log(number);
         });
-        // for (act of activities) {
-        //     totalDuration = totalDuration + act.duration;
-        //     number += 1;
-        // }
         console.log(`You have added ${number} activities. They amount to ${totalDuration} min. of usage"`
         )
     } 
+    if (totalDuration > usageLimit) {
+        alert('You have reached your limit, no more smartphoning for you!');
+    }
 }
 
-// showStatus(activities);
+showStatus(activities);
+
+function mostTime(activities) {
+    let maxActivities = activities[0].duration;
+    let maxActivitiesName = '';
+    for (let activ of activities) {
+        if (activ.duration > maxActivities) {
+            maxActivitiesName = activ.activity;
+            maxActivities = activ.duration;
+        }       
+    }
+    console.log(`user has spent the most time on ${maxActivitiesName}`);
+}
+
+mostTime(activities);
