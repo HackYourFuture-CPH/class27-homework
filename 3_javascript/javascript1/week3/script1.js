@@ -166,3 +166,23 @@ function mostTime(activities) {
 }
 
 mostTime(activities);
+
+// Let's build a matchmaking system that helps discover jobs for developers based on a number of factors.
+let candidate = {
+  minSalary: 120000
+}
+// A job will have a maximum salary, so it will look like this:
+
+let job = {
+  maxSalary: 80000
+}
+
+function match(candidate, job) {
+  if (candidate.minSalary * 0.9 <= job.maxSalary) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(match(candidate, job));
