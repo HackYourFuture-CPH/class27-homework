@@ -74,7 +74,12 @@ logOutSeriesText(); // logs out the text found above
 let notes = []; 
 
 function saveNote(content, id) {
-    notes.push({ 'content': content, 'id': id })
+    if (content != '') {
+        notes.push({ content: content, id: id });
+    } else {
+        alert('Fill the content');
+    }
+    
 }
 
 saveNote("Pick up groceries", 1);
@@ -85,8 +90,27 @@ console.log(notes);
 // Get a note
 
 function getNote(id) {
-  return(getNote.)
+    for (note of notes) {
+        if (note.id === id) {
+            return (note.content);
+      }
+  }
 }
 
 const firstNote = getNote(1);
 console.log(firstNote); // {content: 'Pick up groceries', id: 1}
+
+// Log out notes
+
+function logOutNotesFormatted() {
+    let allNotes = "";
+    for (const note of notes) {
+       allNotes += `The note with id: ${note.id}, has the following note text: ${note.content} `;
+    }
+    return allNotes;
+}
+
+logOutNotesFormatted(); // should log out the text below
+console.log(logOutNotesFormatted());
+// The note with id: 1, has the following note text: Pick up groceries
+// The note with id: 2, has the following note text: Do laundry
