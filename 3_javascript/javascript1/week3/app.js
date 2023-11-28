@@ -1,4 +1,4 @@
-//Remove the item in names that is equal to nameToRemove
+//1-Remove the item in names that is equal to nameToRemove
 
 const names = [
   "Peter",
@@ -46,6 +46,69 @@ const travelInformation = {
 
 const travelTime = calculateTravelTime(travelInformation);
 console.log(travelTime); // : 8 hours and 38 minutes
+//3
+// How much time of my life have i been watching series on tv? Lets find out! Calculate how much time a tv series have taken as a percentage of an average lifespan of 80 years.
+
+// Firstly change the seriesDurations array found above to include your favorite series. Find the duration of a series here: http://tiii.me/
+
+// Create a function that logs out the following text using the seriesDurations array:
+
+// Game of thrones took 0.01% of my life
+// Sopranos took 0.012% of my life
+// The Wire took 0.007% of my life
+
+const seriesDurations = [
+  {
+    title: "Game of thrones",
+    days: 3,
+
+    hours: 1,
+    minutes: 0,
+  },
+  {
+    title: "Sopranos",
+    days: 3,
+    hours: 14,
+    minutes: 0,
+  },
+  {
+    title: "The Wire",
+    days: 2,
+    hours: 12,
+    minutes: 0,
+  },
+];
+
+const averageLifespan = 80 * 365 * 24 * 60; // Convert years 2minutes
+
+function logOutSeriesText() {
+  let totalWatchedMinutes = 0;
+
+  for (const series of seriesDurations) {
+    const seriesDurationMinutes =
+      series.days * 24 * 60 + series.hours * 60 + series.minutes;
+
+    totalWatchedMinutes += seriesDurationMinutes;
+
+    const percentageOfLife = (seriesDurationMinutes / averageLifespan) * 100;
+
+    // Log out  text for each series
+    console.log(
+      `${series.title} took ${percentageOfLife.toFixed(3)}% of my life`
+    );
+  }
+
+  // Calculate total percentage of life spent watching all series
+  const totalPercentageOfLife = (totalWatchedMinutes / averageLifespan) * 100;
+
+  // Log out total percentage
+  console.log(
+    `\nIn total that is ${totalPercentageOfLife.toFixed(3)}% of my life`
+  );
+}
+
+// Call function 2 log out the series text
+logOutSeriesText();
 
 //homework3:
 //create is the functionality to save a note:
