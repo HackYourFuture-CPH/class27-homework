@@ -14,7 +14,9 @@ const nameToRemove = "Ahmad";
 
 // Write some code here
 
-console.log(names.at(1));
+names.splice(1, 1);
+
+console.log(names);
 
 // trying other parameters //
 
@@ -126,13 +128,17 @@ console.log(firstNote); // {content: 'Pick up groceries', id: 1}
 
 function logOutNotesFormatted() {
   // your code here
+  for (let note of notes) {
+    console.log(
+      `The note with id: ${note.id} has the following note text ${note.content}`
+    );
+  }
+}
 
-  let allMyNotes = [
-    "The note with id: 1, has the following note text: Pick up groceries",
-    "The note with id: 2, has the following note text: Do laundry",
-  ];
-  for (let i = 0; i < allMyNotes.length; i++) {
-    return allMyNotes;
+function deleteNote(id) {
+  if (typeof id !== "number" || isNaN(id)) {
+    console.log("Error: Please input a valid number");
+    return;
   }
 }
 
@@ -184,15 +190,11 @@ activities should now look like this
 // show user Status //
 
 function showStatus() {
-  for (let i = 0; i < userActivities.length; i++) {
-    if (userActivities === userActivities.duration);
+  if (userActivities.length === 0) {
+    console.log("Add some activities before calling showStatus");
+    return;
   }
-  return showStatus
-    ? "Add some activities before calling showStatus"
-    : `You have added ${userActivities} Activity. They amount to ${userActivities.duration} min. of usage`;
 }
-
-console.log(showStatus());
 
 // Usage limit //
 const limitedActivities = [
