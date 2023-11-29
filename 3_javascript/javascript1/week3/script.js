@@ -53,30 +53,34 @@ const seriesDurations = [
     minutes: 0,
   },
 ];
+function seriesDurationsOfLife(seriesDurations) {
+  let totalTimeMinutes = 0;
 
-let totalTimeMinutes = 0;
+  for (const item of seriesDurations) {
+    const { days, hours, minutes } = item;
+    const totalMinutes = days * 24 * 60 + hours * 60 + minutes;
+    totalTimeMinutes += totalMinutes;
+  }
 
-for (const item of seriesDurations) {
-  const { days, hours, minutes } = item;
-  const totalMinutes = days * 24 * 60 + hours * 60 + minutes;
-  totalTimeMinutes += totalMinutes;
+  const totalMinutesInLifespan = 80 * 365 * 24 * 60;
+
+  const percentageOfLifespan = (totalTimeMinutes / totalMinutesInLifespan) * 100;
+
+  console.log(`Total time spent watching TV series: ${totalTimeMinutes} minutes`);
+  console.log(
+    `Percentage of an 80-year lifespan spent watching TV series: ${percentageOfLifespan.toFixed(
+      2
+    )}%`
+  );
 }
-
-const totalMinutesInLifespan = 80 * 365 * 24 * 60;
-
-const percentageOfLifespan = (totalTimeMinutes / totalMinutesInLifespan) * 100;
-
-console.log(`Total time spent watching TV series: ${totalTimeMinutes} minutes`);
-console.log(
-  `Percentage of an 80-year lifespan spent watching TV series: ${percentageOfLifespan.toFixed(2)}%`
-);
+seriesDurationsOfLife(seriesDurations)
 
 //NOnoN0nOYes (Note taking app)
 const notes = [];
 
 function saveNote(content, id) {
-  const myWork = { id: id, content: content };
-  notes.push(myWork);
+  const note = { id: id, content: content };
+  notes.push(note);
 }
 saveNote("Pick up groceries", 1);
 saveNote("Do laundry", 2);
@@ -84,9 +88,13 @@ console.log(notes);
 
 //Get a note
 function getNote(id) {
-  for (const item of notes) {
-    if (item.id === id) {
-      return item;
+  if (id === undefined) {
+    console.log("you should add id ");
+    return;
+  }
+  for (const note of notes) {
+    if (note.id === id) {
+      return note;
     }
   }
 }
@@ -96,12 +104,12 @@ console.log(firstNote);
 
 //Log out notes
 
-function logOutNotesFormatted(id) {
-  for (const item of notes) {
-    if (item.id === id) {
-      console.log(`The note with ${item.id} has the following note text: ${item.content}`);
-    }
+function logOutNotesFormatted() {
+  let contents = [];
+  for (const note of notes) {
+    contents.push(note);
   }
+  return contents;
 }
 
 logOutNotesFormatted();
@@ -111,8 +119,8 @@ logOutNotesFormatted();
 const activities = [];
 
 function addActivity(date, activity, duration) {
-  const item = { date: date, activity: activity, duration: duration };
-  activities.push(item);
+  const activiti = { date: date, activity: activity, duration: duration };
+  activities.push(activiti);
 }
 addActivity("23/7-18", "Youtube", 30);
 addActivity("23/7-18", "instagram", 20);
