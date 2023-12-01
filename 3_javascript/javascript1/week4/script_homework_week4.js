@@ -46,7 +46,7 @@ function getReply(Command) {
         case 'What is on my todo?':
             console.log('Here is my todo list:');
             for (let i = 0; i < toDoList.length; i++) {
-                console.log(`${i + 1}: toDoList[i]`);
+                console.log(`${i + 1}- ${toDoList[i]}`);
             }
             return (toDoList); //document.write ??
             break;
