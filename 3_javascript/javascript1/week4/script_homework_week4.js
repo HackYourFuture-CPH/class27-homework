@@ -73,7 +73,7 @@ function getReply(Command) {
                     console.log(countDown);
                 } else {
                     clearInterval(id);
-                    return 'Count is complete'; //Why I cannot see the result ?!
+                    return 'Timer done'; //Why I cannot see the result ?!
                 }
             }
             break;
@@ -97,6 +97,6 @@ console.log(getReply('Remove fishing from my todo'));
 console.log(getReply('What is on my todo?'));
 console.log(getReply('What day is it today?'));
 console.log(getReply('What is 3 * 4?'));
-console.log(getReply('Set a timer for 4 minutes'));
+console.log(getReply('Set a timer for 1 minute'));
 
 
