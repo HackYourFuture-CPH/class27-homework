@@ -81,7 +81,7 @@ function getReply(command) {
 }
 
 
-console.log(getReply('Hello my name is Benjamin'));
+console.log(getReply('Hello my name is Monika'));
 console.log(getReply('What is my name')); 
 console.log(getReply('Add fishing to my todo')); 
 console.log(getReply('Add singing in the shower to my todo')); 
