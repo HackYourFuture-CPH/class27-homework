@@ -5,7 +5,7 @@ function calculateTravelTime(travelInformation) {
     const timeInHours = distance / speed;
   
     const hours = Math.floor(timeInHours);
-    const minutes = Math.round((timeInHours * 60) % 60);
+    const minutes = Math.floor((timeInHours * 60) % 60);
   
     const timeFormatted = hours + " hours and " + minutes + " minutes";
   

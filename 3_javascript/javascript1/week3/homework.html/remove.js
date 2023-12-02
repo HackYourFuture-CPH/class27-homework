@@ -2,14 +2,15 @@ const names = [
     "Peter",
     "Ahmad",
     "Yana",
-    "kristina",
+    "Kristina",
     "Rasmus",
     "Samuel",
     "katrine",
     "Tala",
   ];
-  const nameToRemove = "Ahmad";
-  delete names[1];
+  names.splice(1,1)
+  // const nameToRemove = "Ahmad";
+  // delete names[1];
   
  
   

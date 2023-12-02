@@ -3,10 +3,10 @@ function calculateTax(income) {
     if (income < 50000) {
         taxPercentage = 8;
     }
-    if (income > 50000 && income <= 100000) {
+     else if (income > 50000 && income <= 100000) {
         taxPercentage = 15;
     }
-    if (income > 100000 && income < 300000) {
+    else if (income > 100000 && income < 300000) {
         taxPercentage = 30;
     }
     else {
