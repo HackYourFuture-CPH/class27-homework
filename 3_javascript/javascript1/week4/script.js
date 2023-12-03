@@ -1,3 +1,5 @@
+//Speech Recognition Assistant + homeworks commands
+
 const texts = document.querySelector(".texts");
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -86,7 +88,7 @@ recognition.addEventListener("end", () => {
 })
 recognition.start();
 
-//Class exercises 
+//Class exercises (26/11/2023) 
 /*
 const users = [];
 
@@ -122,11 +124,6 @@ for(const user of users){
     if(user.age >=18);
     console.log(user.name)
 }
-
-
-
-
-
 
 const numbers = [1,2,3,4,5];
 for (let i = numbers.length-1; i>=0; i--){
