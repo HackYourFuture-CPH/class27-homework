@@ -62,7 +62,7 @@ function getReply(command) {
 // console.log(response);
 
 console.log(getReply("Hello my name is Benjamin")); // "Nice to meet you benjamin"
-console.log(getReply("What is my name?")); // "Your name is Benjamin"
 console.log(getReply("Add fishing to my todo")); // "fishing added to your todo"
 console.log(getReply("What day is it today?")); // "Day is stated"
-console.log(getReply("Please provide a valid time for the timer.")); // "Timer set"
+console.log(getReply("Set a timer for 4 minutes")); // "Timer set"
+console.log(getReply("what is 3 + 4")); // "calculation of simple mathematics"
