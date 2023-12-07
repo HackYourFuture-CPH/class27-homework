@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Question Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Quiz Question Form</h1>
+
+    <form id="quizForm">
+      <label for="question">Question:</label>
+      <input type="text" id="question" name="question" required />
+      <br />
+
+      <label>Options:</label><br />
+      <input type="text" class="option" name="option1" required />
+      <input type="text" class="option" name="option2" required />
+      <input type="text" class="option" name="option3" required />
+      <input type="text" class="option" name="option4" required />
+      <br />
+
+      <label for="correctAnswer">Correct Answer:</label>
+      <select id="correctAnswer" name="correctAnswer" required>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <br />
+
+      <button type="button" onclick="randomizeOptions()">
+        Randomize Options
+      </button>
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
