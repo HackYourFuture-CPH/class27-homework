@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Appender</title>
+  </head>
+  <body>
+    <!-- Button to trigger the text change and toggle light/dark mode -->
+    <button id="toggleButton">Toggle Mode</button>
+
+    <!-- Script section for JavaScript code -->
+    <script>
+      // Function to append an image to a specified HTML element
+      function appendImage(imageUrl, elementToAppendImageTo) {
+        const imgElement = document.createElement("img");
+        imgElement.src = imageUrl;
+
+        // Append the img element to the specified HTML element
+        elementToAppendImageTo.appendChild(imgElement);
+      }
+
+      // Example usage: append an image to the body
+      appendImage("https://picsum.photos/536/354", document.body);
+
+      // Event listener for the button click
+      document
+        .getElementById("toggleButton")
+        .addEventListener("click", function () {
+          // Toggle light/dark mode
+          document.body.classList.toggle("dark-mode");
+
+          // Toggle text on the button
+          const buttonText = this.textContent;
+          this.textContent =
+            buttonText === "Button clicked" ? "Toggle Mode" : "Button clicked";
+        });
+    </script>
+
+    <style>
+      body {
+        transition: background-color 0.5s, color 0.5s;
+      }
+
+      .dark-mode {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </body>
+</html>

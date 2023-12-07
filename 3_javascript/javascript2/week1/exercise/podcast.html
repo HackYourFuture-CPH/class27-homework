@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podcasts List</title>
+  </head>
+  <body>
+    <!-- The empty ul element where the podcasts will be added -->
+    <ul id="podcastsList"></ul>
+
+    <script>
+      const podcasts = [
+        {
+          name: "The mystery om of Johan Klausen Varbourg",
+          imageUrl: "https://picsum.photos/536/354",
+        },
+        {
+          name: "Tips about dogs with small legs",
+          imageUrl: "https://picsum.photos/536/354",
+        },
+        {
+          name: "You, me, we and us",
+          imageUrl: "https://picsum.photos/536/354",
+        },
+        {
+          name: "Breakfast news - Dinner edition",
+        },
+      ];
+
+      // Select the ul element in the DOM
+      const ulElement = document.getElementById("podcastsList");
+
+      // Loop through each podcast and create an li element for it
+      podcasts.forEach((podcast) => {
+        const liElement = document.createElement("li");
+
+        // Create an h1 element and set its innerHTML to the podcast name
+        const h1Element = document.createElement("h1");
+        h1Element.innerHTML = podcast.name;
+
+        // Append the h1 element to the li
+        liElement.appendChild(h1Element);
+
+        // Check if imageUrl key exists and create an img element
+        if (podcast.imageUrl) {
+          const imgElement = document.createElement("img");
+          imgElement.src = podcast.imageUrl;
+
+          // Append the img element to the li
+          liElement.appendChild(imgElement);
+        }
+
+        // Append the li element to the ul
+        ulElement.appendChild(liElement);
+      });
+    </script>
+  </body>
+</html>

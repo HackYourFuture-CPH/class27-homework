@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Dishes</title>
+  </head>
+  <body>
+    <!-- The empty ul element where the favorite dishes will be added -->
+    <ul id="favoriteDishesList"></ul>
+
+    <script>
+      // Array of favorite dishes
+      const favoriteDishes = [
+        "Pizza",
+        "Sushi",
+        "Chocolate Cake",
+        "Pasta",
+        "Tacos",
+      ];
+
+      // Select the ul element in the DOM
+      const ulElement = document.getElementById("favoriteDishesList");
+
+      // Loop through each favorite dish and create an li element for it
+      favoriteDishes.forEach((dish) => {
+        const liElement = document.createElement("li");
+        liElement.textContent = dish;
+
+        // Append the li element to the ul element
+        ulElement.appendChild(liElement);
+      });
+    </script>
+  </body>
+</html>
