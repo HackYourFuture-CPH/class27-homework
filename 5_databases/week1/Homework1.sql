@@ -6,7 +6,9 @@ Find out how many tasks are in the task table
 select count(id) as task_count from task;
 Find out how many tasks in the task table do not have a valid due date
 
-select count(id) as no_due_date_count from task where due_date IS NULL OR due_date < NOW();
+select count(task.id) from task
+where task.due_date is null
+
 Find all the tasks that are marked as done
 
 select * from task where status_id = 3;
