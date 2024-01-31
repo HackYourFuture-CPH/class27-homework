@@ -75,14 +75,15 @@ console.log(getCurrentDate());
 
 //(function)------set timer----------------
 let timer;
-function setTimer() {
+function setTimer(minutes) {
   clearTimeout(timer);
 
   timer = setTimeout(() => {
+    //using anonymous function(()=>{....},4000)
     console.log("Timer done");
-  }, 4 * 60 * 1000);
+  }, minutes * 60 * 1000);
 
-  return "Timer set for 4 minutes.";
+  return `Timer set for ${minutes} minutes.`;
 }
 
 console.log(getReply("Hello my name is Benjamin"));
