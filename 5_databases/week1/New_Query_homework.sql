@@ -9,7 +9,6 @@ SELECT COUNT(*) AS count_unvaliddate
 FROM task
 WHERE due_date is NULL
     
-
 --3.Find all the tasks that are marked as done
 
 SELECT *,
