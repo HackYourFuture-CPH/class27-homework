@@ -56,7 +56,6 @@ FROM task
 JOIN status ON status_id=status.id
 GROUP BY status_id
 
-
 --10.Get the names of all statuses, sorted by the status with most tasks first
 
 SELECT status.name, 
