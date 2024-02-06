@@ -1,13 +1,15 @@
 CREATE DATABASE library; 
 
+use library;
+
 CREATE TABLE books(
     book_id INT AUTO_INCREMENT,
     book_title VARCHAR(255),
     author VARCHAR(255),
-    book_address VARCHAR(255),
+    book_address INT,
     book_status ENUM('available', 'cheked out'),
     PRIMARY KEY(book_id),
-    FOREIGN KEY(adress) REFERENCES racks(rack_id)
+    FOREIGN KEY(book_address) REFERENCES racks(rack_id)
 );
 
 CREATE TABLE genre(
@@ -20,7 +22,7 @@ CREATE TABLE book_genre(
     book_id INT,
     genre_id INT,
     PRIMARY KEY(book_id, genre_id),
-    FOREIGN KEY(book_id) REFERENCES book(book_id),
+    FOREIGN KEY(book_id) REFERENCES books(book_id),
     FOREIGN KEY(genre_id) REFERENCES genre(genre_id)
 );
 
