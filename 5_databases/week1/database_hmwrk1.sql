@@ -24,9 +24,18 @@ WHERE
     status.name = "done";
 
 -- 4 Find all the tasks that are not marked as done
-SELECT id AS TaskID, title AS taskTitle, status_id AS NotDone
-FROM task
-WHERE status_id != 3;
+-- SELECT id AS TaskID, title AS taskTitle, status_id AS NotDone
+-- FROM task
+-- WHERE status_id != 3;
+
+SELECT
+    *
+FROM
+    task
+    JOIN status ON task.status ON task.status_id = status.id
+WHERE
+    status.name != "done";
+
 
 -- 5 Get all the tasks, sorted with the most recently created first
 SELECT id AS TaskID, title, description, created AS MostRecentlyCreated, updated, due_date, status_id, user_id, 
