@@ -1,8 +1,6 @@
 use hyf;
 
-
 select * from user;
-
 
 --Get all the tasks assigned to users whose email ends in @spotify.com
 SELECT task.title as 'task title'
