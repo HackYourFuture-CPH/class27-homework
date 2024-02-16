@@ -4,8 +4,9 @@ SELECT* from task;
 INSERT INTO task (title, description, created, updated, due_date, status_id, user_id)
 VALUES ('New Task Title', 'New Task Description', NOW(), NOW(), '2023-12-31', 1, 1);
 -- Change the title of a task:
+--Updated Task Title
 UPDATE task
-SET title = 'Updated Task Title'
+SET title = 'Reading new stucture'
 WHERE id = 1; -- Assuming the task ID is 1
 --hange a task due date:
 UPDATE task
