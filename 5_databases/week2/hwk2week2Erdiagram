@@ -1,0 +1,3 @@
+The Farmer table represents information about farmers, with ID as the primary key.
+The Barn_Animal table represents the many-to-many relationship between barns and animals. It contains composite primary keys (Barn_ID, Animal_ID) which are also foreign keys referencing the Barn and Animal tables respectively.
+The relationship between Farmer and Barn_Animal is not directly shown in this diagram because it's mediated through the Animal table. However, since Barn_Animal represents the relationship between barns and animals, and Animal includes a foreign key Farmer_ID, there is an indirect relationship between Farmer and Barn_Animal through the Animal table.
