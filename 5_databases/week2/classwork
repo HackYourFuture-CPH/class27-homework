@@ -1,0 +1,45 @@
+-- Active: 1706378251164@@0.0.0.0@3306
+ use articles_classwork;
+
+CREATE TABLE authors (
+    id INT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+CREATE TABLE articles (
+    id INT PRIMARY KEY,
+    title VARCHAR(255),
+    content TEXT
+);
+CREATE TABLE tags (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    tag_name VARCHAR(255) UNIQUE
+);
+
+CREATE TABLE article_authors (
+    article_id INT,
+    author_id INT,
+    FOREIGN KEY (article_id) REFERENCES articles(id),
+    FOREIGN KEY (author_id) REFERENCES authors(id),
+    PRIMARY KEY (article_id, author_id)
+);
+INSERT INTO authors (id, name) VALUES
+(1, 'James Smith'),
+(2, 'Jane Jones'),
+(3, 'Aliya Awad'),
+(4, 'Igor Vladimir'),
+(5, 'Kim Jensen');
+
+INSERT INTO articles (id, title, content) VALUES
+(1, 'BREAKING NEWS: Water is wet!', 'Scientists have discovered that water is wet, it''s amazing what.... ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+(2, 'Heavy Snowfall Expected this Weekend', 'Lots of snow is expected... Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(3, 'BREAKING NEWS: These 10 Clickbait Titles Are Bad for Your Health, Number 7 Will SHOCK You!', 'Haha, you clicked! Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat ');
+
+INSERT INTO article_authors (article_id, author_id) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(2, 4),
+(3, 2),
+(3, 5);
+

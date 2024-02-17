@@ -1,0 +1,75 @@
+-- Active: 1706378251164@@0.0.0.0@3306@articles
+use articles;
+select * from task
+
+--Part 1: Working with tasks
+INSERT INTO task (title, description, created, updated, due_date, status_id)
+VALUES ('Working with homework', ' homework1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '2024-01-29', 1);
+
+UPDATE task SET title = 'Change the title' WHERE id = 37;
+UPDATE task SET due_date = '2024-02-10' WHERE id = 37;
+UPDATE task SET status_id = 2 WHERE id = 37;
+DELETE FROM task WHERE id = 36;
+
+--SCHOOL DATABASE
+use School;
+--Part 2: School database
+CREATE INDEX idx_name ON Student (name);
+ALTER TABLE Class 
+ADD COLUMN status ENUM('not-started', 'ongoing', 'finished')
+
+--Part 3: More queries
+use articles;
+
+SELECT * 
+FROM user
+WHERE email LIKE'%@spotify.com';
+
+SELECT *
+FROM task
+JOIN user ON tasks.assigned_to = users.user_id
+WHERE user.name = 'Donald Duck' AND tasks.status = 'Not started';
+
+SELECT task.title as 'task title'
+FROM task
+JOIN user on task.id=user.id
+JOIN status on task.status_id=status.id
+WHERE user.name='Donald Duck' AND status.name='Not started';
+
+SELECT task.title as 'task title'
+FROM task
+JOIN user on task.id=user.id
+WHERE user.name='Maryrose Meadows' AND month(created)=9;
+
+SELECT MONTH(created) AS month_number,
+COUNT(*) AS 'count monthly task'
+FROM task
+GROUP BY month_number;
+
+--Part 4: Creating a database
+use smallBusiness
+
+CREATE TABLE Staff (
+    id INT not NULL AUTO_INCREMENT,
+    name TEXT,
+    email TEXT,
+    office_id INT,
+    FOREIGN KEY (office_id) REFERENCES Offices(office_id)
+);
+CREATE TABLE Offices (
+    office_id INTEGER PRIMARY KEY,
+    location TEXT
+);
+CREATE TABLE JobTitles (
+    job_title_id INTEGER PRIMARY KEY,
+    title TEXT
+);
+CREATE TABLE StaffJobTitles (
+    staff_id INTEGER,
+    job_title_id INTEGER,
+    start_date DATE,
+    end_date DATE,
+    FOREIGN KEY (staff_id) REFERENCES Staff(staff_id),
+    FOREIGN KEY (job_title_id) REFERENCES JobTitles(job_title_id),
+    PRIMARY KEY (staff_id, job_title_id)
+);
