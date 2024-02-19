@@ -1,4 +1,4 @@
--- Active: 1706363831540@@0.0.0.0@3306@business
+-- Active: 1706363831540@@0.0.0.0@3306@hyf_lesson2
 --------------------------------- Part 1
 
 INSERT INTO task(title, description, created, updated, due_date, status_id, user_id)
@@ -55,14 +55,14 @@ CREATE TABLE student(
 SELECT *
 FROM task
 JOIN user_task ON task.id = user_task.task_id
-JOIN USER ON user_task.user_id = user.id
+JOIN user ON user_task.user_id = user.id
 WHERE user.email like '%@spotify.com'
 
 SELECT *
 FROM task
 JOIN user_task ON task.id = user_task.task_id
-JOIN USER ON user_task.user_id = user.id
-JOIN status ON status.id = task_id
+JOIN user ON user_task.user_id = user.id
+JOIN status ON status.id = task.status_id
 WHERE user.name = 'Donald Duck'
   AND status.name = 'Not started'
 
