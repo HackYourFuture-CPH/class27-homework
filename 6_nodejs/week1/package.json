@@ -10,6 +10,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "yargs": "^17.7.2"
+    "minimist": "^1.2.8"
   }
 }
