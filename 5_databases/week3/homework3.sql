@@ -23,7 +23,7 @@ CREATE TABLE reservation (
 );
 
 CREATE TABLE review (
-    id INT(6),
+    id INT(6) AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(20),
     description TEXT,
     meal_id INT(6),
