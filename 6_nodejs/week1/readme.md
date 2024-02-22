@@ -1,1 +1,1 @@
-# Readme
+# These are all nodeJs related files which include exercises and a warm up task of the honework of nodejs-week1.
