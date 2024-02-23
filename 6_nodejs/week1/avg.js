@@ -1,3 +1,4 @@
+//warmup
 let avg = 0;
 for (let j = 2; j < process.argv.length; j++) {
   const a = parseInt(process.argv[2]);
