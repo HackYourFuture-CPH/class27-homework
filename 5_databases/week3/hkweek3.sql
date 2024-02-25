@@ -7,34 +7,34 @@ CREATE DATABASE meal_sharing_website;
 
 
     CREATE TABLE Reservation (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    number_of_guests INT,
-    meal_id INT,
-    created_date DATE,
-    contact_phonenumber VARCHAR(20),
-    contact_name VARCHAR(100),
-    contact_email VARCHAR(100),
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    number_of_guests INT NOT NULL,
+    meal_id INT NOT NULL,
+    created_date DATE NOT NULL,
+    contact_phonenumber VARCHAR(20) NOT NULL,
+    contact_name VARCHAR(100) NOT NULL,
+    contact_email VARCHAR(100) NOT NULL,
     FOREIGN KEY (meal_id) REFERENCES Meal(id)
 );
 
 CREATE TABLE Meal (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(100),
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    title VARCHAR(100) NOT NULL,
     description TEXT,
-    location VARCHAR(100),
-    when_datetime DATETIME,
-    max_reservations INT,
-    price DECIMAL(10, 2),
-    created_date DATE
+    location VARCHAR(100) NOT NULL,
+    when_datetime DATETIME NOT NULL,
+    max_reservations INT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    created_date DATE NOT NULL
 );
 
 CREATE TABLE Review (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(100),
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    title VARCHAR(100) NOT NULL,
     description TEXT,
-    meal_id INT,
-    stars INT,
-    created_date DATE,
+    meal_id INT NOT NULL,
+    stars INT NOT NULL,
+    created_date DATE NOT NULL,
     FOREIGN KEY (meal_id) REFERENCES Meal(id)
 );
 
