@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "type": "doc",
+        "value": "hello world",
+        "name": "Document 1",
+        "price": "50",
+        "description": "Some description 1"
+    },
+    {
+        "id": 2,
+        "type": "doc",
+        "value": "goodbye",
+        "name": "Document 2",
+        "price": "75",
+        "description": "Some description 2"
+    },
+    {
+        "id": 3,
+        "type": "doc",
+        "value": "example",
+        "name": "Document 3",
+        "price": "30",
+        "description": "Some description 3"
+    },
+    {
+        "id": 4,
+        "type": "doc",
+        "value": "world",
+        "name": "Document 4",
+        "price": "90",
+        "description": "Some description 4"
+    },
+    {
+        "id": 5,
+        "type": "doc",
+        "value": "new",
+        "name": "Used Apple Airpods",
+        "price": "50",
+        "description": "Battery life is not great"
+    }
+]
