@@ -42,9 +42,8 @@ app.get("/search/:id", (req, res) => {
 app.post("/search", (req, res) => {
   const query = req.query.q;
   console.log(req.body.fields);
-  const body = req.body;
-  console.log(body);
-  if (query && body && body.fields !== undefined) {
+  const fields = req.body.fields;
+  if (query && fields ) {
     res.status(400).send("can't provide both query and field");
   }
   if (query) {
@@ -57,13 +56,25 @@ app.post("/search", (req, res) => {
       return res.status(404).json({ data: null, message: "not found" });
     }
     return res.json({ data: filteredData, message: "ok" });
-  } else if (body && body.fields) {
-    const keys = Object.keys(body.fields);
+  } else if (fields) {
+
+    // it checks if the key is exsit in my data
+
+    // const keys = Object.keys(fields);
+    // const dataWithField = data.filter(item => {
+    //     return keys.every(key => {
+    //         return item.hasOwnProperty(key);
+    //     });
+    // });
+
+    // it checks if the key and the value of the fields object is exactly the same as key and value of data
+    const keys = Object.keys(fields);
     const dataWithField = data.filter(item => {
-        return keys.every(key => {
-            return item.hasOwnProperty(key);
-        });
+      return keys.every(key => {
+        return item[key] === fields[key]
+      });
     });
+    
     if (dataWithField.length === 0) {
         return res.status(404).json({ data: null, message: "not found" });
     }
