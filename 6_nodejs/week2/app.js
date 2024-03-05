@@ -13,29 +13,16 @@ app.get("/", (req, res) => {
 });
 // GET /search
 app.get("/search", (req, res) => {
-  const query = req.query.q;
-  if (query) {
-    const filteredData = data.filter((item) => {
-      return Object.values(item).some(
-        (value) => typeof value === "string" && value.includes(query)
-      );
-    });
-    if (filteredData.length === 0) {
-      return res.send("not found");
-    }
-    return res.json({ data: filteredData, message: "ok" });
-  }
-  res.json({ data: data, message: "ok" });
+  const {q : query} = req.query;
+  const searchedData = query ? data.filter(each => Object.values(each).join(' ').search(query) > -1) :data
+  res.json({ data: searchedData, message: "ok" });
 });
 
 // GET /documents/:id
 app.get("/search/:id", (req, res) => {
-  const dataId = +req.params.id;
-  const myData = data.find((data) => data.id === dataId);
-  if (!myData) {
-    return res.status(404).json({ data: null, message: "not found" });
-  }
-  res.json({ data: myData, message: "ok" });
+  const result = data.find(item => item.id === +req.params.id);
+  const response = result ? {statusCode: 200 , message : "ok"} : {statusCode: 404 , message : "Not Found"};
+  res.status(response.statusCode).json({data: result , message: response.message})
 });
 
 // POST /search
