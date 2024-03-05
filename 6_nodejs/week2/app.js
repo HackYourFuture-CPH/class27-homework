@@ -58,15 +58,6 @@ app.post("/search", (req, res) => {
     return res.json({ data: filteredData, message: "ok" });
   } else if (fields) {
 
-    // it checks if the key is exsit in my data
-
-    // const keys = Object.keys(fields);
-    // const dataWithField = data.filter(item => {
-    //     return keys.every(key => {
-    //         return item.hasOwnProperty(key);
-    //     });
-    // });
-
     // it checks if the key and the value of the fields object is exactly the same as key and value of data
     const keys = Object.keys(fields);
     const dataWithField = data.filter(item => {
