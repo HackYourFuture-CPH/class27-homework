@@ -41,7 +41,6 @@ app.get("/search/:id", (req, res) => {
 // POST /search
 app.post("/search", (req, res) => {
   const query = req.query.q;
-  console.log(req.body.fields);
   const fields = req.body.fields;
   if (query && fields ) {
     res.status(400).send("can't provide both query and field");
