@@ -5,7 +5,7 @@ const knexInstance = knex({
     host: process.env.DB_HOST || "127.0.0.1",
     port: process.env.DB_PORT || 3306,
     user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "my-secret-pw",
+    password: process.env.DB_PASSWORD || "my-secret-password",
     database: process.env.DB_NAME || "hyf_node_week3_warmup",
     multipleStatements: true,
   },
@@ -24,12 +24,16 @@ const contactsAPIRouter = express.Router();
 apiRouter.use("/contacts", contactsAPIRouter);
 
 contactsAPIRouter.get("/", async (req, res) => {
-  let query = knex("contacts").select("*");
+  let query = knexInstance("contacts").select();
 
   if ("sort" in req.query) {
     const orderBy = req.query.sort.toString();
-    if (orderBy.length > 0) {
-      query = query.orderByRaw(orderBy);
+    if (orderBy === "first_name"){
+      query = query.orderBy(orderBy);
+    }else if(orderBy === "last_name"){
+        query = query.orderBy(orderBy , "desc");
+    }else{
+        res.send("invalid sort")
     }
   }
 
