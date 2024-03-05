@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Used Apple Airpods",
+    "price": "50",
+    "description": "Battery life is not great"
+  },
+  {
+    "id": 2,
+    "name": "iPhone 12 Pro",
+    "price": "999",
+    "description": "A high-end smartphone with excellent camera quality"
+  },
+  {
+    "id": 3,
+    "name": "Samsung Galaxy Watch",
+    "price": "349",
+    "description": "A smartwatch with long battery life and fitness tracking features"
+  },
+  {
+    "id": 4,
+    "name": "Dell XPS 13 Laptop",
+    "price": "1299",
+    "description": "A powerful and compact laptop with a stunning display"
+  },
+  {
+    "id": 5,
+    "name": "Sony WH-1000XM4 Headphones",
+    "price": "349",
+    "description": "Premium noise-canceling headphones with excellent sound quality"
+  },
+  {
+    "id": 6,
+    "name": "Google Pixel 5",
+    "price": "699",
+    "description": "A flagship smartphone with pure Android experience"
+  },
+  {
+    "id": 7,
+    "name": "Amazon Echo Dot",
+    "price": "49",
+    "description": "A compact smart speaker powered by Alexa"
+  },
+  {
+    "id": 8,
+    "name": "Apple MacBook Pro 16",
+    "price": "2399",
+    "description": "A professional-grade laptop with a stunning Retina display"
+  },
+  {
+    "id": 9,
+    "name": "Fitbit Charge 4",
+    "price": "149",
+    "description": "An advanced fitness tracker with built-in GPS and heart rate monitoring"
+  },
+  {
+    "id": 10,
+    "name": "Logitech MX Master 3",
+    "price": "99",
+    "description": "An ergonomic and customizable wireless mouse for productivity"
+  }
+]
