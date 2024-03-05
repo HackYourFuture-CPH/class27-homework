@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Used Apple Airpods",
+        "price": "50",
+        "description": "Battery life is not great"
+    },
+    {
+        "id": 2,
+        "type": "doc",
+        "value": "hello world"
+    },
+    {
+        "id": 3,
+        "name": "Cats",
+        "value": "Highly addictive super cute cats"
+    },
+    {
+        "id": 4,
+        "name": "Dream companies",
+        "value": "Top secret dream companies"
+    }
+
+]
