@@ -1,5 +1,5 @@
-import knex from 'knex'
-const knexInstance = knex({
+import knexInstance from 'knex'
+const knex= knexInstance({
   client: "mysql2",
   connection: {
     host: process.env.DB_HOST || "127.0.0.1",
@@ -24,7 +24,7 @@ const contactsAPIRouter = express.Router();
 apiRouter.use("/contacts", contactsAPIRouter);
 
 contactsAPIRouter.get("/", async (req, res) => {
-  let query = knexInstance("contacts").select();
+  let query = knex("contacts").select();
 
   if ("sort" in req.query) {
     const orderBy = req.query.sort.toString();
