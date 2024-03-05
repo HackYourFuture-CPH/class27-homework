@@ -37,8 +37,7 @@ app.post("/search", (req, res) => {
   const fields = req.body.fields;
   if (query && fields) {
     res.status(400).send("can't provide both query and field");
-  }
-  if (query) {
+  }else if (query) {
     const filteredData = data.filter((item) =>
       Object.values(item).some(
         (value) => typeof value === "string" && value.includes(query)
