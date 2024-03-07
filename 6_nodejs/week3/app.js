@@ -5,7 +5,7 @@ const knexInstance = knex({
     host: process.env.DB_HOST || "127.0.0.1",
     port: process.env.DB_PORT || 3306,
     user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "my-secret-pw",
+    password: process.env.DB_PASSWORD || "2424",
     database: process.env.DB_NAME || "hyf_node_week3_warmup",
     multipleStatements: true,
   },
@@ -13,7 +13,7 @@ const knexInstance = knex({
 
 import express from "express";
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 
 app.use(express.json());
 
@@ -24,18 +24,18 @@ const contactsAPIRouter = express.Router();
 apiRouter.use("/contacts", contactsAPIRouter);
 
 contactsAPIRouter.get("/", async (req, res) => {
-  let query = knexInstance.select("*").from("contacts");
+  let query = knex.select("*").from("contacts");
 
   if ("sort" in req.query) {
     const orderBy = req.query.sort.toString();
-    const validColumns = ["first_name", "last_name"];
-    const validOrders = ["ASC", "DESC"];
+    const validFields = ["first_name", "last_name"]; // Define valid sorting fields
+    const validDirections = ["ASC", "DESC"]; // Define valid sorting directions
 
-    const [column, order] = orderBy.split(" ");
-    if (validColumns.includes(column) && validOrders.includes(order)) {
-      query = query.orderBy(column, order);
+    // Parse and validate the sort parameter
+    const [field, direction] = orderBy.split(" ");
+    if (validFields.includes(field) && validDirections.includes(direction)) {
+      query = query.orderBy(field, direction); // Use sanitized orderBy
     } else {
-      // Handle invalid sort parameters
       return res.status(400).json({ error: "Invalid sort parameter" });
     }
   }
