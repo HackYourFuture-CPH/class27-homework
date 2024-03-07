@@ -10,18 +10,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/search", (req, res) => {
-  const query = req.query.q;
+  const { q: query } = req.query;
+  const searchResult = query
+    ? data.filter((each) => Object.values(each).join(" ").search(query) > -1)
+    : data;
 
-  if (!query) {
-    res.json(documents);
-  } else {
-    const filteredDocuments = documents.filter((doc) => {
-      return Object.values(doc).some((value) =>
-        value.toString().toLowerCase().includes(query.toLowerCase())
-      );
-    });
-    res.json({ data: filteredDocuments, message: "ok" });
-  }
+  res.json({ data: searchResult, message: "ok" });
 });
 
 //GET /documents/:id
@@ -43,7 +37,7 @@ app.post("/search", (req, res) => {
   const query = req.query.q;
   const fields = req.body.fields;
 
-  if (query && fields) {
+  if ((query && fields) || (!query && !fields)) {
     res.status(400).send("Bad Request: Both q and fields cannot be provided");
     return;
   }
@@ -60,9 +54,6 @@ app.post("/search", (req, res) => {
         ([field, value]) => doc[field] && doc[field].toString() === value.toString()
       );
     });
-  } else {
-    res.status(400).send("Bad Request: q or fields must be provided");
-    return;
   }
   res.json(filteredDocuments);
 });
