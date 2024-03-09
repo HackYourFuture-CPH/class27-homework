@@ -29,7 +29,8 @@ contactsAPIRouter.get("/", async (req, res) => {
   if ("sort" in req.query) {
     const orderBy = req.query.sort.toString();
     if (orderBy.length > 0) {
-      query = query.orderByRaw(orderBy);
+        // Use raw expression for proper bindings
+        query = query.orderByRaw(knex.raw('?', [orderBy]));
     }
   }
 
