@@ -1,0 +1,7 @@
+.form{
+    display: flex;
+    gap: 0.5rem;
+}
+input, button{
+    padding: 0.2rem;
+}
