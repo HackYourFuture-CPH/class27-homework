@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  margin-right: 1.5rem;
+  margin-right: 2rem;
 }
 .App {
   padding: 10px;
@@ -43,7 +43,7 @@ body {
 }
 .App button {
   background: #000;
-  color: aliceblue;
+  color: gray;
   padding: 12px;
   border: none;
   font-size: 12px;

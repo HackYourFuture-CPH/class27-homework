@@ -1,16 +1,15 @@
-
-import React from 'react'
+import React from "react";
 
 function NewTodo(props) {
   return (
     <div>
-       <li>
+      <li>
         <h3>
-          {props.name} , date = {props.date} 
+          {props.name} , Date : {props.date}
         </h3>
       </li>
     </div>
-  )
+  );
 }
 
-export default NewTodo
+export default NewTodo;

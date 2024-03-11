@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <h2 className="main-title">My To Do List</h2>
+      <h2 className="main-title">ToDo List</h2>
       <div className="container">
         <NewTodoList newTodo={newTodo} />
       </div>
