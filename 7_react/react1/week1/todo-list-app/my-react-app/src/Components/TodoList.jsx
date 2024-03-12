@@ -8,7 +8,7 @@ import "./TodoList.css"; // Import CSS file
 const todosData = [
   { id: 1, description: "Attend family meeting", deadline: "Sun Mar 10 2024" },
   { id: 2, description: "Get some groceries", deadline: "Mon Mar 11 2024" },
-  { id: 3, description: "Walk my dog", deadline: "Tues Mar 12 2024" },
+  { id: 3, description: "Walk my dog", deadline: "Tue Mar 12 2024" },
 ];
 
 function TodoList() {
