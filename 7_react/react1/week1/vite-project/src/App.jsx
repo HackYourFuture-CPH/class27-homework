@@ -12,33 +12,33 @@ const ToDoListItem = (props) => {
   );
 };
 
-// const ToDo = (props) => {
-//   return (
-//     <div>
-//       TOdo item : {props.item}
-//     </div>
-//   );
-// };
+const ToDo = (props) => {
+  return (
+    <div>
+      Todo item : {props.description} - {props.day} - {props.date}
+    </div>
+  );
+};
 
-// const ToDoItems = [
-//   {
-//     'Description': "Brush teeth",
-//     'Day':'Thu',
-//     'Date':'Sep 14 2017',
-// },
+const ToDoItems = [
+  {
+    Description: 'Get out of bed',
+    Day:'Wed',
+    Date:'Sep 13 2017',
+},
 
-//   {
-//     'Description' : 'Brush teeth',
-//      'Day' : 'Thu',
-//     'Date' : 'Sep 14 2017',
-//   },
+  {
+    Description : 'Brush teeth',
+    Day : 'Thu',
+    Date : 'Sep 14 2017',
+  },
 
-//   {
-//   'Description' : 'Eat breakfast',
-//   'itemDay' : 'Fri',
-//   'itemDate' : 'Sep 15 2017',
-// }
-// ];
+  {
+  Description : 'Eat breakfast',
+  Day : 'Fri',
+  Date : 'Sep 15 2017',
+},
+];
 
 
 
@@ -89,16 +89,16 @@ function App() {
 
       <p>*****************************************************</p>
 
-      {/* <div className="todo_item_from_array">
+       <div className="todo_item_from_array">
         <h3>Todo List taken from a todo lists array</h3>
 
         {ToDoItems.map(item => {
           return ( 
-            <ToDo key={item} item={item} />
+            <ToDo key={item} description={item.Description} day={item.Day} date={item.Date}/>
           )
           })
         }
-      </div> */}
+      </div> 
 
     </>
   );
