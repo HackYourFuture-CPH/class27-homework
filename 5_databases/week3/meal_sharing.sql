@@ -1,14 +1,14 @@
 use meal_sharing_db
 CREATE TABLE Meal (
-    id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(150) NOT NULL, description TEXT, location VARCHAR(50), meal_datetime DATETIME, max_reservations INT, price DECIMAL, created_date DATE
+    id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(150) NOT NULL, description TEXT, location VARCHAR(50) NOT NULL, meal_datetime DATETIME NOT NULL, max_reservations INT NOT NULL, price DECIMAL NOT NULL, created_date DATETIME NOT NULL
 );
 
 CREATE TABLE Reservation (
-    id INT PRIMARY KEY AUTO_INCREMENT, number_of_guests INT NOT NULL, meal_id INT, created_date DATE, contact_phonenumber VARCHAR(15), contact_name VARCHAR(50), contact_email VARCHAR(20), FOREIGN KEY (meal_id) REFERENCES Meal (id) ON DELETE CASCADE ON UPDATE CASCADE
+    id INT PRIMARY KEY AUTO_INCREMENT, number_of_guests INT NOT NULL, meal_id INT, created_date DATETIME NOT NULL, contact_phonenumber VARCHAR(15) NOT NULL, contact_name VARCHAR(50) NOT NULL, contact_email VARCHAR(20) NOT NULL, FOREIGN KEY (meal_id) REFERENCES Meal (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Review (
-    id INT PRIMARY KEY, title VARCHAR(150), description TEXT(255), meal_id INT, stars INT, created_date DATE, FOREIGN KEY (meal_id) REFERENCES Meal (id)
+    id INT PRIMARY KEY, title VARCHAR(150), description TEXT(255), meal_id INT, stars INT, created_date DATETIME, FOREIGN KEY (meal_id) REFERENCES Meal (id)
 );
 
 INSERT INTO
@@ -144,10 +144,15 @@ SET
 WHERE
     id = 1;
 --Delete a review with any id, fx 1
-DELETE from Review where id = 1
----Additional queries-----------------------------------------------------------------------------
---Get meals that has a price smaller than a specific price fx 90
-SELECT Meal.price as 'price' FROM Meal WHERE price < 90;
+DELETE from Review
+where
+    id = 1
+    ---Additional queries-----------------------------------------------------------------------------
+    --Get meals that has a price smaller than a specific price fx 90
+SELECT Meal.price as 'price'
+FROM Meal
+WHERE
+    price < 90;
 
 --Get meals that still has available reservations
 SELECT * FROM Meal WHERE max_reservations > 15;
