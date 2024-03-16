@@ -1,0 +1,22 @@
+.todo-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-description {
+    font-size: 1rem;
+    color:blue;
+    margin: 0;
+}
+
+.todo-deadline {
+    font-size: 0.9rem;
+    color:rgb(16, 163, 38);
+    margin: 0;
+}

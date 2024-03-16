@@ -1,0 +1,23 @@
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px rgba(red, green, blue, alpha);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+.todo-description {
+    margin-right: 20px;
+}
+
+todo-deadline {
+    margin-left: 20px;
+}
+
+.todo-list li:not(:last-child) {
+    border-bottom: 1px solid #ececec;
+}
