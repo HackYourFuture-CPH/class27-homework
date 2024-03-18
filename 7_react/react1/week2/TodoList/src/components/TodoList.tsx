@@ -5,7 +5,7 @@ function TodoList({ todos }: { todos: Todo[] }) {
   return (
     <ul>
       {todos.map((todo) => (
-        <TodoItem description={todo.description} deadline={todo.deadline} />
+        <TodoItem key={todo.id} description={todo.description} deadline={todo.deadline} />
       ))}
     </ul>
   );
