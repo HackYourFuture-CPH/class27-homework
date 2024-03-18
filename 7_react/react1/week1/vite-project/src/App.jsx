@@ -56,16 +56,16 @@ function App() {
         </h2>
       </div>
       <div className="todo_list_normal_text">
-        <h3>Todo List as normal text</h3>
+        <h3>Todo List as simple texts</h3>
         <p>* Get out of bed, Wed Sep 13 2017</p>
         <p>* Brush teeth, Thu Sep 14 2017</p>
         <p>* Eat breakfast, Fri Sep 15 2017</p>
       </div>
 
-      <p>*****************************************************</p>
+      <p>------------------------------------------</p>
 
       <div className="todo_list_static">
-        <h3>Todo List as static items using props</h3>
+        <h3>Todo List items</h3>
 
         <ToDoListItem
           itemNumber="1"
@@ -87,7 +87,7 @@ function App() {
         />
       </div>
 
-      <p>*****************************************************</p>
+      <p>---------------------------------------------</p>
 
        <div className="todo_item_from_array">
         <h3>Todo List taken from a todo lists array</h3>
