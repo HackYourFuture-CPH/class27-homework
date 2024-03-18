@@ -30,7 +30,7 @@ function App() {
     setTodos([...todos , {
       id: todos.length + 1,
       description: "random todo",
-      deadline: "Fri Sep 15 2017",
+      deadline: "random deadline",
     }])
   }
 
