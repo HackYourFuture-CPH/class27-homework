@@ -1,11 +1,12 @@
 import TodoItem from "./TodoItem";
-import { Todo } from "../App";
+import { DeleteTodo, Todo } from "../App";
 
-function TodoList({ todos }: { todos: Todo[] }) {
+
+function TodoList({ todos, deleteTodo }: { todos: Todo[] , deleteTodo: DeleteTodo}) {
   return (
     <ul>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} description={todo.description} deadline={todo.deadline} />
+        <TodoItem key={todo.id} description={todo.description} deadline={todo.deadline} deleteTodo={deleteTodo} todoId={todo.id}/>
       ))}
     </ul>
   );

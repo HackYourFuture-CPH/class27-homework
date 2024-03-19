@@ -8,6 +8,7 @@ export type Todo = {
   description : string,
   deadline: string
 }
+export type  DeleteTodo = (id : number) => void
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([    {
@@ -33,11 +34,15 @@ function App() {
       deadline: "random deadline",
     }])
   }
+  const deleteTodo = (id: number) => {
+    const newTodoList = todos.filter(todo => (todo.id !== id));
+    setTodos(newTodoList)
+  }
 
   return (
     <div className="container">
       <TodoForm addTodo={addRandomTodo}/>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo}/>
     </div>
   );
 }
