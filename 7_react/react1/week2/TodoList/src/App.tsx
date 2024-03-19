@@ -42,7 +42,9 @@ function App() {
   return (
     <div className="container">
       <TodoForm addTodo={addRandomTodo}/>
-      <TodoList todos={todos} deleteTodo={deleteTodo}/>
+      {
+        todos.length > 0 ? (<TodoList todos={todos} deleteTodo={deleteTodo}/>) : (<p>No items</p>)
+      }
     </div>
   );
 }
