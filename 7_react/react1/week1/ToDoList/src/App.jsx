@@ -1,7 +1,6 @@
-
 import "./index.css";
-
 import NewTodoList from "./Components/NewTodoList.jsx";
+import TaskInput from "./Components/TaskInput.jsx";
 
 function App() {
   const newTodo = [
@@ -21,10 +20,13 @@ function App() {
 
   return (
     <>
-      <h2 className="main-title">ToDo List</h2>
       <div className="container">
-        <NewTodoList newTodo={newTodo} />
+        <div>
+          <h2 className="main-title">ToDo List</h2>
+          <TaskInput />
+        </div>
       </div>
+      <NewTodoList newTodo={newTodo} />
     </>
   );
 }
