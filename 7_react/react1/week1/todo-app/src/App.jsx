@@ -1,6 +1,5 @@
 import TodoList from "./components/TodoList/TodoList";
 
-function App() {
 const todos = [
   {
     id: 1,
@@ -17,6 +16,9 @@ const todos = [
     task:"Eat breakfast",
     deadline:"Fri Sep 15 2017"
   }];
+
+function App() {
+
   return (
     <div className="App">
       <TodoList todos={todos} />
