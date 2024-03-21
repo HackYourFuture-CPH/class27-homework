@@ -1,14 +1,8 @@
-
 const ListingItems = (props) => {
   return (
-    <div>
-        <ul>
-      <li>
-        <strong>Item {props.id}: </strong> {props.description} ,{" "}
-        {props.deadline}
-      </li>
-      </ul>
-    </div>
+    <li>
+      <strong>Item {props.id}: </strong> {props.description} , {props.deadline}
+    </li>
   );
 };
 

@@ -23,14 +23,14 @@ const toDoItems = [
 
 function App() {
   return (
-    <>
+    
       <div className="todo-list">
-        <h3 class="todo-header">Todo List</h3>
+        <h3 className="todo-header">Todo List</h3>
         
           <IteratingTodoItemsArray toDoItems={toDoItems} />
         
       </div>
-    </>
+    
   );
 }
 

@@ -2,7 +2,7 @@ import ListingItems from "./listingItems";
 
 function IteratingTodoItemsArray ({toDoItems}) {
     return (
-      <div>
+      <ul>
         {toDoItems.map(item => 
             <ListingItems key={item.id}
               id={item.id}
@@ -11,7 +11,7 @@ function IteratingTodoItemsArray ({toDoItems}) {
             />
           )
         }
-      </div>
+      </ul>
     );
   };
   
