@@ -72,7 +72,7 @@
   padding: 0;
 }
 .todo_list_ul {
-  list-style: decimal;
+  list-style: none;
   margin: 5px;
   padding: 15px;
 }
