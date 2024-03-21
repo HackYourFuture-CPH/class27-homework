@@ -3,34 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  background-color: rgb(178, 246, 223);
 }
 
 .card {
@@ -41,8 +14,21 @@
   color: #888;
 }
 
-.todo_list {
-  color: rgb(18, 151, 0);
+.todo-list {
+  color: rgb(2, 0, 51);
+  text-align: left;
+  border: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  border-color: rgb(0, 22, 104);
+  background-color: rgb(246, 246, 246);
+  padding: 15px;
+  text-wrap: nowrap;
+}
+
+.todo-header {
+  text-align: center;
+  color: brown;
 }
 
 p {
