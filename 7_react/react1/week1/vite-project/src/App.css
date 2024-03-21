@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(178, 246, 223);
+}
+
+.todo-list {
+  color: rgb(2, 0, 51);
+  text-align: left;
+  border: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  border-color: rgb(0, 22, 104);
+  background-color: rgb(246, 246, 246);
+  padding: 15px;
+  text-wrap: nowrap;
+}
+
+.todo-header {
+  text-align: center;
+  color: brown;
+}
+
+p {
+  color: rgb(68, 22, 0);
+}
