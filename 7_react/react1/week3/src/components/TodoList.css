@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 380px;
+  height: 100vh;
+  background-image: url("/Users/aaronaboah/todo-app/class27-homework/7_react/react1/week3/src/image1.png");
+  /* Replace 'path/to/your/background-image.jpg' with the actual path to your background image file */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+}
+
+.todo-list {
+  margin: 20px auto;
+  padding: 20px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #404caa;
+  display: flexbox;
+  align-items: center;
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: center; /* Center items vertically */
+
+  background-image: url("/Users/aaronaboah/todo-app/class27-homework/7_react/react1/week3/src/image1.png");
+  /* Replace 'path/to/your/background-image.jpg' with the actual path to your background image file */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+}
+
+.todo-list h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.todo-list form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.todo-list input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.todo-list button {
+  padding: 5px 10px;
+  background-color: #667707;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-list button:hover {
+  background-color: #8b036b;
+}
+
+.todo-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list ul li {
+  border: 1px solid #ccc; /* Set border color */
+  background-color: rgb(186, 124, 9);
+}
