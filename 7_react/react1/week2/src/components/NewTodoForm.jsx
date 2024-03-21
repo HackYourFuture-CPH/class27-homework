@@ -1,17 +1,6 @@
 import React, { useState } from "react";
 
 function NewTodoForm() {
-  const [description, setDescription] = useState("");
-  const [deadline, setDeadline] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!description.trim() || !deadline.trim()) return;
-    // Add logic to add new todo
-    setDescription("");
-    setDeadline("");
-  };
-
   return (
     <form onSubmit={handleSubmit}>
       <input

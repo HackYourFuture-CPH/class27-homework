@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "./TodoList.css";
 
-const todos = [
+const initialTodos = [
   {
     id: 1,
     description: "Attend family meeting",
@@ -22,114 +22,96 @@ const todos = [
   },
 ];
 
-class TodoList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: todos,
-      timer: 0,
-      description: "",
-      deadline: "",
-    };
-  }
+const TodoList = () => {
+  const [todos, setTodos] = useState(initialTodos);
+  const [timer, setTimer] = useState(0);
+  const [description, setDescription] = useState("");
+  const [deadline, setDeadline] = useState("");
 
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => prevTimer + 1);
+    }, 1000);
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+    return () => clearInterval(interval);
+  }, []);
 
-  tick() {
-    this.setState({
-      timer: this.state.timer + 1,
-    });
-  }
-
-  handleInputChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "description") setDescription(value);
+    if (name === "deadline") setDeadline(value);
   };
 
-  addRandomTodo = () => {
-    const { description, deadline } = this.state;
+  const addTodo = () => {
+    if (!description || !deadline) return; // Check for empty fields
     const newTodo = {
       id: Date.now(),
       description: description,
       deadline: deadline,
       done: false,
     };
-    this.setState((prevState) => ({
-      todos: [...prevState.todos, newTodo],
-      description: "", // Reset description input after adding todo
-      deadline: "", // Reset deadline input after adding todo
-    }));
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+    setDescription("");
+    setDeadline("");
   };
 
-  toggleDone = (id) => {
-    this.setState((prevState) => ({
-      todos: prevState.todos.map((todo) =>
+  const toggleDone = (id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
         todo.id === id ? { ...todo, done: !todo.done } : todo
-      ),
-    }));
-  };
-
-  deleteTodo = (id) => {
-    this.setState((prevState) => ({
-      todos: prevState.todos.filter((todo) => todo.id !== id),
-    }));
-  };
-
-  render() {
-    const { todos, timer, description, deadline } = this.state;
-
-    return (
-      <div className="todo-list">
-        <h2>Todo List</h2>
-        <div>
-          <input
-            type="text"
-            name="description"
-            value={description}
-            onChange={this.handleInputChange}
-            placeholder="Enter description"
-          />
-          <input
-            type="text"
-            name="deadline"
-            value={deadline}
-            onChange={this.handleInputChange}
-            placeholder="Enter deadline"
-          />
-          <button onClick={this.addRandomTodo}>Add Todo</button>
-        </div>
-        {todos.length === 0 ? (
-          <p>No items...</p>
-        ) : (
-          <ul>
-            {todos.map((todo) => (
-              <li
-                key={todo.id}
-                style={{ textDecoration: todo.done ? "line-through" : "none" }}
-              >
-                <input
-                  type="checkbox"
-                  checked={todo.done}
-                  onChange={() => this.toggleDone(todo.id)}
-                />
-                <span>{todo.description}</span>
-                <span>({todo.deadline})</span>
-                <button onClick={() => this.deleteTodo(todo.id)}>Delete</button>
-              </li>
-            ))}
-          </ul>
-        )}
-        <div>Time spent on this website: {timer} seconds</div>
-      </div>
+      )
     );
-  }
-}
+  };
+
+  const deleteTodo = (id) => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+  };
+
+  return (
+    <div className="todo-list">
+      <h2>My Todo List</h2>
+      <div>
+        <input
+          type="text"
+          name="description"
+          value={description}
+          onChange={handleInputChange}
+          placeholder="Enter description"
+        />
+        <input
+          type="text"
+          name="deadline"
+          value={deadline}
+          onChange={handleInputChange}
+          placeholder="Enter deadline"
+        />
+        <button onClick={addTodo}>Add Todo</button>
+      </div>
+      {todos.length === 0 ? (
+        <p>No items...</p>
+      ) : (
+        <ul>
+          {todos.map((todo) => (
+            <li
+              key={todo.id}
+              style={{ textDecoration: todo.done ? "line-through" : "none" }}
+            >
+              <input
+                type="checkbox"
+                checked={todo.done}
+                onChange={() => toggleDone(todo.id)}
+              />
+              <span>{todo.description}</span>
+              <span>({todo.deadline})</span>
+              <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            </li>
+          ))}
+        </ul>
+      )}
+      <div>Time spent on this website: {timer} seconds</div>
+      <p>Copyright © 2024 Angel Designs | All Rights reserved</p>
+    </div>
+  );
+};
 
 export default TodoList;
