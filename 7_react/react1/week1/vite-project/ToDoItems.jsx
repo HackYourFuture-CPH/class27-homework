@@ -1,5 +1,5 @@
 
-const ToDoItems = [
+const toDoItems = [
   {
     description: 'Get out of bed',
     deadline:"Wed Sep 13 2017"
@@ -14,4 +14,4 @@ const ToDoItems = [
   },
 ];
 
-export default ToDoItems;
+export default toDoItems;
