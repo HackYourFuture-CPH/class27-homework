@@ -1,11 +1,16 @@
-// TodoItem.jsx
 import React from "react";
 
-function TodoItem({ description, deadline }) {
+function TodoItem({ todo, toggleTodo }) {
   return (
     <div>
-      <p>{description}</p>
-      <p>{deadline}</p>
+      <input
+        type="checkbox"
+        checked={todo.done}
+        onChange={() => toggleTodo(todo.id)}
+      />
+      <span style={{ textDecoration: todo.done ? "line-through" : "none" }}>
+        {todo.description}
+      </span>
     </div>
   );
 }
