@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.container{
+  background-color: rgb(245, 196, 163);
+}
+button{
+ font-size : 15px;
+  margin: 10px;
+}
+button:hover {
+  background-color: rgb(243, 228, 218);
+}
