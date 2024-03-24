@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import AppTodo from "./todoList/TodoList";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <h1>Todo list</h1>
+        <AppTodo />
       </header>
     </div>
   );
