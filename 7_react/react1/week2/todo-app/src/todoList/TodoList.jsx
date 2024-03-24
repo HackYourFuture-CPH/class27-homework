@@ -11,7 +11,7 @@ function AppTodo() {
     const newTodo = {id:new Date(), name: "new todo", date: new Date(), status: false };
     setTodoList((todolist) => { return [...todolist, newTodo]; });
   }
-
+ 
   const onDeleteClick = (id) => {
     setTodoList(todolist.filter(todo => todo.id !== id));
   }
@@ -44,7 +44,7 @@ function AppTodo() {
   return (
     <div>
       <h2>My To-Do List</h2>
-      <TimeCount />
+      {/* <TimeCount /> */}
       <TodoList todos={todolist} />
     </div>
   );
