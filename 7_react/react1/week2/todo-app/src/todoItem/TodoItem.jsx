@@ -1,14 +1,13 @@
 import "./todoitem.css";
 import { useState } from "react";
 
-export const TodoItem = (props, {onDeleteClick}) => {
+export const TodoItem = (props) => {
   const [itemStatus, setItemStatus] = useState(props.status);
 
   function toggleStatus(e) {
     setItemStatus(!itemStatus);
   }
 
-  console.log(props)
   return (
     <div className="list_elem">
       <input
@@ -20,7 +19,7 @@ export const TodoItem = (props, {onDeleteClick}) => {
       />
       <label htmlFor="item">{props.name}</label>
       <p>{props.deadline}</p>
-      <button type="button" onClick={() => onDeleteClick(props.id)}>
+      <button type="button" onClick={() => props.onDeleteClick(props.id)}>
         Delete
       </button>
     </div>
