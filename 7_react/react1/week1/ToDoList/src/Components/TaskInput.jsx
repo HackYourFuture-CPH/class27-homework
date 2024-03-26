@@ -15,16 +15,16 @@ function TaskInput() {
       text: todo,
       completed: false,
     };
-    setToDoList([...toDoList].concat(newTodo));
+    setToDoList((prevTodos) => [...prevTodos, newTodo]);
     setTodo("");
   }
 
   function deleteTodo(id) {
-    const updateToDoList = [...toDoList].filter((todo) => todo.id !== id);
+    const updateToDoList = toDoList.filter((todo) => todo.id !== id);
     setToDoList(updateToDoList);
   }
   function checkTodo(id) {
-    const checkToDoList = [...toDoList].map((todo) => {
+    const checkToDoList = toDoList.map((todo) => {
       if (todo.id === id) {
         todo.completed = !todo.completed;
       }
@@ -60,7 +60,7 @@ function TaskInput() {
           </div>
         ))
       ) : (
-        <p>No Item, add new item</p>
+        <p>No Item</p>
       )}
     </div>
   );
