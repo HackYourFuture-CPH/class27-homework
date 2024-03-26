@@ -1,6 +1,6 @@
-function Task({ task }) {
+function Task({ task, isChecked }) {
     return (
-        <div className="task">
+        <div className={`task ${isChecked ? 'completed' : ''}`}>
             <p>Task: {task}</p>
         </div>
     );

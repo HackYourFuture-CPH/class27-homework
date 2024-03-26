@@ -1,0 +1,3 @@
+.todo-item.completed .task p {
+    text-decoration: line-through;
+  }
