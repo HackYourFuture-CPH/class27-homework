@@ -1,7 +1,8 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import useSWR from "swr";
 
 export type Todo = {
   id: number,
@@ -10,30 +11,34 @@ export type Todo = {
 }
 export type  DeleteTodo = (id : number) => void;
 
-const initialTodo : Todo[] = [{
-  id: 1,
-  description: "Get out of bed",
-  deadline: "Wed Sep 13 2017",
-},
-{
-  id: 2,
-  description: "Brush teeth",
-  deadline: "Thu Sep 14 2017",
-},
-{
-  id: 3,
-  description: "Eat breakfast",
-  deadline: "Fri Sep 15 2017",
-}]
 
 function generateUniqueId(): number {
   return parseInt(Date.now().toString(36) + Math.random().toString(36).substr(2), 36);
 }
 
-
+const url: string = 'https://gist.githubusercontent.com/benna100/391eee7a119b50bd2c5960ab51622532/raw';
+const fetcher = async() => {
+  try{
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  }catch(error){
+    console.log(error)
+  }
+}
 function App() {
-  const [todos, setTodos] = useState<Todo[]>(initialTodo)
+  const {data : initialTodo, error} = useSWR(url , fetcher);
   
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(()=>{
+    if (initialTodo) {
+      setTodos(initialTodo);
+      setIsLoading(false);
+    }
+  }, [initialTodo]);
+
   const addRandomTodo = () => {
     setTodos(prevTodo => [...prevTodo , {
       id: generateUniqueId(),
@@ -45,6 +50,9 @@ function App() {
     const newTodoList = todos.filter(todo => (todo.id !== id));
     setTodos(newTodoList)
   }
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error fetching todos...</div>;
 
   return (
     <div className="container">
