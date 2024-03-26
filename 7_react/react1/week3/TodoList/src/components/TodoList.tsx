@@ -1,12 +1,39 @@
-import TodoItem from "./TodoItem";
 import { DeleteTodo, Todo } from "../App";
+import { useState } from "react";
+import "./todoList.css";
 
+function TodoList({
+  todos,
+  deleteTodo,
+}: {
+  todos: Todo[];
+  deleteTodo: DeleteTodo;
+}) {
+  const [doneStatus, setDoneStatus] = useState<{ [key: number]: boolean }>({});
 
-function TodoList({ todos, deleteTodo }: { todos: Todo[] , deleteTodo: DeleteTodo}) {
+  const toggleDoneStatus = (todoId: number) => {
+    setDoneStatus((prevStatus) => ({
+      ...prevStatus,
+      [todoId]: !prevStatus[todoId],
+    }));
+  };
+
   return (
     <ul>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} description={todo.description} deadline={todo.deadline} deleteTodo={deleteTodo} todoId={todo.id}/>
+        <li key={todo.id}>
+          <span className={doneStatus[todo.id] ? "done" : ""}>
+            {todo.description} ({todo.deadline}){" "}
+          </span>
+          <input
+            type="checkbox"
+            checked={doneStatus[todo.id] || false}
+            onChange={() => toggleDoneStatus(todo.id)}
+          />
+          <button type="button" onClick={() => deleteTodo(todo.id)}>
+            delete
+          </button>
+        </li>
       ))}
     </ul>
   );
