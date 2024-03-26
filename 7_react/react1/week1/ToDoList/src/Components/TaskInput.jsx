@@ -5,7 +5,6 @@ function TaskInput() {
   const [toDoList, setToDoList] = useState([]);
   const [todo, setTodo] = useState("");
 
-  console.log(todo);
 
   function handleSubmit(e) {
     e.preventDefault();
