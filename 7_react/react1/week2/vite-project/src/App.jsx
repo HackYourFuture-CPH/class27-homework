@@ -1,7 +1,4 @@
-import { useState } from "react";
 import Timer from "./timer.jsx";
-import IteratingTodoItemsArray from "./components/iteratingTodoItemsArray";
-import toDoItems from "./data/data.js";
 import AddNewToDo from "./components/addNewToDo";
 import "./App.css";
 
