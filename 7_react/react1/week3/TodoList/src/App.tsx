@@ -12,9 +12,6 @@ export type Todo = {
 export type  DeleteTodo = (id : number) => void;
 
 
-function generateUniqueId(): number {
-  return parseInt(Date.now().toString(36) + Math.random().toString(36).substr(2), 36);
-}
 
 const url: string = 'https://gist.githubusercontent.com/benna100/391eee7a119b50bd2c5960ab51622532/raw';
 const fetcher = async() => {
@@ -39,13 +36,6 @@ function App() {
     }
   }, [initialTodo]);
 
-  const addRandomTodo = () => {
-    setTodos(prevTodo => [...prevTodo , {
-      id: generateUniqueId(),
-      description: "random todo",
-      deadline: "random deadline",
-    }])
-  }
   const deleteTodo = (id: number) => {
     const newTodoList = todos.filter(todo => (todo.id !== id));
     setTodos(newTodoList)
@@ -56,7 +46,7 @@ function App() {
 
   return (
     <div className="container">
-      <TodoForm addTodo={addRandomTodo}/>
+      <TodoForm todos={todos} setTodos={setTodos}/>
       {
         todos.length > 0 ? (<TodoList todos={todos} deleteTodo={deleteTodo}/>) : (<p>No items</p>)
       }
